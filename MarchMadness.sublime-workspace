@@ -1,0 +1,216 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"help",
+				"help_page"
+			],
+			[
+				"have",
+				"have_title"
+			],
+			[
+				"bas",
+				"base_title"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/jstump/Development/projects/MarchMadness/config/routes.rb",
+		"/home/jstump/Development/projects/MarchMadness/db/schema.rb",
+		"/home/jstump/Development/projects/MarchMadness/config/database.yml",
+		"/home/jstump/Development/projects/MarchMadness/README.md",
+		"/home/jstump/Development/projects/MarchMadness/db/development.sqlite3",
+		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/scaffolds.css.scss",
+		"/home/jstump/Development/projects/MarchMadness/app/controllers/users_digits_controller.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/controllers/users_controller.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/models/users_digit.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/models/user.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/controllers/pages_controller.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/controllers/application_controller.rb",
+		"/home/jstump/Development/projects/MarchMadness/config/environments/development.rb",
+		"/home/jstump/Development/projects/MarchMadness/config/application.rb",
+		"/home/jstump/Development/projects/MarchMadness/spec/models/user_spec.rb",
+		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140215054444_create_users.rb",
+		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140215055351_create_users_digits.rb",
+		"/home/jstump/Development/projects/MarchMadness/Gemfile",
+		"/home/jstump/Development/projects/MarchMadness/spec/requests/pages_spec.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/users/index.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/spec/requests/users_digits_spec.rb",
+		"/home/jstump/Development/projects/MarchMadness/spec/spec_helper.rb",
+		"/home/jstump/Development/projects/MarchMadness/spec/controllers/users_controller_spec.rb",
+		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140215031839_create_users.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/helpers/users_digits_helper.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/users/new.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/config/initializers/secret_token.rb",
+		"/home/jstump/Development/projects/sample_app/config/routes.rb",
+		"/home/jstump/Development/projects/sample_app/app/views/layouts/_header.html.erb",
+		"/home/jstump/Development/projects/sample_app/app/views/layouts/_footer.html.erb",
+		"/home/jstump/Development/projects/sample_app/spec/requests/static_pages_spec.rb",
+		"/home/jstump/Development/projects/sample_app/app/views/static_pages/home.html.erb",
+		"/home/jstump/Development/projects/sample_app/spec/requests/user_pages_spec.rb",
+		"/home/jstump/Development/projects/sample_app/app/views/static_pages/help.html.erb",
+		"/home/jstump/Development/projects/sample_app/app/views/static_pages/contact.html.erb",
+		"/home/jstump/Development/projects/sample_app/app/models/user.rb",
+		"/home/jstump/Development/projects/sample_app/spec/models/user_spec.rb",
+		"/home/jstump/Development/projects/sample_app/config/application.rb",
+		"/home/jstump/Development/projects/sample_app/db/migrate/20140128004629_create_users.rb",
+		"/home/jstump/Development/projects/sample_app/db/schema.rb",
+		"/home/jstump/Development/projects/sample_app/Gemfile",
+		"/home/jstump/Development/projects/sample_app/db/migrate/20140209223441_add_index_to_users_email.rb",
+		"/home/jstump/Development/projects/sample_app/db/migrate/20140210030851_add_password_digest_to_users.rb",
+		"/home/jstump/Development/projects/sample_app/db/development.sqlite3",
+		"/home/jstump/Development/projects/sample_app/app/controllers/users_controller.rb",
+		"/home/jstump/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/jstump/Development/projects/sample_app/app/controllers/static_pages_controller.rb",
+		"/home/jstump/Development/projects/sample_app/spec/spec_helper.rb",
+		"/home/jstump/Development/projects/sample_app/app/helpers/static_pages_helper.rb",
+		"/home/jstump/Development/projects/sample_app/app/views/static_pages/about.html.erb",
+		"/home/jstump/Development/projects/sample_app/app/views/users/new.html.erb",
+		"/home/jstump/Development/projects/sample_app/spec/support/utilities.rb",
+		"/home/jstump/Development/projects/sample_app/app/helpers/application_helper.rb",
+		"/home/jstump/Development/projects/sample_app/app/helpers/users_helper.rb",
+		"/home/jstump/Development/projects/sample_app/app/assets/stylesheets/custom.css.scss",
+		"/home/jstump/Development/projects/sample_app/app/views/layouts/_shim.html.erb",
+		"/home/jstump/Development/projects/sample_app/app/controllers/application_controller.rb",
+		"/home/jstump/Development/projects/sample_app/app/views/layouts/application.html.erb",
+		"/home/jstump/Development/projects/sample_app/example_user.rb",
+		"/home/jstump/Development/projects/sample_app/Guardfile",
+		"/home/jstump/Development/projects/sample_app/.gitignore",
+		"/home/jstump/Development/projects/sample_app/README.rdoc",
+		"/home/jstump/Development/projects/sample_app/config/initializers/secret_token.rb",
+		"/home/jstump/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/jstump/Development/projects/first_app/Gemfile"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"do",
+			"lightGray"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"grayLight"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 228.0,
+	"status_bar_visible": true
+}
