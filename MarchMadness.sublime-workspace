@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"be",
+				"be_valid"
+			],
+			[
+				"should",
+				"should_not"
+			],
+			[
+				"b",
+				"before"
+			],
+			[
 				"help",
 				"help_page"
 			],
@@ -19,6 +31,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 322,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/pages/results.html.erb",
+			"settings":
+			{
+				"buffer_size": 106,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -44,33 +72,39 @@
 	},
 	"file_history":
 	[
+		"/home/jstump/Development/projects/MarchMadness/app/helpers/application_helper.rb",
+		"/home/jstump/Development/projects/MarchMadness/spec/requests/pages_spec.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/helpers/pages_helper.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/pages/results.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/layouts/application.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/models/user.rb",
+		"/home/jstump/Development/projects/MarchMadness/spec/models/user_spec.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/users/new.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140215163203_create_users.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/controllers/users_controller.rb",
+		"/home/jstump/Development/projects/MarchMadness/spec/spec_helper.rb",
 		"/home/jstump/Development/projects/MarchMadness/config/routes.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/controllers/pages_controller.rb",
+		"/home/jstump/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/jstump/Development/projects/MarchMadness/Gemfile",
+		"/home/jstump/Development/projects/MarchMadness/config/application.rb",
+		"/home/jstump/Development/projects/MarchMadness/config/initializers/secret_token.rb",
 		"/home/jstump/Development/projects/MarchMadness/db/schema.rb",
 		"/home/jstump/Development/projects/MarchMadness/config/database.yml",
 		"/home/jstump/Development/projects/MarchMadness/README.md",
 		"/home/jstump/Development/projects/MarchMadness/db/development.sqlite3",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/scaffolds.css.scss",
 		"/home/jstump/Development/projects/MarchMadness/app/controllers/users_digits_controller.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/controllers/users_controller.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/models/users_digit.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/models/user.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/controllers/pages_controller.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/controllers/application_controller.rb",
 		"/home/jstump/Development/projects/MarchMadness/config/environments/development.rb",
-		"/home/jstump/Development/projects/MarchMadness/config/application.rb",
-		"/home/jstump/Development/projects/MarchMadness/spec/models/user_spec.rb",
 		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140215054444_create_users.rb",
 		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140215055351_create_users_digits.rb",
-		"/home/jstump/Development/projects/MarchMadness/Gemfile",
-		"/home/jstump/Development/projects/MarchMadness/spec/requests/pages_spec.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/users/index.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/spec/requests/users_digits_spec.rb",
-		"/home/jstump/Development/projects/MarchMadness/spec/spec_helper.rb",
 		"/home/jstump/Development/projects/MarchMadness/spec/controllers/users_controller_spec.rb",
 		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140215031839_create_users.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/helpers/users_digits_helper.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/views/users/new.html.erb",
-		"/home/jstump/Development/projects/MarchMadness/config/initializers/secret_token.rb",
 		"/home/jstump/Development/projects/sample_app/config/routes.rb",
 		"/home/jstump/Development/projects/sample_app/app/views/layouts/_header.html.erb",
 		"/home/jstump/Development/projects/sample_app/app/views/layouts/_footer.html.erb",
@@ -89,7 +123,6 @@
 		"/home/jstump/Development/projects/sample_app/db/migrate/20140210030851_add_password_digest_to_users.rb",
 		"/home/jstump/Development/projects/sample_app/db/development.sqlite3",
 		"/home/jstump/Development/projects/sample_app/app/controllers/users_controller.rb",
-		"/home/jstump/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 		"/home/jstump/Development/projects/sample_app/app/controllers/static_pages_controller.rb",
 		"/home/jstump/Development/projects/sample_app/spec/spec_helper.rb",
 		"/home/jstump/Development/projects/sample_app/app/helpers/static_pages_helper.rb",
@@ -146,8 +179,61 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/views/layouts/application.html.erb",
+					"settings":
+					{
+						"buffer_size": 322,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								79,
+								79
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/pages/results.html.erb",
+					"settings":
+					{
+						"buffer_size": 106,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								106,
+								106
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
