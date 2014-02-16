@@ -14,4 +14,8 @@ describe "Pages" do
 			expect(page).to have_content("Results")
       		end
 	end
+
+	describe "Bracket page" do
+		
+	end
 end

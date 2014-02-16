@@ -1,2 +1,20 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<% provide(:title, "Create Participant") %>
+<h1>Create Participant</h1>
+
+<div class="row">
+  <div class="offset1">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, :autofocus => true %>
+
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+
+      <div class="offset3">
+        <%= f.submit "Create", class: "btn btn-large btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
