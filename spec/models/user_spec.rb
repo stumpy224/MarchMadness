@@ -5,6 +5,7 @@ describe User do
 
 	subject { @user }
 
+	it { should be_an_instance_of User }
 	it { should respond_to(:first_name) }
 	it { should respond_to(:last_name) }
 

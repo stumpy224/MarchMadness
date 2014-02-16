@@ -1,0 +1,20 @@
+<% provide(:title, "Participant Digits") %>
+<h1>Enter Digits for Participant</h1>
+
+<div class="row">
+  <div class="offset1">
+    <%= form_for(@users_digits) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :winner_digit %>
+      <%= f.text_field :winner_digit %>
+
+      <%= f.label :loser_digit %>
+      <%= f.text_field :loser_digit %>
+
+      <div class="offset3">
+        <%= f.submit "Enter", class: "btn btn-large btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
