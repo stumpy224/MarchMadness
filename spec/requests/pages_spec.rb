@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "Pages" do
 	describe "Results page" do
 		before do
-			visit '/pages/results'
+			visit root_path
 		end
 
 		it "should have the title 'Results'" do

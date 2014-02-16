@@ -1,7 +1,10 @@
 MarchMadness::Application.routes.draw do
+  root  'pages#results'
   get "users/new"
-  get "pages/results"
-  get "pages/bracket"
+  match '/bracket', to: 'pages#bracket',   via: 'get'
+  #get "pages/results"
+  #get "pages/bracket"
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
