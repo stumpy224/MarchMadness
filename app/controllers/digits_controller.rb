@@ -1,7 +1,7 @@
 class DigitsController < ApplicationController
   def new
   	@digit = Digit.new
-	@user = User.find(:all)
+	@users = User.all
   end
 
   def show
@@ -10,6 +10,7 @@ class DigitsController < ApplicationController
 
   def create
   	@digit = Digit.new(digit_params)
+  	@users = User.all
 		if @digit.save
 			flash[:success] = "User's digits have been entered."
 			redirect_to new_digits_path

@@ -6,8 +6,8 @@
     <%= form_for(@digit) do |f| %>
       <%= render 'validation/error_messages_digit' %>
 
-      	<%= f.label "Select Participant" %>
-		<%= f.select('user_id', @user.collect {|usr| [h(usr.first_name + ' ' + usr.last_name)] }, { :include_blank => true }) %>
+      <%= f.label "Select Participant" %>
+      <%= f.select("user_id", @users.collect { |u| [ (u.first_name + ' ' + u.last_name), u.id ] }, { :include_blank => true }) %>
 
       <%= f.label :winner_digit %>
       <%= f.text_field :winner_digit %>
