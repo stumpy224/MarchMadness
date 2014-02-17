@@ -17,7 +17,7 @@ MarchMadness::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   resources :users
-  resources :users_digits
+  resources :digits
 
   # Example resource route with options:
   #   resources :products do
