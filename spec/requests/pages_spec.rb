@@ -12,7 +12,7 @@ describe "Pages" do
 
 		it "should have the content 'Results'" do
 			expect(page).to have_content("Results")
-      		end
+		end
 	end
 
 	describe "Bracket page" do

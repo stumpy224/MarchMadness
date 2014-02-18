@@ -13,7 +13,7 @@ describe User do
 
 	describe "when first_name is not present" do
 		before { @user.first_name = " " }
-	  	it { should_not be_valid }
+		it { should_not be_valid }
 	end
 
 	describe "when last_name is not present" do
