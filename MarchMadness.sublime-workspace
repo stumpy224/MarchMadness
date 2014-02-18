@@ -4,12 +4,28 @@
 		"selected_items":
 		[
 			[
-				"be",
-				"be_valid"
+				"di",
+				"digits"
+			],
+			[
+				"digit_",
+				"digit_user_id"
+			],
+			[
+				"Di",
+				"Digit"
+			],
+			[
+				"not",
+				"not_to"
 			],
 			[
 				"user",
-				"user_digits"
+				"user_id"
+			],
+			[
+				"be",
+				"be_valid"
 			],
 			[
 				"user_",
@@ -47,14 +63,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app/views/digits/new.html.erb",
-			"settings":
-			{
-				"buffer_size": 666,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -84,28 +92,40 @@
 	},
 	"file_history":
 	[
-		"/home/jstump/Development/projects/MarchMadness/spec/requests/pages_spec.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/controllers/digits_controller.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/digits/new.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/digits/_form.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/spec/models/digit_spec.rb",
 		"/home/jstump/Development/projects/MarchMadness/spec/factories.rb",
 		"/home/jstump/Development/projects/MarchMadness/spec/requests/user_pages_spec.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/models/user.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/controllers/users_controller.rb",
-		"/home/jstump/Development/projects/MarchMadness/spec/models/digit_spec.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/models/digit.rb",
 		"/home/jstump/Development/projects/MarchMadness/spec/requests/digits_spec.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/views/users/show.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/digits/show.html.erb",
-		"/home/jstump/Development/projects/MarchMadness/app/controllers/digits_controller.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/views/shared/_error_messages.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/digits/index.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/controllers/users_controller.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/models/digit.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/models/user.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/digits.css.scss",
+		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/users.css.scss",
+		"/home/jstump/Development/projects/MarchMadness/app/controllers/pages_controller.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/layouts/_header.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/layouts/application.html.erb",
+		"/home/jstump/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/home/jstump/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/jstump/Development/projects/MarchMadness/app/views/pages/bracket.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/pages/results.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/users/new.html.erb",
-		"/home/jstump/Development/projects/MarchMadness/app/views/validation/_error_messages_user.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/users/show.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/validation/_error_messages_digit.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/validation/_error_messages_user.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/spec/models/user_spec.rb",
+		"/home/jstump/Development/projects/MarchMadness/spec/requests/pages_spec.rb",
+		"/home/jstump/Development/projects/MarchMadness/spec/spec_helper.rb",
 		"/home/jstump/Development/projects/MarchMadness/config/routes.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/views/digits/new.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/shared/_error_messages.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/db/schema.rb",
 		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140217033637_create_digits.rb",
 		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140215163203_create_users.rb",
 		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140216205458_create_user_digits.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/views/layouts/application.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/controllers/user_digits_controller.rb",
 		"/home/jstump/Development/projects/MarchMadness/spec/models/user_digit_spec.rb",
 		"/home/jstump/Development/projects/MarchMadness/spec/requests/user_digit_pages_spec.rb",
@@ -114,24 +134,18 @@
 		"/home/jstump/Development/projects/MarchMadness/app/models/user_digit.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/users_digits/show.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/helpers/users_digits_helper.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/users.css.scss",
-		"/home/jstump/Development/projects/MarchMadness/spec/models/user_spec.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/custom.css.scss",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/pages.css.scss",
 		"/home/jstump/Development/projects/MarchMadness/config/environments/production.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/helpers/application_helper.rb",
 		"/home/jstump/Development/projects/MarchMadness/config/environments/test.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/views/pages/results.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/config/application.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/controllers/application_controller.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/helpers/users_helper.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/helpers/pages_helper.rb",
 		"/home/jstump/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
-		"/home/jstump/Development/projects/MarchMadness/spec/spec_helper.rb",
 		"/home/jstump/Development/projects/MarchMadness/Gemfile",
-		"/home/jstump/Development/projects/MarchMadness/app/views/layouts/_header.html.erb",
 		"/home/jstump/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
-		"/home/jstump/Development/projects/MarchMadness/app/controllers/pages_controller.rb",
 		"/home/jstump/Development/projects/MarchMadness/config/initializers/secret_token.rb",
 		"/home/jstump/Development/projects/MarchMadness/config/database.yml",
 		"/home/jstump/Development/projects/MarchMadness/README.md",
@@ -199,6 +213,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ctrl+shift+r",
 			"%>\n",
 			"error_messages_digit",
 			"digit",
@@ -224,139 +239,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/views/digits/new.html.erb",
-					"settings":
-					{
-						"buffer_size": 666,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								453,
-								453
-							]
-						],
-						"settings":
-						{
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
