@@ -1,0 +1,22 @@
+<% provide(:title, "Participant Digits") %>
+<p>
+  <h1>Participant Digits:</h1>
+  <div class="row">
+    <h3 class="offset1">Name</h3>
+    <% @users.each do |user| %>
+      <div class="offset1"><%= user.first_name %>&nbsp;<%= user.last_name %></div>
+      <table class="offset2">
+        <thead><th>Year</th><th class="digitColumn">Winner's Digit</th><th class="digitColumn">Loser's Digit</th></thead>
+        <tbody>
+          <% for digit in user.digits %>
+            <tr>
+              <td><%= digit.year %></td>
+              <td class="digitColumn"><%= digit.winner_digit %></td>
+              <td class="digitColumn"><%= digit.loser_digit %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+   <% end %>
+  </div>
+</p>

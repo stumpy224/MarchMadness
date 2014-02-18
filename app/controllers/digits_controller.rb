@@ -1,19 +1,30 @@
 class DigitsController < ApplicationController
+	before_filter :authenticate, :only => [:edit, :update]
+	http_basic_authenticate_with :name => "stumpy", :password => "sochi2014", :only => [:create, :edit, :destroy]
+
+	def index
+		@users = User.all
+		@digits = Digit.all
+	end
+
   def new
+  	@users = User.all
   	@digit = Digit.new
-	@users = User.all
   end
 
   def show
-  	@digit = Digit.find(params(:id))
+  	# @user = User.find(params(:id))
+  	@users = User.all
+  	# @digits = Digit.find(params(:id))
   end
 
   def create
   	@digit = Digit.new(digit_params)
   	@users = User.all
+  	@digit.year = Time.new.year
 		if @digit.save
-			flash[:success] = "User's digits have been entered."
-			redirect_to new_digits_path
+			flash[:success] = "Digits for participant have been entered."
+			redirect_to new_digit_path
 		else
 			render 'new'
 		end

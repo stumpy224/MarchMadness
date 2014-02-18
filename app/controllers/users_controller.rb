@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+	before_filter :authenticate, :only => [:edit, :update]
+	http_basic_authenticate_with :name => "stumpy", :password => "sochi2014", :only => [:create, :edit, :destroy]
+	
 	def new
 		@user = User.new
 	end
