@@ -4,7 +4,7 @@ FactoryGirl.define do
       last_name     "Dirt"
   end
 
-  factory :digit do
+  factory :square do
     user_id            1
     winner_digit    0
     loser_digit       0

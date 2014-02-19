@@ -1,0 +1,27 @@
+<% provide(:title, "Participant Squares") %>
+<h1>Enter Participant Squares</h1>
+
+<div class="row">
+  <div class="offset1">
+    <%= form_for(@square) do |f| %>
+    <%= render 'validation/error_messages_square' %>
+
+    <%= f.label "Select Participant" %>
+    <%= f.select("user_id", @users.collect { |u| [ (u.first_name + ' ' + u.last_name), u.id ] }, { :include_blank => true }) %>
+
+    <table class="offset1">
+      <thead><th class="digitColumn">Winner's Digit</th><th class="digitColumn">Loser's Digit</th></thead>
+      <tbody>
+        <tr>
+          <td class="digitColumn"><%= f.text_field :winner_digit %></td>
+          <td class="digitColumn"><%= f.text_field :loser_digit %></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div>
+      <%= f.submit "Enter", class: "btn btn-large btn-primary" %>
+    </div>
+    <% end %>
+  </div>
+</div>

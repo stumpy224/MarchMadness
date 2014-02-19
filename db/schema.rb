@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140217033637) do
+ActiveRecord::Schema.define(version: 20140219040631) do
 
-  create_table "digits", force: true do |t|
+  create_table "squares", force: true do |t|
     t.integer  "user_id"
     t.integer  "winner_digit"
     t.integer  "loser_digit"

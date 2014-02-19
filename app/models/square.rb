@@ -1,4 +1,4 @@
-class Digit < ActiveRecord::Base
+class Square < ActiveRecord::Base
   has_and_belongs_to_many :users
   validates :user_id, presence: true
   validates :winner_digit, presence: true

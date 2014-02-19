@@ -1,13 +1,17 @@
 class UsersController < ApplicationController
   before_filter :authenticate, :only => [:edit, :update]
-  http_basic_authenticate_with :name => "stumpy", :password => "sochi2014", :only => [:create, :edit, :destroy]
+  http_basic_authenticate_with :name => "stumpy224", :password => "sochi2014", :only => [:create, :edit, :destroy]
   
+  def index
+    @users = User.all.order(:first_name, :last_name)
+  end
+
   def new
     @user = User.new
   end
 
   def show
-    @user = User.find(params[:id])
+    @users = User.all
   end
 
   def create

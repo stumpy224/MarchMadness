@@ -1,0 +1,29 @@
+<% provide(:title, "Participant Squares") %>
+<p>
+  <h1>Participant Squares:</h1>
+  <div class="row">
+    <table>
+      <thead>
+        <th style="text-align:left;">Name</th>
+        <th class="yearColumn">Year</th>
+        <th class="digitColumn">Winner's Digit</th>
+        <th class="digitColumn">Loser's Digit</th>
+      </thead>
+      <tbody>
+      <% @users.each do |user| %>
+      <tr>
+        <td><%= user.first_name %>&nbsp;<%= user.last_name %></td>
+      </tr>
+      <% for square in user.squares %>
+        <tr>
+          <td>&nbsp;</td>
+          <td class="yearColumn"><%= square.year %></td>
+          <td class="digitColumn"><%= square.winner_digit %></td>
+          <td class="digitColumn"><%= square.loser_digit %></td>
+        </tr>
+        <% end %>
+    <% end %>
+    </tbody>
+    </table>
+  </div>
+</p>

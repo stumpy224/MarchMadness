@@ -1,0 +1,9 @@
+<% provide(:title, "Participants") %>
+<p>
+  <h1>Participants:</h1>
+  <div class="row">
+    <% @users.each do |user| %>
+    <div class="offset1"><%= user.first_name %>&nbsp;<%= user.last_name %></div>
+    <% end %>
+  </div>
+</p>
