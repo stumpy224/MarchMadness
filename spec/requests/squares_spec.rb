@@ -1,19 +1,19 @@
 require 'spec_helper'
 
 describe "Squares" do
-  # describe "show participant's digits" do
-  #   it "should have title of 'Participant Digits" do
-  #     # @digit = FactoryGirl.create(:digit)
+  # describe "show squares for participant" do
+  #   it "should have title of 'something'" do
+  #     # @square = FactoryGirl.create(:square)
 
-  #     visit digit_path(FactoryGirl.create(:digit))
-  #     expect(page).to have_title("Participant Digits")
+  #     visit square_path(FactoryGirl.create(:square))
+  #     expect(page).to have_title("Participant Squares")
   #   end
 
   #   # it "should have title of participant's name" do
    #  #     @user = FactoryGirl.create(:user)
-   #  #     @digit = FactoryGirl.create(:digit)
+   #  #     @square = FactoryGirl.create(:square)
 
-  #   #   visit digit_path(digit)
+  #   #   visit square_path(square)
   #   #   expect(page).to have_title(@user.first_name + ' ' + @user.last_name)
   #   # end
   # end
