@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe "User pages" do
-
   subject { page }
 
   describe "show a participant" do

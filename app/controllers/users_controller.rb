@@ -27,6 +27,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name)
+    params.require(:user).permit(:first_name, :last_name, squares_attributes: [:id, :winner_digit, :loser_digit, :_destroy])
   end
 end

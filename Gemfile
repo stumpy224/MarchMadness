@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 gem 'bootstrap-sass', '2.3.2.0'
+gem 'cocoon', '~> 1.2.0'
 
 group :development, :test do
   gem 'sqlite3'
@@ -15,7 +16,6 @@ group :test do
   gem 'capybara', '2.1.0'
   gem 'libnotify', '0.8.0'
   gem 'factory_girl_rails', '4.2.1'
-  gem "mocha", "~> 1.0.0"
 end
 
 # Use SCSS for stylesheets
