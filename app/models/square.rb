@@ -1,5 +1,5 @@
 class Square < ActiveRecord::Base
-  has_and_belongs_to_many :users
+  belongs_to :user
   validates :user_id, presence: true
   validates :winner_digit, presence: true
   validates :loser_digit, presence: true

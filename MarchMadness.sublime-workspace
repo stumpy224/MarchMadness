@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"should",
+				"should"
+			],
+			[
+				"squ",
+				"squares"
+			],
+			[
 				"padd",
 				"padding-left"
 			],
@@ -44,10 +52,6 @@
 				"participant"
 			],
 			[
-				"should",
-				"should_not"
-			],
-			[
 				"b",
 				"before"
 			],
@@ -84,10 +88,127 @@
 			}
 		},
 		{
+			"file": "app/controllers/users_controller.rb",
+			"settings":
+			{
+				"buffer_size": 735,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": ".nested-fields\n  .field\n    = f.label :winner_digit\n    %br\n    = f.text_field :winner_digit\n  .field\n    = f.label :loser_digit\n    %br\n    = f.text_field :loser_digit\n  = link_to_remove_association \"remove square\", f\n  ",
+			"file": "app/views/users/_square_fields.html.erb",
+			"file_size": 221,
+			"file_write_time": 1392859479000000,
+			"settings":
+			{
+				"buffer_size": 221,
+				"line_ending": "Unix",
+				"name": ".nested-fields"
+			}
+		},
+		{
+			"file": "app/views/squares/_square_fields.html.erb",
+			"settings":
+			{
+				"buffer_size": 312,
+				"line_ending": "Unix",
+				"name": "<div class=\"nested-fields\">"
+			}
+		},
+		{
+			"file": "app/models/user.rb",
+			"settings":
+			{
+				"buffer_size": 226,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/square.rb",
+			"settings":
+			{
+				"buffer_size": 225,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/users/_form.html.erb",
+			"settings":
+			{
+				"buffer_size": 488,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "db/schema.rb",
+			"settings":
+			{
+				"buffer_size": 1177,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/requests/users_spec.rb",
+			"settings":
+			{
+				"buffer_size": 1199,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/users/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 124,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/squares/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 823,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/requests/squares_spec.rb",
+			"settings":
+			{
+				"buffer_size": 1559,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/requests/pages_spec.rb",
+			"settings":
+			{
+				"buffer_size": 365,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/models/square_spec.rb",
+			"settings":
+			{
+				"buffer_size": 868,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/models/user_spec.rb",
+			"settings":
+			{
+				"buffer_size": 527,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "Gemfile",
 			"settings":
 			{
-				"buffer_size": 1529,
+				"buffer_size": 1503,
 				"line_ending": "Unix"
 			}
 		}
@@ -107,7 +228,7 @@
 				"About"
 			]
 		],
-		"width": 602.0
+		"width": 530.0
 	},
 	"console":
 	{
@@ -124,7 +245,12 @@
 	},
 	"file_history":
 	[
+		"/home/jstump/Development/projects/MarchMadness/app/views/users/new.html.erb",
+		"/home/jstump/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 		"/home/jstump/Development/projects/MarchMadness/Gemfile",
+		"/home/jstump/Development/projects/MarchMadness/spec/spec_helper.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/controllers/squares_controller.rb",
+		"/home/jstump/Development/projects/MarchMadness/–",
 		"/home/jstump/Development/projects/MarchMadness/app/views/squares/new.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/users/_form.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/models/user.rb",
@@ -137,12 +263,10 @@
 		"/home/jstump/Development/projects/MarchMadness/config/routes.rb",
 		"/home/jstump/Development/projects/MarchMadness/config/environment.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/layouts/application.html.erb",
-		"/home/jstump/Development/projects/MarchMadness/app/controllers/squares_controller.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/digits.css.scss",
 		"/home/jstump/Development/projects/MarchMadness/db/schema.rb",
 		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140219040631_drop_digits.rb",
 		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140217033637_create_digits.rb",
-		"/home/jstump/Development/projects/MarchMadness/spec/spec_helper.rb",
 		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140219032446_create_squares.rb",
 		"/home/jstump/Development/projects/MarchMadness/config/application.rb",
 		"/home/jstump/Development/projects/MarchMadness/config/database.yml",
@@ -157,7 +281,6 @@
 		"/home/jstump/Development/projects/MarchMadness/spec/requests/users_spec.rb",
 		"/home/jstump/Development/projects/MarchMadness/spec/models/user_spec.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/controllers/digits_controller.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/views/users/new.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/digits/new.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/users/show.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/digits/index.html.erb",
@@ -180,7 +303,6 @@
 		"/home/jstump/Development/projects/MarchMadness/spec/requests/pages_spec.rb",
 		"/home/jstump/Development/projects/MarchMadness/spec/requests/user_pages_spec.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/controllers/pages_controller.rb",
-		"/home/jstump/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/users.css.scss",
 		"/home/jstump/Development/projects/MarchMadness/app/views/shared/_error_messages.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140215163203_create_users.rb",
@@ -265,6 +387,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"auto",
 			"digit",
 			"@digit",
 			"\n  ",
@@ -298,7 +421,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 16,
 			"sheets":
 			[
 				{
@@ -313,12 +436,13 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								253,
+								253
 							]
 						],
 						"settings":
 						{
+							"codeintel": true,
 							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
@@ -461,18 +585,18 @@
 				},
 				{
 					"buffer": 2,
-					"file": "Gemfile",
+					"file": "app/controllers/users_controller.rb",
 					"settings":
 					{
-						"buffer_size": 1529,
+						"buffer_size": 735,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								387,
-								387
+								527,
+								527
 							]
 						],
 						"settings":
@@ -483,6 +607,392 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/users/_square_fields.html.erb",
+					"settings":
+					{
+						"buffer_size": 221,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": ".nested-fields",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/squares/_square_fields.html.erb",
+					"settings":
+					{
+						"buffer_size": 312,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								304,
+								304
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<div class=\"nested-fields\">",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/models/user.rb",
+					"settings":
+					{
+						"buffer_size": 226,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								142,
+								142
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/models/square.rb",
+					"settings":
+					{
+						"buffer_size": 225,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								69,
+								69
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/views/users/_form.html.erb",
+					"settings":
+					{
+						"buffer_size": 488,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "db/schema.rb",
+					"settings":
+					{
+						"buffer_size": 1177,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1011,
+								1011
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "spec/requests/users_spec.rb",
+					"settings":
+					{
+						"buffer_size": 1199,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								930,
+								930
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RSpec/RSpec.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "app/views/users/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 124,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "app/views/squares/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 823,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "spec/requests/squares_spec.rb",
+					"settings":
+					{
+						"buffer_size": 1559,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RSpec/RSpec.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "spec/requests/pages_spec.rb",
+					"settings":
+					{
+						"buffer_size": 365,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								212,
+								212
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RSpec/RSpec.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "spec/models/square_spec.rb",
+					"settings":
+					{
+						"buffer_size": 868,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								349,
+								349
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RSpec/RSpec.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "spec/models/user_spec.rb",
+					"settings":
+					{
+						"buffer_size": 527,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								254,
+								254
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RSpec/RSpec.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 1503,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								423,
+								423
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 765.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

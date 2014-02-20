@@ -12,6 +12,16 @@
     <%= f.label :last_name %>
     <%= f.text_field :last_name %>
 
+    <h3>Squares</h3>
+    <div id="squares">
+      <%= f.fields_for :squares do |square| %>
+        <%= render 'square_fields', :f => square %>
+      <% end %>
+      <div class="links">
+        <%= link_to_add_association 'add square', f, :squares %>
+      </div>
+    </div>
+
     <div class="offset3">
       <%= f.submit "Create", class: "btn btn-large btn-primary" %>
     </div>
