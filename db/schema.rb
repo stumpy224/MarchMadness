@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140219040631) do
+ActiveRecord::Schema.define(version: 20140221013301) do
+
+  create_table "payouts", force: true do |t|
+    t.integer  "game_payout"
+    t.integer  "round"
+    t.string   "year"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "squares", force: true do |t|
     t.integer  "user_id"

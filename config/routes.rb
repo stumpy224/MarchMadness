@@ -1,4 +1,6 @@
 MarchMadness::Application.routes.draw do
+  resources :payouts
+
   root  'pages#results'
   match '/bracket', to: 'pages#bracket',   via: 'get'
   #match "bracket" => "pages#bracket"
@@ -18,7 +20,6 @@ MarchMadness::Application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   resources :users
   resources :squares
-
   # Example resource route with options:
   #   resources :products do
   #     member do
