@@ -18,12 +18,13 @@
       <td class="column"><%= payout.year %></td>
       <td class="column"><%= payout.round %></td>
       <td class="column">$<%= payout.game_payout %></td>
-      <td class="column"><%= link_to "Show", payout %> |</td>
-      <td><%= link_to "Edit", edit_payout_path(payout) %> |</td>
-      <td><%= link_to "Destroy", payout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td class="column"><%= link_to 'Show', payout %> |</td>
+      <td><%= link_to 'Edit', edit_payout_path(payout) %> |</td>
+      <td><%= link_to 'Destroy', payout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
     <% end %>
   </tbody>
 </table>
+
 <br>
 <%= link_to 'New Payout', new_payout_path %>

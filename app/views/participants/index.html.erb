@@ -1,0 +1,47 @@
+<% provide(:title, "Show Participants") %>
+<h1>Listing participants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th class="column">Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @participants.each do |participant| %>
+    <tr>
+      <td class="column" style="text-align:left;"><%= participant.name %></td>
+      <td class="column"><%= link_to 'Show', participant %> |</td>
+      <td><%= link_to 'Edit', edit_participant_path(participant) %> |</td>
+      <td><%= link_to 'Destroy', participant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Winner's digit</th>
+          <th>Loser's digit</th>
+          <th>Year</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% Square.find(params[participant.id]) do |square| %>
+        <tr>
+          <td><%= square.winner_digit %></td>
+          <td><%= square.loser_digit %></td>
+          <td><%= square.year %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Participant', new_participant_path %>

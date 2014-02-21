@@ -1,21 +1,17 @@
-<% provide(:title, "Create Participant") %>
-<h1>Create Participant</h1>
-
 <div class="row">
   <div class="offset1">
-    <%= form_for(@user) do |f| %>
-    <%= render 'validation/error_messages_user' %>
+    <%= form_for(@participant) do |f| %>
+    <%= render 'validation/error_messages_participant' %>
 
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name, :autofocus => true %>
-
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name, :autofocus => true %>
+    </div>
 
     <h3>Squares</h3>
     <div id="squares">
       <%= f.fields_for :squares do |square| %>
-        <%= render 'square_fields', :f => square %>
+      <%= render 'square_fields', :f => square %>
       <% end %>
       <div class="links">
         <%= link_to_add_association 'add square', f, :squares %>

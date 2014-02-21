@@ -1,0 +1,11 @@
+<% provide(:title, "Show Participant") %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @participant.name %>
+</p>
+
+<%= link_to 'Edit', edit_participant_path(@participant) %> |
+<%= link_to 'New', participants_path %> |
+<%= link_to 'Show All', participants_path %>

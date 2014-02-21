@@ -31,7 +31,13 @@ class SquaresController < ApplicationController
 
   private
 
-  def square_params
-    params.require(:square).permit(:user_id, :winner_digit, :loser_digit, :year)
+    # Use callbacks to share common setup or constraints between actions.
+    def set_square
+      @square = Square.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def square_params
+      params.require(:square).permit(:winner_digit, :loser_digit, :year, :participant_id)
+    end
   end
-end
