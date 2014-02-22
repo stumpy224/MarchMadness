@@ -3,4 +3,5 @@ class Square < ActiveRecord::Base
   validates :winner_digit, presence: true
   validates :loser_digit, presence: true
   validates :year, presence: true
+  validates :participant_id, presence: true
 end

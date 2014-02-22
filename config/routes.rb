@@ -1,6 +1,7 @@
 MarchMadness::Application.routes.draw do
   resources :participants
   resources :payouts
+  resources :results
   resources :squares
 
   root  'pages#results'

@@ -1,0 +1,20 @@
+@import "bootstrap";
+
+.nameColumn {
+  padding-left: 30px;
+  text-align:left;
+}
+
+.column {
+  padding-left: 30px;
+  text-align: center;
+}
+
+.totalsColumn {
+  @extend .column;
+  font-weight: bold;
+}
+
+.linkColumn {
+  padding-left: 20px;
+}

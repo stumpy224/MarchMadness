@@ -1,0 +1,60 @@
+<% provide(:title, "Show Results") %>
+<h1>Listing results</h1>
+<div class="row">
+  <table>
+    <thead>
+      <th class="nameColumn">Name</th>
+      <th class="column">Year</th>
+      <th class="column">Round</th>
+      <th class="column">Amt Paid</th>
+      <th class="column">Amt Won</th>
+      <th class="column">Profit</th>
+      <th class="linkColumn"/>
+    </thead>
+
+    <tbody>
+      <% @participants.each do |participant| %>
+      <% @totalPaid = 0 %>
+      <% @totalWon = 0 %>
+      <% @totalProfit = 0 %>
+      <tr>
+        <td class="nameColumn"><%= participant.name %></td>
+      </tr>
+
+      <% for result in participant.results %>
+      <% @totalPaid += 5 %>
+      <tr>
+        <td>&nbsp;</td>
+        <td class="column"><%= result.year %></td>
+        <td class="column"><%= result.round %></td>
+        <td class="column">$5</td>
+
+        <% @payouts.each do |payout| %>
+        <% if result.round == payout.round %>
+        <% @totalWon += payout.game_payout %>
+        <% @totalProfit += (@totalWon - @totalPaid) %>
+        <td class="column">$<%= payout.game_payout %></td>
+        <td class="column">$<%= (payout.game_payout-5) %></td>
+        <% end %>
+        <% end %>
+        <td class="linkColumn">
+          <%= link_to 'Edit', edit_result_path(result) %> |
+          <%= link_to 'Destroy', result, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+      <% end %>
+
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td class="totalsColumn">$<%= @totalPaid %></td>
+        <td class="totalsColumn">$<%= @totalWon %></td>
+        <td class="totalsColumn">$<%= @totalProfit %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<br/>
+<%= link_to 'New Result', new_result_path %>
