@@ -7,6 +7,7 @@ class ParticipantsController < ApplicationController
   # GET /participants.json
   def index
     @participants = Participant.all.order(:name)
+    @squares = Square.all
   end
 
   # GET /participants/1

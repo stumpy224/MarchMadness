@@ -1,11 +1,27 @@
-<% provide(:title, "Show Participant") %>
-<p id="notice"><%= notice %></p>
+<% provide(:title, "View Participant") %>
+<h1><%= @participant.name %></h1>
+<h3>Squares</h3>
 
-<p>
-  <strong>Name:</strong>
-  <%= @participant.name %>
-</p>
-
+<div class="row">
+  <table>
+    <thead>
+      <th class="yearColumn">Year</th>
+      <th class="digitColumn">Winner's Digit</th>
+      <th class="digitColumn">Loser's Digit</th>
+    </thead>
+    <tbody>
+      <% for square in @participant.squares %>
+      <tr>
+        <td class="yearColumn"><%= square.year %></td>
+        <td class="digitColumn"><%= square.winner_digit %></td>
+        <td class="digitColumn"><%= square.loser_digit %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<br/>
 <%= link_to 'Edit', edit_participant_path(@participant) %> |
+<%= link_to 'Destroy', @participant, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'New', participants_path %> |
 <%= link_to 'Show All', participants_path %>
