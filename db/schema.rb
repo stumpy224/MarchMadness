@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140221040943) do
+ActiveRecord::Schema.define(version: 20140222023610) do
 
   create_table "participants", force: true do |t|
     t.string   "name"
@@ -35,5 +35,7 @@ ActiveRecord::Schema.define(version: 20140221040943) do
     t.datetime "updated_at"
     t.integer  "participant_id"
   end
+
+  add_index "squares", ["participant_id"], name: "index_squares_on_participant_id"
 
 end
