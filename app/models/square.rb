@@ -1,7 +1,4 @@
 class Square < ActiveRecord::Base
   belongs_to :participant
-  validates :winner_digit, presence: true
-  validates :loser_digit, presence: true
-  validates :year, presence: true
-  validates :participant_id, presence: true
+  validates_presence_of :winner_digit, :loser_digit, :year, :participant_id
 end

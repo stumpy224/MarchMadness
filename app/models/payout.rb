@@ -1,5 +1,3 @@
 class Payout < ActiveRecord::Base
-  validates :game_payout, presence: true
-  validates :round, presence: true
-  validates :year, presence: true
+  validates_presence_of :game_payout, :round, :year
 end
