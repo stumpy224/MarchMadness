@@ -5,8 +5,7 @@ MarchMadness::Application.routes.draw do
   resources :squares
 
   root  'pages#results'
-  match '/bracket', to: 'pages#bracket',   via: 'get'
-  #match "bracket" => "pages#bracket"
+  match '/bracket', to: 'pages#bracket', via: 'get'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

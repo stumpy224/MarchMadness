@@ -1,11 +1,14 @@
+require 'net/http'
+
 class ResultsController < ApplicationController
   before_action :set_result, only: [:show, :edit, :update, :destroy]
   http_basic_authenticate_with :name => "stumpy224", :password => "sochi2014", :only => [:create, :edit, :destroy]
 
+  helper_method :check_for_results
+
   # GET /results
   # GET /results.json
   def index
-    @jsonResponse = parse_json
     @participants = Participant.all.order(:name)
     @payouts = Payout.all
     @results = Result.all
@@ -69,7 +72,23 @@ class ResultsController < ApplicationController
     end
   end
 
-  private
+  def check_for_results
+   if get_bracket_response.is_a?(Net::HTTPSuccess)
+    parse_json(get_bracket_response).each do |parsed_game|
+      game = translate_game_info parsed_game
+
+      if Result.find_by(round: game.round, year: Time.new.year, bracket_position_id: game.bracket_position_id).blank?
+        square = Square.find_by winner_digit: game.winner_digit, loser_digit: game.loser_digit
+        
+        create_new_result game, square if square.present?
+      end
+    end
+  else
+    flash[:notice] = "Please try refreshing the page to get the latest results."
+  end
+end
+
+private
     # Use callbacks to share common setup or constraints between actions.
     def set_result
       @result = Result.find(params[:id])
@@ -78,158 +97,53 @@ class ResultsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def result_params
-      params.require(:result).permit(:participant_id, :round, :year)
+      params.require(:result).permit(:participant_id, :round, :year, :bracket_position_id)
     end
 
-    def parse_json
-      sample_response = '{
-          "games": [
-    {
-          "contestId":"302606",
-          "bracketPositionId":"602",
-          "away": {
-            
-                "score":"56",
-                "names": {
-                  "full": "Syracuse University",
-                  "short": "Syracuse",
-                  "seo": "syracuse",
-                  "char6": "SYR",
-                  "char8": "",
-                  "char10": ""
-                },
-                "description":"",
-                "iconURL":"/sites/default/files/images/logos/schools/s/syracuse.70.png",
-                "radioUrl":"",
-                "isTop":"F",
-                "winner":"false"
-              
-          },
-          "currentPeriod":"Final",
-          "finalMessage":"Final",
-          "gameDate": "SATURDAY , APRIL    06",
-          "gameDateShort": "APR. 06",
-          "startTime":"09:21PM ET",
-          "startTimeShort":"09:21P.M.",
-          "startTimeEpoch":"1365283260",
-          "gameState":"final",
-          "home": {
-            
-                "score":"61",
-                "names": {
-                  "full": "University of Michigan",
-                  "short": "Michigan",
-                  "seo": "michigan",
-                  "char6": "MICH",
-                  "char8": "",
-                  "char10": ""
-                },
-                "description":"",
-                "iconURL":"/sites/default/files/images/logos/schools/m/michigan.70.png",
-                "radioUrl":"",
-                "isTop":"T",
-                "winner":"true"
-              
-          },
-          "timeclock":"0:00",
-          "round":"6",
-          "location": "Georgia Dome, Atlanta, Ga.",
-          "network":"CBS",
-          "url":"/game/basketball-men/d1/2013/04/06/syracuse-michigan",
-          "liveStatsEnabled": "0",
-          "previewUrl": "",
-          "watchLiveUrl":"http://www.ncaa.com/march-madness-live/game/602",
-          "gameCenterUrl": "",
-          "externalStatsUrl": "",
-          "liveVideoExternalUrl": "",
-          "nationalRadioUrl": "",
-          "boxScoreUrl": "",
-          "recapUrl": "http://www.ncaa.com/game/basketball-men/d1/2013/04/06/syracuse-michigan#recap",
-          "highlightUrl":"http://www.ncaa.com/menshighlights/game/602",
-          "ticketsUrl":"",
-          "seedTop": "4",
-          "seedBottom": "4",
-          "textOverrideTop":null,
-          "textOverrideBottom":null
-        }
-      ,
-        {
-          "contestId":"302607",
-          "bracketPositionId":"701",
-          "away": {
-            
-                "score":"76",
-                "names": {
-                  "full": "University of Michigan",
-                  "short": "Michigan",
-                  "seo": "michigan",
-                  "char6": "MICH",
-                  "char8": "",
-                  "char10": ""
-                },
-                "description":"(31-8)",
-                "iconURL":"/sites/default/files/images/logos/schools/m/michigan.70.png",
-                "radioUrl":"",
-                "isTop":"F",
-                "winner":"false"
-              
-          },
-          "currentPeriod":"Final",
-          "finalMessage":"Final",
-          "gameDate": "MONDAY   , APRIL    08",
-          "gameDateShort": "APR. 08",
-          "startTime":"09:23PM ET",
-          "startTimeShort":"09:23P.M.",
-          "startTimeEpoch":"1365456180",
-          "gameState":"final",
-          "home": {
-            
-                "score":"82",
-                "names": {
-                  "full": "University of Louisville",
-                  "short": "Louisville",
-                  "seo": "louisville",
-                  "char6": "LOUIS",
-                  "char8": "",
-                  "char10": ""
-                },
-                "description":"(35-5)",
-                "iconURL":"/sites/default/files/images/logos/schools/l/louisville.70.png",
-                "radioUrl":"",
-                "isTop":"T",
-                "winner":"true"
-              
-          },
-          "timeclock":"0:00",
-          "round":"7",
-          "location": "Georgia Dome, Atlanta, Ga.",
-          "network":"CBS",
-          "url":"/game/basketball-men/d1/2013/04/08/michigan-louisville",
-          "liveStatsEnabled": "1",
-          "previewUrl": "",
-          "watchLiveUrl":"http://www.ncaa.com/march-madness-live/game/701",
-          "gameCenterUrl": "",
-          "externalStatsUrl": "",
-          "liveVideoExternalUrl": "",
-          "nationalRadioUrl": "",
-          "boxScoreUrl": "",
-          "recapUrl": "http://www.ncaa.com/game/basketball-men/d1/2013/04/08/michigan-louisville",
-          "highlightUrl":"http://www.ncaa.com/menshighlights/game/701",
-          "ticketsUrl":"",
-          "seedTop": "1",
-          "seedBottom": "4",
-          "textOverrideTop":null,
-          "textOverrideBottom":null
-        }
-          ]
-        }'
+    def get_bracket_response
+      url = 'http://data.ncaa.com/jsonp/gametool/brackets/championships/basketball-men/d1/2012/data.json'
+      Net::HTTP.get_response(URI.parse(url))
+    end
 
-      parse_result = JSON.parse(sample_response)
+    def parse_json(response)
+      formatted_response = (response.body.sub! 'callbackWrapper(', '').sub! '});', '}'
+      json_response = JSON.parse(formatted_response)
+      json_response['games']
+    end
 
-      output = " "
+    def translate_game_info(parsed_game)
+      Game.clean_up
+      game = Game.new
+      game.round = parsed_game['round']
+      game.bracket_position_id = parsed_game['bracketPositionId']
 
-      parse_result.each do |game|
-        output = game["contestId"]
+      if parsed_game['away']['winner'] == "true"
+        game.winner_digit = away_team_score parsed_game
+        game.loser_digit = home_team_score parsed_game
+      else
+        game.winner_digit = home_team_score parsed_game
+        game.loser_digit = away_team_score parsed_game
       end
+
+      return game
     end
-end
+
+    def away_team_score(parsed_game)
+      parsed_game['away']['score'].last(1)
+    end
+
+    def home_team_score(parsed_game)
+      parsed_game['home']['score'].last(1)
+    end
+
+    def create_new_result(game, square)
+      result = Result.new do |r|
+        r.participant_id = square.participant_id
+        r.round = game.round
+        r.year = Time.new.year
+        r.bracket_position_id = game.bracket_position_id
+      end
+
+      result.save
+    end
+  end
