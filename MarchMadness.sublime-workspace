@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"get",
+				"get_bracket_response"
+			],
+			[
+				"par",
+				"parse_json"
+			],
+			[
+				"create",
+				"create_new_game"
+			],
+			[
 				"json",
 				"json_response"
 			],
@@ -22,10 +34,6 @@
 			[
 				"parti",
 				"participant"
-			],
-			[
-				"par",
-				"participant_id"
 			],
 			[
 				"brack",
@@ -151,7 +159,7 @@
 			"file": "app/controllers/results_controller.rb",
 			"settings":
 			{
-				"buffer_size": 3812,
+				"buffer_size": 4222,
 				"line_ending": "Unix"
 			}
 		},
@@ -175,7 +183,7 @@
 			"file": "config/routes.rb",
 			"settings":
 			{
-				"buffer_size": 1793,
+				"buffer_size": 1754,
 				"line_ending": "Unix"
 			}
 		},
@@ -199,12 +207,12 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 54.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
 				"p",
-				"Package Control: Install Package"
+				"Package Control: List Packages"
 			],
 			[
 				"beau",
@@ -232,6 +240,7 @@
 	},
 	"file_history":
 	[
+		"/home/jstump/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
 		"/home/jstump/Development/projects/MarchMadness/app/views/results/new.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/results/_form.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/helpers/results_helper.rb",
@@ -357,7 +366,6 @@
 		"/home/jstump/Development/projects/MarchMadness/spec/requests/digits_spec.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/application.css",
 		"/home/jstump/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
-		"/home/jstump/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
 		"/home/jstump/Development/projects/MarchMadness/app/views/pages/bracket.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/spec/requests/user_pages_spec.rb"
 	],
@@ -378,6 +386,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"translate_game_info",
+			"results",
 			"parse_json",
 			"puts",
 			"user_id",
@@ -419,7 +429,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -427,15 +437,15 @@
 					"file": "app/controllers/results_controller.rb",
 					"settings":
 					{
-						"buffer_size": 3812,
+						"buffer_size": 4222,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3285,
-								3063
+								1965,
+								1965
 							]
 						],
 						"settings":
@@ -445,7 +455,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1462.0,
+						"translation.y": 1078.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -509,15 +519,15 @@
 					"file": "config/routes.rb",
 					"settings":
 					{
-						"buffer_size": 1793,
+						"buffer_size": 1754,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								155,
-								155
+								206,
+								206
 							]
 						],
 						"settings":

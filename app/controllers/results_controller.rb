@@ -75,12 +75,14 @@ class ResultsController < ApplicationController
   def check_for_results
    if get_bracket_response.is_a?(Net::HTTPSuccess)
     parse_json(get_bracket_response).each do |parsed_game|
-      game = translate_game_info parsed_game
+      if parsed_game['gameState'].upcase == "FINAL"
+        game = translate_game_info parsed_game
 
-      if Result.find_by(round: game.round, year: Time.new.year, bracket_position_id: game.bracket_position_id).blank?
-        square = Square.find_by winner_digit: game.winner_digit, loser_digit: game.loser_digit
-        
-        create_new_result game, square if square.present?
+        if Result.find_by(round: game.round, year: Time.new.year, bracket_position_id: game.bracket_position_id).blank?
+          square = Square.find_by winner_digit: game.winner_digit, loser_digit: game.loser_digit
+          
+          create_new_result game, square if square.present?
+        end
       end
     end
   else
