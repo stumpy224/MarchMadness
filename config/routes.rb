@@ -3,10 +3,14 @@ MarchMadness::Application.routes.draw do
   resources :payouts
   resources :results
   resources :squares
+  resources :sessions, only: [:new, :create, :destroy]
 
   root  'pages#results'
   match '/bracket', to: 'pages#bracket', via: 'get'
-  
+
+  match '/login', to: 'sessions#new', via: 'get'
+  match '/logout', to: 'sessions#destroy', via: 'delete'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

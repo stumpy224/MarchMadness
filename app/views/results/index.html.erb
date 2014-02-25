@@ -38,10 +38,12 @@
         <td class="column">$<%= (payout.game_payout-5) %></td>
         <% end %>
         <% end %>
+        <% if admin? %>
         <td class="linkColumn">
           <%= link_to 'Edit', edit_result_path(result) %> |
           <%= link_to 'Destroy', result, method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>
+        <% end %>
       </tr>
       <% end %>
 

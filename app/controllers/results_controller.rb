@@ -80,7 +80,7 @@ class ResultsController < ApplicationController
 
         if Result.find_by(round: game.round, year: Time.new.year, bracket_position_id: game.bracket_position_id).blank?
           square = Square.find_by winner_digit: game.winner_digit, loser_digit: game.loser_digit
-          
+
           create_new_result game, square if square.present?
         end
       end
