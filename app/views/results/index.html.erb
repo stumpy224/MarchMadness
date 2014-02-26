@@ -1,6 +1,6 @@
-<% provide(:title, "Show Results") %>
+<% provide(:title, "Results") %>
 <h1>Listing results</h1>
-<% check_for_results %>
+<%= link_to "Refresh", refresh_results_path, class: "btn btn-large btn-primary offset7" %>
 <div class="row">
   <table>
     <thead>

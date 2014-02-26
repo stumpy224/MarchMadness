@@ -73,21 +73,23 @@ class ResultsController < ApplicationController
   end
 
   def check_for_results
-  #  if get_bracket_response.is_a?(Net::HTTPSuccess)
-  #   parse_json(get_bracket_response).each do |parsed_game|
-  #     if parsed_game['gameState'].upcase == "FINAL"
-  #       game = translate_game_info parsed_game
+   if get_bracket_response.is_a?(Net::HTTPSuccess)
+    parse_json(get_bracket_response).each do |parsed_game|
+      if parsed_game['gameState'].upcase == "FINAL"
+        game = translate_game_info parsed_game
 
-  #       if Result.find_by(round: game.round, year: Time.new.year, bracket_position_id: game.bracket_position_id).blank?
-  #         square = Square.find_by winner_digit: game.winner_digit, loser_digit: game.loser_digit
+        if Result.find_by(round: game.round, year: Time.new.year, bracket_position_id: game.bracket_position_id).blank?
+          square = Square.find_by winner_digit: game.winner_digit, loser_digit: game.loser_digit
 
-  #         create_new_result game, square if square.present?
-  #       end
-  #     end
-  #   end
-  # else
-  #   flash[:notice] = "Please try refreshing the page to get the latest results."
-  # end
+          create_new_result game, square if square.present?
+        end
+      end
+    end
+
+    redirect_to action: 'index'
+  else
+    flash[:notice] = "Please try refreshing the page to get the latest results."
+  end
 end
 
 private
@@ -139,13 +141,10 @@ private
     end
 
     def create_new_result(game, square)
-      result = Result.new do |r|
-        r.participant_id = square.participant_id
-        r.round = game.round
-        r.year = Time.new.year
-        r.bracket_position_id = game.bracket_position_id
-      end
-
-      result.save
+      Result.create(
+          participant_id: square.participant_id,
+          round: game.round,
+          year: Time.new.year,
+          bracket_position_id: game.bracket_position_id)
     end
   end
