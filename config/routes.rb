@@ -1,15 +1,14 @@
 MarchMadness::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   resources :participants
   resources :payouts
   resources :results
   resources :squares
-  resources :sessions, only: [:new, :create, :destroy]
 
-  root  'pages#results'
-  match '/bracket', to: 'pages#bracket', via: 'get'
-
-  match '/login', to: 'sessions#new', via: 'get'
-  match '/logout', to: 'sessions#destroy', via: 'delete'
+  root 'results#index'
+  get '/bracket', to: 'pages#bracket'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -5,7 +5,6 @@ ruby '2.0.0'
 gem 'rails', '4.0.2'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'cocoon', '~> 1.2.0'
-gem 'figaro'
 
 group :development, :test do
   gem 'sqlite3'
@@ -19,6 +18,15 @@ group :test do
   gem 'libnotify', '0.8.0'
   gem 'factory_girl_rails', '4.2.1'
 end
+
+# Use for Active Admin
+gem 'devise',              github: 'plataformatec/devise'
+gem 'responders',          github: 'plataformatec/responders'
+gem 'inherited_resources', github: 'josevalim/inherited_resources'
+gem 'ransack',             github: 'ernie/ransack'
+gem 'activeadmin',         github: 'gregbell/active_admin'
+gem 'formtastic',          github: 'justinfrench/formtastic'
+gem 'cancancan', '~> 1.7'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

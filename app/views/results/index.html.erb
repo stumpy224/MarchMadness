@@ -23,41 +23,33 @@
       </tr>
 
       <% for result in participant.results %>
-      <% @totalPaid += 5 %>
-      <tr>
-        <td>&nbsp;</td>
-        <td class="column"><%= result.year %></td>
-        <td class="column"><%= result.round %></td>
-        <td class="column">$5</td>
+        <% @totalPaid += 5 %>
+        <tr>
+          <td>&nbsp;</td>
+          <td class="column"><%= result.year %></td>
+          <td class="column"><%= result.round %></td>
+          <td class="column">$5</td>
 
-        <% @payouts.each do |payout| %>
-        <% if result.round == payout.round %>
-        <% @totalWon += payout.game_payout %>
-        <% @totalProfit += (@totalWon - @totalPaid) %>
-        <td class="column">$<%= payout.game_payout %></td>
-        <td class="column">$<%= (payout.game_payout-5) %></td>
+          <% @payouts.each do |payout| %>
+            <% if result.round == payout.round %>
+              <% @totalWon += payout.game_payout %>
+              <% @totalProfit += (@totalWon - @totalPaid) %>
+              <td class="column">$<%= payout.game_payout %></td>
+              <td class="column">$<%= (payout.game_payout-5) %></td>
+            <% end %>
+          <% end %>
+        </tr>
         <% end %>
-        <% end %>
-        <% if admin? %>
-        <td class="linkColumn">
-          <%= link_to 'Edit', edit_result_path(result) %> |
-          <%= link_to 'Destroy', result, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
-        <% end %>
-      </tr>
-      <% end %>
 
-      <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td class="totalsColumn">$<%= @totalPaid %></td>
-        <td class="totalsColumn">$<%= @totalWon %></td>
-        <td class="totalsColumn">$<%= @totalProfit %></td>
-      </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td class="totalsColumn">$<%= @totalPaid %></td>
+          <td class="totalsColumn">$<%= @totalWon %></td>
+          <td class="totalsColumn">$<%= @totalProfit %></td>
+        </tr>
       <% end %>
     </tbody>
   </table>
 </div>
-<br/>
-<%= link_to 'New Result', new_result_path %>
