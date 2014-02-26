@@ -2,10 +2,7 @@ MarchMadness::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  resources :participants
-  resources :payouts
   resources :results
-  resources :squares
 
   root 'results#index'
   get '/bracket', to: 'pages#bracket'

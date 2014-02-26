@@ -7,22 +7,14 @@
     <thead>
       <th class="yearColumn">Year</th>
       <th class="digitColumn">Round</th>
-      <th class="linkColumn"/>
     </thead>
     <tbody>
       <% for result in @participant.results %>
       <tr>
         <td class="yearColumn"><%= result.year %></td>
-        <td class="digitColumn"><%= result.round %></td>
-        <td class="linkColumn">
-          <%= link_to 'Edit', edit_result_path(result) %> |
-          <%= link_to 'Destroy', result, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
+        <td class="digitColumn"><%= result.round %></td>                                        
       </tr>
       <% end %>
     </tbody>
   </table>
 </div>
-<br/>
-<%= link_to 'New', new_result_path %> |
-<%= link_to 'Show Results', results_path %>

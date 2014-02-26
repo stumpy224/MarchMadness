@@ -1,4 +1,6 @@
 ActiveAdmin.register Result do
+  permit_params :participant_id, :round, :year, :bracket_position_id
+  
   index do
     column :year, sortable: :year do |result|
       div class: "year" do

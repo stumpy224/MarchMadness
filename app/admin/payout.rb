@@ -1,4 +1,6 @@
 ActiveAdmin.register Payout do
+  permit_params :game_payout, :round, :year
+
   config.sort_order = "year_asc, game_payout_asc"
 
   index do
