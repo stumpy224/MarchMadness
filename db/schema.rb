@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140226003335) do
+ActiveRecord::Schema.define(version: 20140226235434) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 20140226003335) do
     t.string   "year"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "bracket_position_id"
+    t.integer  "game_id"
   end
 
   add_index "results", ["participant_id"], name: "index_results_on_participant_id"

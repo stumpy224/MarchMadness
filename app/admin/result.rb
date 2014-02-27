@@ -1,5 +1,5 @@
 ActiveAdmin.register Result do
-  permit_params :participant_id, :round, :year, :bracket_position_id
+  permit_params :participant_id, :round, :year, :game_id
   
   index do
     column :year, sortable: :year do |result|
@@ -15,7 +15,7 @@ ActiveAdmin.register Result do
         result.round
       end
     end
-    column "Game Payout", sortable: :bracket_position_id do |result|
+    column "Game Payout", sortable: :game_id do |result|
       div class: "payout" do
         number_to_currency Payout.find_by(round: result.round, year: result.year).game_payout
       end

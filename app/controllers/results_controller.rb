@@ -73,26 +73,26 @@ class ResultsController < ApplicationController
   end
 
   def check_for_results
-   if get_bracket_response.is_a?(Net::HTTPSuccess)
-    parse_json(get_bracket_response).each do |parsed_game|
-      if parsed_game['gameState'].upcase == "FINAL"
-        game = translate_game_info parsed_game
+    redirect_to action: 'index'
+    
+    if get_bracket_response.is_a?(Net::HTTPSuccess)
+      parse_json(get_bracket_response).each do |parsed_game|
+        if parsed_game['gameState'].upcase == "FINAL"
+          game = translate_game_info(parsed_game)
 
-        if Result.find_by(round: game.round, year: Time.new.year, bracket_position_id: game.bracket_position_id).blank?
-          square = Square.find_by winner_digit: game.winner_digit, loser_digit: game.loser_digit
+          if Result.find_by(round: game.round, year: Time.new.year, game_id: game.game_id).blank?
+            square = Square.find_by(winner_digit: game.winner_digit, loser_digit: game.loser_digit)
 
-          create_new_result game, square if square.present?
+            create_new_result game, square if square.present?
+          end
         end
       end
+    else
+      flash[:error] = "An error occurred.  Please try clicking Refresh again to get the latest results."
     end
-
-    redirect_to action: 'index'
-  else
-    flash[:notice] = "Please try refreshing the page to get the latest results."
   end
-end
 
-private
+  private
     # Use callbacks to share common setup or constraints between actions.
     def set_result
       @result = Result.find(params[:id])
@@ -101,7 +101,7 @@ private
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def result_params
-      params.require(:result).permit(:participant_id, :round, :year, :bracket_position_id)
+      params.require(:result).permit(:participant_id, :round, :year, :game_id)
     end
 
     def get_bracket_response
@@ -119,7 +119,7 @@ private
       Game.clean_up
       game = Game.new
       game.round = parsed_game['round']
-      game.bracket_position_id = parsed_game['bracketPositionId']
+      game.game_id = parsed_game['contestId']
 
       if parsed_game['away']['winner'] == "true"
         game.winner_digit = away_team_score parsed_game
@@ -142,9 +142,9 @@ private
 
     def create_new_result(game, square)
       Result.create(
-          participant_id: square.participant_id,
-          round: game.round,
-          year: Time.new.year,
-          bracket_position_id: game.bracket_position_id)
+        participant_id: square.participant_id,
+        round: game.round,
+        year: Time.new.year,
+        game_id: game.game_id)
     end
   end
