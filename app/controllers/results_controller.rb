@@ -12,6 +12,7 @@ class ResultsController < ApplicationController
     @participants = Participant.all.order(:name)
     @payouts = Payout.all
     @results = Result.all
+    @most_recent_result_date_time = Result.last.updated_at
   end
 
   # GET /results/1
@@ -75,21 +76,21 @@ class ResultsController < ApplicationController
   def check_for_results
     redirect_to action: 'index'
     
-    if get_bracket_response.is_a?(Net::HTTPSuccess)
-      parse_json(get_bracket_response).each do |parsed_game|
-        if parsed_game['gameState'].upcase == "FINAL"
-          game = translate_game_info(parsed_game)
+    # if get_bracket_response.is_a?(Net::HTTPSuccess)
+    #   parse_json(get_bracket_response).each do |parsed_game|
+    #     if parsed_game['gameState'].upcase == "FINAL"
+    #       game = translate_game_info(parsed_game)
 
-          if Result.find_by(round: game.round, year: Time.new.year, game_id: game.game_id).blank?
-            square = Square.find_by(winner_digit: game.winner_digit, loser_digit: game.loser_digit)
+    #       if Result.find_by(round: game.round, year: Time.new.year, game_id: game.game_id).blank?
+    #         square = Square.find_by(winner_digit: game.winner_digit, loser_digit: game.loser_digit)
 
-            create_new_result game, square if square.present?
-          end
-        end
-      end
-    else
-      flash[:error] = "An error occurred.  Please try clicking Refresh again to get the latest results."
-    end
+    #         create_new_result game, square if square.present?
+    #       end
+    #     end
+    #   end
+    # else
+    #   flash[:error] = "An error occurred.  Please try clicking Refresh again to get the latest results."
+    # end
   end
 
   private
