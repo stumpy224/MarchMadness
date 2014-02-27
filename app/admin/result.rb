@@ -15,9 +15,14 @@ ActiveAdmin.register Result do
         result.round
       end
     end
-    column "Game Payout", sortable: :game_id do |result|
+    column "Game Payout" do |result|
       div class: "payout" do
         number_to_currency Payout.find_by(round: result.round, year: result.year).game_payout
+      end
+    end
+    column "Game Id", sortable: :game_id do |result|
+      div class: "game" do
+        result.game_id
       end
     end
     column "Date Created", :created_at
