@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"bor",
+				"border-bottom"
+			],
+			[
 				"game",
 				"game_id"
 			],
@@ -203,7 +207,7 @@
 			"file": "app/views/results/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 1979,
+				"buffer_size": 2002,
 				"line_ending": "Unix"
 			}
 		},
@@ -211,15 +215,15 @@
 			"file": "app/assets/stylesheets/results.css.scss",
 			"settings":
 			{
-				"buffer_size": 1188,
+				"buffer_size": 1244,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/assets/javascripts/results.js.coffee",
+			"file": "app/assets/javascripts/application.js",
 			"settings":
 			{
-				"buffer_size": 5924,
+				"buffer_size": 6659,
 				"line_ending": "Unix"
 			}
 		}
@@ -260,6 +264,7 @@
 	},
 	"file_history":
 	[
+		"/home/jstump/Development/projects/MarchMadness/app/assets/javascripts/results.js.coffee",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/custom.css.scss",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/foundation_and_overrides.scss",
 		"/home/jstump/Development/projects/MarchMadness/app/views/layouts/application.html.erb",
@@ -386,8 +391,7 @@
 		"/home/jstump/Development/projects/MarchMadness/app/views/squares/_form.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/javascripts/application.js",
 		"/home/jstump/Development/projects/MarchMadness/app/views/squares/_square_fields.html.erb",
-		"/home/jstump/Development/projects/MarchMadness/spec/requests/squares_spec.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/views/users/new.html.erb"
+		"/home/jstump/Development/projects/MarchMadness/spec/requests/squares_spec.rb"
 	],
 	"find":
 	{
@@ -395,7 +399,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			""
@@ -406,6 +410,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"table",
 			"include-html-classes",
 			"bracket_position_id",
 			"comments",
@@ -453,7 +458,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -550,8 +555,8 @@
 						"selection":
 						[
 							[
-								36939,
-								36939
+								34303,
+								34303
 							]
 						],
 						"settings":
@@ -559,7 +564,7 @@
 							"syntax": "Packages/SCSS/SCSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 18814.0,
+						"translation.y": 17217.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -569,15 +574,15 @@
 					"file": "app/views/results/index.html.erb",
 					"settings":
 					{
-						"buffer_size": 1979,
+						"buffer_size": 2002,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								125,
-								125
+								1725,
+								1725
 							]
 						],
 						"settings":
@@ -587,7 +592,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 493.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -597,49 +602,53 @@
 					"file": "app/assets/stylesheets/results.css.scss",
 					"settings":
 					{
-						"buffer_size": 1188,
+						"buffer_size": 1244,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1188,
-								1188
+								528,
+								528
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 306.0,
+						"translation.y": 459.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "app/assets/javascripts/results.js.coffee",
+					"file": "app/assets/javascripts/application.js",
 					"settings":
 					{
-						"buffer_size": 5924,
+						"buffer_size": 6659,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								54,
-								54
+								707,
+								707
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 115.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
