@@ -1,11 +1,13 @@
 class Game
-  attr_accessor(:winner_digit, :loser_digit, :round, :game_id)
+  attr_accessor(:game_id, :bracket_position_id, :game_state, :winner_score, :loser_score, :round)
 
   def initialize(attributes = {})
-    @winner_digit = attributes[:winner_digit]
-    @loser_digit = attributes[:loser_digit]
-    @round = attributes[:round]
     @game_id = attributes[:game_id]
+    @bracket_position_id = attributes[:bracket_position_id]
+    @game_state = attributes[:game_state]
+    @winner_score = attributes[:winner_score]
+    @loser_score = attributes[:loser_score]
+    @round = attributes[:round]
   end
 
   def self.all

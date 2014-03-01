@@ -1,0 +1,6 @@
+<div style='padding-bottom:15px;'>
+  <% if !@results.blank? %>
+    <%= @most_recent_result_date_time.strftime('Last updated: %m/%d/%Y at %I:%M %p') %>
+  <% end %>
+  <span style='padding-left:20px;'><%= link_to 'Refresh', refresh_results_path, class: 'btn btn-default btn-primary' %></span>
+</div>

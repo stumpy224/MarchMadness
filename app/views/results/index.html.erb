@@ -1,14 +1,9 @@
 <% provide(:title, 'Results') %>
 <div align='center'>
 <div class='page-header'><h1>Results</h1></div>
-<div style='padding-bottom:15px;'>
-  <% if !@results.blank? %>
-    <%= @most_recent_result_date_time.strftime('Last updated: %m/%d/%Y at %I:%M %p') %>
-  <% end %>
-  <span style='padding-left:20px;'><%= link_to 'Refresh', refresh_results_path, class: 'btn btn-default btn-primary' %></span>
-</div>
+<%= render 'refresh' %>
 <table>
-  <thead background='silver'>
+  <thead class='headerRow'>
     <tr>
     <th class='nameColumn'>Name</th>
     <th class='roundColumn'>Round</th>

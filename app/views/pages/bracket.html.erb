@@ -5,6 +5,7 @@
      <div class="clearfix"></div>
      <div style="width:990px;position:relative;" class="bracketParent grid34" >
         <div id="bracket" class="bracket-games topGames16">
+          <!-- loop through each game here -->
            <div id="section21" class="ltr" style="position:relative; width:495px; height:537px;  float:left;"  >
               <span class="regionHeadingTop">Midwest</span>
               <div class="column1 round  " style="width:165px;">
@@ -13,38 +14,25 @@
                     <span class="rTitle">Second Round</span>
                  </div>
                  <div id="game201" class="gameSet  game-xs "style="margin-bottom:10px;margin-top:0px;" >
-                    <div class="live-top"></div>
-                    <div class="game-cell">
-                       <div class="teamInfo_top">
-                          <div class="teamLogo"></div>
-                          <div class="teamSeed"></div>
-                          <div class="teamName"></div>
-                          <div class="status"></div>
-                       </div>
-                       <div class="teamInfo_bottom">
-                          <div class="teamLogo"></div>
-                          <div class="teamSeed"></div>
-                          <div class="teamName"></div>
-                          <div class="status"></div>
-                       </div>
-                    </div>
-                    <div class="live-bottom"></div>
+                    <%= render 'game' %>
                  </div>
                  <div id="game202" class="gameSet  game-xs "style="margin-bottom:10px;" >
                     <div class="live-top"></div>
                     <div class="game-cell">
+                      <!-- check if the bracket_position_id matches -->
                        <div class="teamInfo_top">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
+                       <!-- end if -->
                     </div>
                     <div class="live-bottom"></div>
                  </div>
@@ -55,13 +43,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -73,13 +61,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -91,13 +79,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -109,13 +97,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -127,13 +115,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -145,13 +133,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -169,13 +157,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -187,13 +175,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -205,13 +193,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -223,13 +211,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -247,13 +235,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -265,13 +253,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -289,13 +277,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -313,13 +301,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -331,13 +319,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -349,13 +337,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -367,13 +355,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -385,13 +373,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -403,13 +391,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -421,13 +409,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -439,13 +427,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -463,13 +451,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -481,13 +469,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -499,13 +487,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -517,13 +505,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -541,13 +529,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -559,13 +547,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -583,13 +571,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -606,13 +594,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -626,13 +614,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -650,13 +638,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -673,13 +661,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -691,13 +679,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -709,13 +697,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -727,13 +715,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -745,13 +733,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -763,13 +751,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -781,13 +769,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -799,13 +787,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -819,13 +807,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -837,13 +825,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -855,13 +843,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -873,13 +861,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -893,13 +881,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -911,13 +899,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -931,13 +919,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -954,13 +942,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -972,13 +960,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -990,13 +978,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -1008,13 +996,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -1026,13 +1014,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -1044,13 +1032,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -1062,13 +1050,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -1080,13 +1068,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -1100,13 +1088,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -1118,13 +1106,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -1136,13 +1124,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -1154,13 +1142,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -1174,13 +1162,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -1192,13 +1180,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -1212,13 +1200,13 @@
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                        <div class="teamInfo_bottom">
                           <div class="teamLogo"></div>
                           <div class="teamSeed"></div>
                           <div class="teamName"></div>
-                          <div class="status"></div>
+                          <div class="teamScore"></div>
                        </div>
                     </div>
                     <div class="live-bottom"></div>
@@ -1227,6 +1215,7 @@
            </div>
            <div class="clear"></div>
            <span class="logo"></span>
+           <!-- end loop -->
         </div>
      </div>
      <div id="bracket_popup">
