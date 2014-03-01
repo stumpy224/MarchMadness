@@ -21,20 +21,41 @@
 }
 
 /* Index Page */
+.nameCell {
+  border-top: solid 2px;
+  border-left: solid 2px;
+  border-bottom: solid 2px;
+  border-right: solid 2px;
+}
+
+.firstResultRow {
+  border-top: solid 2px;
+  border-right: solid 2px;
+}
+
+.resultRow {
+  border-right: solid 2px;
+}
+
+.totalResultRow {
+  border-left: solid 2px;
+  border-bottom: solid 2px;
+  border-right: solid 2px;
+}
+
+.nameColumn {
+  padding-left: 10px;
+  width: 200px;
+}
+
 .roundColumn {
-  text-align: center;
+  text-align: center !important;
+  width: 90px;
 }
 
-.amtPaidColumn {
+.dollarColumn {
   text-align: right;
-}
-
-.amtWonColumn {
-  text-align: right;
-}
-
-.profitColumn {
-  text-align: right;
+  width: 100px;
 }
 
 .borderBottom {

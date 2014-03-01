@@ -1,56 +1,63 @@
-<% provide(:title, "Results") %>
-<h1>Results</h1>
-<div style="padding-bottom:15px;">
+<% provide(:title, 'Results') %>
+<div align='center'>
+<div class='page-header'><h1>Results</h1></div>
+<div style='padding-bottom:15px;'>
   <% if !@results.blank? %>
-    <%= @most_recent_result_date_time.strftime("Last updated: %m/%d/%Y at %I:%M %p") %>
+    <%= @most_recent_result_date_time.strftime('Last updated: %m/%d/%Y at %I:%M %p') %>
   <% end %>
-  <span style="padding-left:20px;"><%= link_to "Refresh", refresh_results_path, class: "btn btn-default btn-primary" %></span>
+  <span style='padding-left:20px;'><%= link_to 'Refresh', refresh_results_path, class: 'btn btn-default btn-primary' %></span>
 </div>
 <table>
-  <thead>
+  <thead background='silver'>
     <tr>
-    <th>Name</th>
-    <th>Year</th>
-    <th class="roundColumn">Round</th>
-    <th class="amtPaidColumn">Amt Paid</th>
-    <th class="amtWonColumn">Amt Won</th>
-    <th class="profitColumn">Profit</th>
+    <th class='nameColumn'>Name</th>
+    <th class='roundColumn'>Round</th>
+    <th class='dollarColumn'>$ Paid</th>
+    <th class='dollarColumn'>$ Won</th>
+    <th class='dollarColumn'>Profit</th>
     </tr>
   </thead>
   <tbody>
     <% @participants.each do |participant| %>
+    <% @resultCounter = 0 %>
     <% @totalPaid = 0 %>
     <% @totalWon = 0 %>
     <% @totalProfit = 0 %>
     <tr>
-    <%= content_tag :td, rowspan: participant.results.count + 2 do -%>
+    <%= content_tag :td, class: 'nameCell', rowspan: participant.results.count + 2 do %>
       <%= participant.name %>
     <% end %>
     <% for result in participant.results %>
       <% @totalPaid += 5 %>
-      <tr>
-        <td><%= result.year %></td>
-        <td class="roundColumn"><%= result.round %></td>
-        <td class="amtPaidColumn">$5</td>
+      <% @resultCounter += 1 %>
+      <% if @resultCounter == 1 %>
+        <tr class='firstResultRow'>
+      <% else %>
+        <tr class='resultRow'>
+      <% end %>
+      
+        <td class='roundColumn'><%= result.round %></td>
+        <td>$5</td>
 
         <% @payouts.each do |payout| %>
           <% if result.round == payout.round %>
             <% @totalWon += payout.game_payout %>
             <% @totalProfit += (@totalWon - @totalPaid) %>
-            <td class="amtWonColumn">$<%= payout.game_payout %></td>
-            <td class="profitColumn">$<%= (payout.game_payout-5) %></td>
+            <td>$<%= payout.game_payout %></td>
+            <td>$<%= (payout.game_payout-5) %></td>
           <% end %>
         <% end %>
       </tr>
       <% end %>
 
-      <tr class="borderBottom">
-        <td colspan="2" style="text-align:center;">Totals</td>
-        <td class="amtPaidColumn">$<%= @totalPaid %></td>
-        <td class="amtWonColumn">$<%= @totalWon %></td>
-        <td class="profitColumn">$<%= @totalProfit %></td>
+      <tr class='totalResultRow'>
+        <td />
+        <td style='font-weight:bold;'>$<%= @totalPaid %></td>
+        <td style='font-weight:bold;'>$<%= @totalWon %></td>
+        <td style='font-weight:bold;'>$<%= @totalProfit %></td>
       </tr>
       <% end %>
     </tr>
   </tbody>
 </table>
+</div>
