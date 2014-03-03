@@ -4,9 +4,9 @@ MarchMadness::Application.routes.draw do
 
   resources :results
 
-  root 'results#index'
-  get '/bracket', to: 'pages#bracket'
-  get '/refresh_results', to: 'results#check_for_results'
+  root 'pages#results'
+  get 'bracket', to: 'pages#bracket'
+  get 'refresh_results', to: 'pages#check_for_results'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
