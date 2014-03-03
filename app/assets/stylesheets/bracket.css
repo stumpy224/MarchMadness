@@ -303,44 +303,12 @@ text-align:center;
 left:15px;
 }
 
-.ltr .regionHeadingTop {
-font-size: 18px;
-font-weight: bold;
-text-align:center;
-text-transform: uppercase;
-top:240px;
-right:205px;
-position:absolute;
-}
-
-.ltr .regionHeadingBottom {
-font-size: 18px;
-font-weight: bold;
-text-align:center;
-text-transform: uppercase;
-bottom:220px;
-right:225px;
-position:absolute;
-}
-
-.rtl .regionHeadingTop {
-font-size: 18px;
-font-weight: bold;
-text-align:center;
-text-transform: uppercase;
-top:240px;
-right:210px;
-position:absolute;
-}
-
-.rtl .regionHeadingBottom {
-font-size: 18px;
-font-weight: bold;
-text-align:center;
-text-transform: uppercase;
-top:230px;
-right:215px;
-position:absolute;
+.regionHeading {
+  font-size: 18px;
+  font-weight: bold;
+  text-align:center;
+  text-transform: uppercase;
+  position:absolute;
 }
 
 .live-top, .live-bottom {
@@ -362,7 +330,7 @@ border-bottom-left-radius:3px;
 border-bottom-right-radius:3px;
 background:linear-gradient(top,#dbdbdb0%,#dbdbdb100%);
 font-size: 9px !important;
-width: 150px !important;
+width: 180px !important;
 }
 
 .ie8 .live-top,.ie8 .live-bottom {
@@ -471,7 +439,8 @@ padding-left:0;
 }
 
 .topGames16 .game-sm .teamSeed {
-width:16px;
+  margin-right: -2px;
+  width:16px;
 }
 
 .gameTime .active,.gameQuarter .active {
@@ -1174,7 +1143,7 @@ margin-left:49px;
 }
 
 .game-lg.isChamp .live-bottom {
-margin-left:25px;
+margin-left:10px;
 text-align: center;
 }
 

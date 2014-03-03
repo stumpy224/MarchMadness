@@ -4,12 +4,88 @@
 		"selected_items":
 		[
 			[
-				"bor",
-				"border-bottom"
+				"mar",
+				"margin-right"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"par",
+				"participant_id"
+			],
+			[
+				"lo",
+				"loser_digit"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"se",
+				"seed_top"
+			],
+			[
+				"see",
+				"seed_bottom"
+			],
+			[
+				"seed",
+				"seed_bottom"
+			],
+			[
+				"aw",
+				"away_score"
+			],
+			[
+				"awa",
+				"away_score"
+			],
+			[
+				"home",
+				"home_score"
+			],
+			[
+				"hom",
+				"home_is_winner"
+			],
+			[
+				"away",
+				"away_is_top"
 			],
 			[
 				"game",
-				"game_id"
+				"game_over"
+			],
+			[
+				"gam",
+				"game_over"
+			],
+			[
+				"parse",
+				"parsed_game"
+			],
+			[
+				"tra",
+				"translate_score_info"
+			],
+			[
+				"redi",
+				"redirect_page"
+			],
+			[
+				"import",
+				"important"
+			],
+			[
+				"bor",
+				"border-right"
+			],
+			[
+				"result",
+				"resultCounter"
 			],
 			[
 				"results",
@@ -17,10 +93,6 @@
 			],
 			[
 				"parti",
-				"participant_id"
-			],
-			[
-				"par",
 				"participant_id"
 			],
 			[
@@ -54,14 +126,6 @@
 			[
 				"brack",
 				"bracket_position_id"
-			],
-			[
-				"parse",
-				"parseGame"
-			],
-			[
-				"font",
-				"font-weight"
 			],
 			[
 				"to",
@@ -106,10 +170,6 @@
 			[
 				"desc",
 				"describe"
-			],
-			[
-				"gam",
-				"game_payout"
 			],
 			[
 				"pad",
@@ -171,46 +231,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app/views/layouts/application.html.erb",
-			"settings":
-			{
-				"buffer_size": 610,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/results/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 1804,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/pages/bracket.html.erb",
-			"settings":
-			{
-				"buffer_size": 69992,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/bracket.css",
-			"settings":
-			{
-				"buffer_size": 88420,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/layouts/_header.html.erb",
-			"settings":
-			{
-				"buffer_size": 419,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -220,7 +240,7 @@
 		[
 			[
 				"p",
-				"Package Control: List Packages"
+				"Package Control: Install Package"
 			],
 			[
 				"beau",
@@ -248,45 +268,58 @@
 	},
 	"file_history":
 	[
-		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/application.css.scss",
-		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/results.css.scss",
-		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/pages.css.scss",
+		"/home/jstump/Development/projects/MarchMadness/app/views/results/index.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/results/_refresh.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/pages/bracket.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/pages/_region.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/pages/_game.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/bracket.css",
-		"/home/jstump/Development/projects/MarchMadness/app/views/layouts/_header.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/controllers/results_controller.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/controllers/application_controller.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/models/game.rb",
+		"/home/jstump/Development/projects/MarchMadness/config/routes.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/controllers/pages_controller.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/pages.css.scss",
+		"/home/jstump/Development/projects/MarchMadness/app/admin/region.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/models/region.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/admin/payout.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/helpers/application_helper.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/helpers/results_helper.rb",
+		"/home/jstump/Development/projects/MarchMadness/db/schema.rb",
+		"/home/jstump/Development/projects/MarchMadness/spec/models/payout_spec.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/models/result.rb",
+		"/home/jstump/Development/projects/MarchMadness/spec/models/region_spec.rb",
+		"/home/jstump/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/jstump/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/application.css.scss",
+		"/home/jstump/Development/projects/MarchMadness/app/models/payout.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/javascripts/application.js",
+		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/results.css.scss",
+		"/home/jstump/Development/projects/MarchMadness/app/helpers/pages_helper.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/layouts/application.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/foundation_and_overrides.scss",
+		"/home/jstump/Development/projects/MarchMadness/app/views/layouts/_header.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/pages/results.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/javascripts/results.js.coffee",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/custom.css.scss",
-		"/home/jstump/Development/projects/MarchMadness/app/views/layouts/application.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/admin/participant.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/controllers/results_controller.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/views/results/index.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/admin/result.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/active_admin.css.scss",
 		"/home/jstump/Development/projects/MarchMadness/Gemfile",
 		"/home/jstump/Development/projects/MarchMadness/app/admin/admin_user.rb",
-		"/home/jstump/Development/projects/MarchMadness/db/schema.rb",
-		"/home/jstump/Development/projects/MarchMadness/config/routes.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/results/_form.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/db/seeds.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/models/game.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/models/result.rb",
 		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140223173348_add_bracket_position_id_to_results.rb",
 		"/home/jstump/Development/projects/MarchMadness/MarchMadness.sublime-workspace",
 		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140226235434_rename_column_bracket_position_id_to_game_id.rb",
-		"/home/jstump/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 		"/home/jstump/Development/projects/MarchMadness/app/views/results/new.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/results/show.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/admin/square.rb",
 		"/home/jstump/Development/projects/MarchMadness/config/initializers/active_admin.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/admin/payout.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/controllers/participants_controller.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/controllers/application_controller.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/models/participant.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/participants/_form.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/participants/_square_fields.html.erb",
-		"/home/jstump/Development/projects/MarchMadness/app/controllers/pages_controller.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/controllers/payouts_controller.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/participants/edit.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/participants/index.html.erb",
@@ -299,9 +332,7 @@
 		"/home/jstump/Development/projects/MarchMadness/app/views/payouts/show.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/results/edit.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/admin/dashboard.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/models/payout.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/models/ability.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/helpers/application_helper.rb",
 		"/home/jstump/Development/projects/MarchMadness/.gitignore",
 		"/home/jstump/Development/projects/MarchMadness/app/controllers/sessions_controller.rb",
 		"/home/jstump/Development/projects/MarchMadness/config/initializers/admin.rb",
@@ -315,7 +346,6 @@
 		"/home/jstump/Development/projects/MarchMadness/app/helpers/sessions_helper.rb",
 		"/home/jstump/Development/projects/MarchMadness/log/development.log",
 		"/home/jstump/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
-		"/home/jstump/Development/projects/MarchMadness/app/helpers/results_helper.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/results/index.json.jbuilder",
 		"/home/jstump/Development/projects/MarchMadness/json",
 		"/home/jstump/Development/projects/MarchMadness/app/models/square.rb",
@@ -325,7 +355,6 @@
 		"/home/jstump/Development/projects/MarchMadness/app/controllers/game.rb",
 		"/home/jstump/Development/projects/MarchMadness/spec/models/square_spec.rb",
 		"/home/jstump/Development/projects/MarchMadness/spec/models/result_spec.rb",
-		"/home/jstump/Development/projects/MarchMadness/spec/models/payout_spec.rb",
 		"/home/jstump/Development/projects/MarchMadness/spec/models/participant_spec.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/participants.css.scss",
 		"/home/jstump/Development/projects/MarchMadness/app/views/validation/_error_messages_participant.html.erb",
@@ -366,16 +395,7 @@
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/users.css.scss",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/javascripts/users.js.coffee",
 		"/home/jstump/Development/projects/MarchMadness/app/views/payouts/show.json.jbuilder",
-		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140221013301_create_payouts.rb",
-		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140221003713_create_payouts.rb",
-		"/home/jstump/Development/projects/MarchMadness/spec/spec_helper.rb",
-		"/home/jstump/.config/sublime-text-2/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
-		"/home/jstump/Development/projects/MarchMadness/spec/requests/pages_spec.rb",
-		"/home/jstump/Development/projects/MarchMadness/spec/requests/models_spec.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/helpers/payouts_helper.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/assets/javascripts/payouts.js.coffee",
-		"/home/jstump/Development/projects/MarchMadness/Rakefile",
-		"/home/jstump/Development/projects/MarchMadness/app/views/squares/_form.html.erb"
+		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140221013301_create_payouts.rb"
 	],
 	"find":
 	{
@@ -383,7 +403,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 			""
@@ -394,6 +414,24 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"column3",
+			"\"",
+			"live-bottom",
+			"ischamp",
+			"special",
+			"mono",
+			"live-bottom",
+			"]\n",
+			"class=\"status\"",
+			"sectionHeading",
+			"section32",
+			"\"",
+			".content",
+			"height",
+			"1101",
+			"2013",
+			"2012",
+			"width: 940",
 			"#bracket-basketball-men",
 			"a:visit",
 			"hover",
@@ -431,6 +469,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"'",
+			"class=\"teamScore\"",
+			"'",
 			"game_id",
 			"participant_id",
 			"@participant",
@@ -446,149 +487,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/views/layouts/application.html.erb",
-					"settings":
-					{
-						"buffer_size": 610,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								521,
-								521
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/views/results/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 1804,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/views/pages/bracket.html.erb",
-					"settings":
-					{
-						"buffer_size": 69992,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								495,
-								495
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/assets/stylesheets/bracket.css",
-					"settings":
-					{
-						"buffer_size": 88420,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								256,
-								256
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/layouts/_header.html.erb",
-					"settings":
-					{
-						"buffer_size": 419,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								252,
-								252
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],

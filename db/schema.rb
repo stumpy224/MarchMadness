@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140226235434) do
+ActiveRecord::Schema.define(version: 20140303033350) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -56,6 +56,15 @@ ActiveRecord::Schema.define(version: 20140226235434) do
     t.integer  "game_payout"
     t.integer  "round"
     t.string   "year"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "regions", force: true do |t|
+    t.string   "name"
+    t.string   "year"
+    t.string   "style"
+    t.integer  "quadrant_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

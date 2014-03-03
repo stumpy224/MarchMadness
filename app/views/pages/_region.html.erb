@@ -1,0 +1,4 @@
+<% @r = Region.find_by(quadrant_id: quadrant_id) %>
+<%= content_tag :span, class: 'regionHeading', style: @r.style do %>
+  <%= @r.name %>
+<% end %>

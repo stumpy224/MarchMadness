@@ -8,20 +8,24 @@
   <% else %>
     <div class="teamInfo_top">
   <% end %>
-    <div class="teamLogo"></div>
-    <div class="teamSeed">(<%= @g.seed_top %>)</div>
-    <div class="teamName"><%= @g.home_is_top? ? @g.home_name : @g.away_name %></div>
-    <div class="teamScore"><%= @g.home_is_top? ? @g.home_score : @g.away_score %></div>
+      <div class="teamLogo"></div>
+      <div class="teamSeed">(<%= @g.seed_top %>)</div>
+      <div class="teamName"><%= @g.home_is_top? ? @g.home_name : @g.away_name %></div>
+      <div class="teamScore"><%= @g.home_is_top? ? @g.home_score : @g.away_score %></div>
   </div>
   <% if (@g.home_is_top && @g.away_is_winner) || (@g.away_is_top && @g.home_is_winner) %>
     <div class="teamInfo_bottom winner">
   <% else %>
     <div class="teamInfo_bottom">
   <% end %>
-    <div class="teamLogo"></div>
-    <div class="teamSeed">(<%= @g.seed_bottom %>)</div>
-    <div class="teamName"><%= @g.home_is_top? ? @g.away_name : @g.home_name %></div>
-    <div class="teamScore"><%= @g.home_is_top? ? @g.away_score : @g.home_score %></div>
+      <div class="teamLogo"></div>
+      <div class="teamSeed">(<%= @g.seed_bottom %>)</div>
+      <div class="teamName"><%= @g.home_is_top? ? @g.away_name : @g.home_name %></div>
+      <div class="teamScore"><%= @g.home_is_top? ? @g.away_score : @g.home_score %></div>
   </div>
 </div>
+<% if bracket_position_id != '602' %>
 <div class="live-bottom"><%= @g.square_winner %></div>
+<% else %>
+<div class="live-bottom" style="text-align:right;"><%= @g.square_winner %></div>
+<% end %>
