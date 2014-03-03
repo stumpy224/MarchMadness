@@ -1,16 +1,27 @@
+<% @g = @games.find { |g| g.bracket_position_id == bracket_position_id } %>
+<% if bracket_position_id != '701' %>
 <div class="live-top"></div>
+<% end %>
 <div class="game-cell">
-   <div class="teamInfo_top">
+  <% if (@g.home_is_top && @g.home_is_winner) || (@g.away_is_top && @g.away_is_winner) %>
+    <div class="teamInfo_top winner">
+  <% else %>
+    <div class="teamInfo_top">
+  <% end %>
     <div class="teamLogo"></div>
-    <div class="teamSeed">(1)</div>
-    <div class="teamName">Purdue</div>
-    <div class="teamScore">68</div>
+    <div class="teamSeed">(<%= @g.seed_top %>)</div>
+    <div class="teamName"><%= @g.home_is_top? ? @g.home_name : @g.away_name %></div>
+    <div class="teamScore"><%= @g.home_is_top? ? @g.home_score : @g.away_score %></div>
   </div>
-  <div class="teamInfo_bottom">
+  <% if (@g.home_is_top && @g.away_is_winner) || (@g.away_is_top && @g.home_is_winner) %>
+    <div class="teamInfo_bottom winner">
+  <% else %>
+    <div class="teamInfo_bottom">
+  <% end %>
     <div class="teamLogo"></div>
-    <div class="teamSeed">(16)</div>
-    <div class="teamName">Indiana</div>
-    <div class="teamScore">67</div>
+    <div class="teamSeed">(<%= @g.seed_bottom %>)</div>
+    <div class="teamName"><%= @g.home_is_top? ? @g.away_name : @g.home_name %></div>
+    <div class="teamScore"><%= @g.home_is_top? ? @g.away_score : @g.home_score %></div>
   </div>
 </div>
-<div class="live-bottom"></div>
+<div class="live-bottom"><%= @g.square_winner %></div>

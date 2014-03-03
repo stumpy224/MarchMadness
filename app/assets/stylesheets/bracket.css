@@ -346,7 +346,6 @@ position:absolute;
 .live-top, .live-bottom {
 height:15px;
 display:block;
-visibility:hidden;
 width:75px;
 line-height:16px;
 padding:1px 3px 0;
@@ -362,6 +361,8 @@ background:linear-gradient(top,#bababa0%,#dbdbdb100%);
 border-bottom-left-radius:3px;
 border-bottom-right-radius:3px;
 background:linear-gradient(top,#dbdbdb0%,#dbdbdb100%);
+font-size: 9px !important;
+width: 150px !important;
 }
 
 .ie8 .live-top,.ie8 .live-bottom {
@@ -450,7 +451,6 @@ padding:0 0 0 1px;
 .teamScore {
 color:#333;
 float:right;
-font-weight:700;
 margin-right:4px;
 padding-left:4px;
 }
@@ -499,17 +499,16 @@ padding-right:0;
 }
 
 .winner * {
-color:#fff;
-font-weight:700;
+font-weight: bold;
 }
 
 .ltr .winner .teamScore {
-background:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/scoreArrow.png) no-repeat scroll left top transparent;
+/*background:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/scoreArrow.png) no-repeat scroll left top transparent;*/
 padding-left:6px;
 }
 
 .rtl .winner .teamScore {
-background:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/scoreArrow_right.png) no-repeat scroll right top transparent;
+/*background:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/scoreArrow_right.png) no-repeat scroll right top transparent;*/
 padding-right:8px;
 }
 
@@ -530,7 +529,7 @@ font-weight:700;
 }
 
 .ltr .game-sm .winner .teamScore {
-background:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/finalFourScoreArrow.png) no-repeat scroll left top transparent;
+/*background:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/finalFourScoreArrow.png) no-repeat scroll left top transparent;*/
 font-weight:700;
 padding-left:6px;
 }
@@ -540,7 +539,7 @@ padding-left:2px;
 }
 
 .rtl .game-sm .winner .teamScore,.ltr .last .game-sm .winner .teamScore {
-background:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/finalFourScoreArrow_right.png) no-repeat scroll right top transparent;
+/*background:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/finalFourScoreArrow_right.png) no-repeat scroll right top transparent;*/
 }
 
 .rtl .game-sm .teamScore,.grid33 #section22 .last .winner .teamScore,.grid34 #section32 .last .winner .teamScore {
@@ -602,13 +601,13 @@ padding-left:0;
 }
 
 .ltr .game-md .winner .teamScore {
-background:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/finalFourScoreArrow.png) no-repeat scroll left -2px transparent;
+/*background:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/finalFourScoreArrow.png) no-repeat scroll left -2px transparent;*/
 font-weight:700;
 padding-left:7px;
 }
 
 .rtl .game-md .winner .teamScore {
-background:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/finalFourScoreArrow_right.png) no-repeat scroll right -2px transparent;
+/*background:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/finalFourScoreArrow_right.png) no-repeat scroll right -2px transparent;*/
 }
 
 .game-lg .teamInfo_bottom,.game-lg .teamInfo_top {
@@ -629,7 +628,7 @@ padding-right:3px;
 }
 
 .game-lg .winner .teamScore {
-background:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/champScoreArrow.png) no-repeat scroll left center transparent;
+/*background:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/champScoreArrow.png) no-repeat scroll left center transparent;*/
 padding-left:8px;
 }
 
@@ -693,7 +692,8 @@ background:linear-gradient(top,#a8c7db0%,#d2e4f050%,#a8c7db100%);
 .isChamp .specialText {
 display:block;
 margin-top:-20px;
-font:bold 10px TechwoodSlabW04,Rockwell,Georgia,serif;
+font-size: 11px;
+/*font:bold 10px TechwoodSlabW04,Rockwell,Georgia,serif;*/
 background-color:#00375C;
 color:#fff;
 text-align:center;
@@ -752,7 +752,7 @@ top:5px;
 }
 
 .topGames16 {
-background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/bracketbg.png);
+/*background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/bracketbg.png);*/
 background-repeat:no-repeat;
 background-position:-4px 18px;
 }
@@ -762,7 +762,7 @@ background-position:-5px 120px;
 }
 
 .topGames8 {
-background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/bracketbg_8.png);
+/*background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/bracketbg_8.png);*/
 background-repeat:no-repeat;
 background-position:-9px 47px;
 }
@@ -780,7 +780,7 @@ position:absolute;
 width:495px;
 height:200px;
 background-position:-10px -10px;
-background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/pop_up_sprite.png);
+/*background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/pop_up_sprite.png);*/
 box-shadow:0 5px 5px rgba(0,0,0,0.2);
 z-index:10;
 }
@@ -806,7 +806,7 @@ font-weight:700;
 
 .popup_radio_link {
 padding-left:15px;
-background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/radio-blue.png);
+/*background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/radio-blue.png);*/
 background-repeat:no-repeat;
 }
 
@@ -891,7 +891,7 @@ display:block;
 top:172px;
 height:31px;
 width:151px;
-background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/pop_up_sprite.png);
+/*background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/pop_up_sprite.png);*/
 }
 
 #popup_last_link {
@@ -903,7 +903,7 @@ position:absolute;
 left:161px;
 top:165px;
 display:block;
-background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/pop_up_sprite.png);
+/*background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/pop_up_sprite.png);*/
 width:172px;
 height:46px;
 }
@@ -994,17 +994,17 @@ background-position:-547px -49px;
 }
 
 #popup_first_link.popup_mml_ticket:hover,#popup_last_link.popup_mml_ticket:hover {
-background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/pop-up-sprite-mml.png);
+/*background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/pop-up-sprite-mml.png);*/
 background-position:-547px -356px;
 }
 
 #popup_first_link.popup_mml_highlights,#popup_last_link.popup_mml_highlights {
-background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/pop-up-sprite-mml.png);
+/*background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/pop-up-sprite-mml.png);*/
 background-position:-547px -203px;
 }
 
 #popup_first_link.popup_mml_highlights:hover,#popup_last_link.popup_mml_highlights:hover {
-background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/pop-up-sprite-mml.png);
+/*background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/pop-up-sprite-mml.png);*/
 background-position:-547px -234px;
 }
 
@@ -1042,7 +1042,7 @@ top:-7px;
 right:-7px;
 width:21px;
 height:21px;
-background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/pop_up_sprite.png);
+/*background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/pop_up_sprite.png);*/
 background-position:-515px -7px;
 text-indent:-99999px;
 }
@@ -1060,7 +1060,7 @@ border:solid 1px #0065a8;
 }
 
 .grid34 #section12 {
-background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/bracketbg_first_four.png);
+/*background-image:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/bracketbg_first_four.png);*/
 width:936px!important;
 height:103px!important;
 margin-left:30px!important;
@@ -1174,7 +1174,8 @@ margin-left:49px;
 }
 
 .game-lg.isChamp .live-bottom {
-margin-left:58px;
+margin-left:25px;
+text-align: center;
 }
 
 .bracket-footer {
@@ -1202,7 +1203,7 @@ font-weight:700;
 }
 
 .ui-state-hover .ui-icon,.ui-state-focus .ui-icon,.ui-state-active .ui-icon {
-background-image:url(http://i2.turner.ncaa.com/dr/ncaa/ncaa7/release/sites/all/modules/custom/ncaa_admin/images/ui-icons_454545_256x240.png);
+/*background-image:url(http://i2.turner.ncaa.com/dr/ncaa/ncaa7/release/sites/all/modules/custom/ncaa_admin/images/ui-icons_454545_256x240.png);*/
 }
 
 .ui-icon-carat-1-n,.ie7 .grid34 .topGames16 {

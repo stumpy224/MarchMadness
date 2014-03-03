@@ -1,8 +1,6 @@
 require 'net/http'
 
 class ResultsController < ApplicationController
-  include ResultsHelper
-
   # GET /results
   # GET /results.json
   def index
@@ -21,12 +19,7 @@ class ResultsController < ApplicationController
       Game.clean_up
       parse_tourney_json(response).each do |parsed_game|
         game = translate_game_info(parsed_game)
-        if game.game_state.upcase == "FINAL"
-          if Result.find_by(round: game.round, year: Time.new.year, game_id: game.game_id).blank?
-            square = Square.find_by(winner_digit: game.winner_score.to_s.last(1), loser_digit: game.loser_score.to_s.last(1))
-            create_new_result game, square if square.present?
-          end
-        end
+        create_new_result_if_necessary(game)
       end
     else
       flash[:error] = "An error occurred.  Please try clicking Refresh again to get the latest results."
