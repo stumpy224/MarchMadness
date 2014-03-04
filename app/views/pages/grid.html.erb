@@ -21,12 +21,15 @@
           <% (0..9).each do |winner| %>
             <% @s = @squares.find_by(winner_digit: winner, loser_digit: loser) %>
             <% @p = @participants.find(@s.participant_id) if @s.present? %>
-            <td class='gridSquare'>
-              <% if @s.blank? || @p.blank? %>
+            <% if @s.blank? or @p.blank? %>
+              <%= content_tag :td, class: 'gridSquare' do %>
                 &nbsp;
-              <% else %>
+              <% end %>
+            <% else %>
+              <%= content_tag :td, class: 'gridSquare', title: @p.name do %>
                 <%= @p.first_name.first %>. <%= @p.last_name %>
               <% end %>
+            <% end %>
             </td>
           <% end %>
         </tr>
