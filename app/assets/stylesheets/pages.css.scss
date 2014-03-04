@@ -6,11 +6,38 @@
 
 .container {
   width: 1000px !important;
-  height: 1065px;
+  // height: 1065px;
   margin-top: 15px;
   /*padding-top: 5px;*/
   background:white;
   -moz-border-radius:5px;
   -webkit-border-radius:5px;
   border-radius:5px;
+}
+
+/* GRID */
+.gridTable {
+  border: 1px solid #ddd;
+}
+
+.gridHeaderRow {
+  font-size: xx-large;
+  text-align: center;
+}
+.gridDigitsHeaderRow {
+  text-align: center;
+}
+
+.gridLoserColumn {
+  font-weight: bold;
+}
+
+.gridSquare {
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  font-size: 10px;
+  text-align: center;
+  width: 95px;
 }

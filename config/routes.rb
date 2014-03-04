@@ -6,6 +6,7 @@ MarchMadness::Application.routes.draw do
 
   root 'pages#results'
   get 'bracket', to: 'pages#bracket'
+  get 'grid', to: 'pages#grid'
   get 'refresh_results', to: 'pages#check_for_results'
 
   # The priority is based upon order of creation: first created -> highest priority.
