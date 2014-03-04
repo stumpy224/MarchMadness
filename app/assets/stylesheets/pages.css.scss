@@ -6,13 +6,21 @@
 
 .container {
   width: 1000px !important;
-  // height: 1065px;
   margin-top: 15px;
-  /*padding-top: 5px;*/
+  padding-bottom: 10px;
   background:white;
   -moz-border-radius:5px;
   -webkit-border-radius:5px;
   border-radius:5px;
+}
+
+.pageHeaderLcl {
+  background-color: gainsboro !important;
+  margin-top: -3px !important;
+  padding-bottom: 0px !important;
+  -moz-border-radius:5px 5px 0px 0px;
+  -webkit-border-radius:5px 5px 0px 0px;
+  border-radius:5px 5px 0px 0px;
 }
 
 /* GRID */
