@@ -7,10 +7,17 @@ class ApplicationController < ActionController::Base
 
   def get_tourney_info
     url = 'http://data.ncaa.com/jsonp/gametool/brackets/championships/basketball-men/d1/2012/data.json'
-    Net::HTTP.get_response(URI.parse(url))
+    response = Net::HTTP.get_response(URI.parse(url))
+
+    if response.is_a?(Net::HTTPSuccess)
+      Game.clean_up
+      return parse_tourney_response(response)
+    else
+      return 'Oh, snap! An error occurred... please try clicking Refresh again to get the latest results.'
+    end
   end
 
-  def parse_tourney_json(response)
+  def parse_tourney_response(response)
     formatted_response = (response.body.sub! 'callbackWrapper(', '').sub! '});', '}'
     json_response = JSON.parse(formatted_response)
     json_response['games']

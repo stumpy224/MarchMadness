@@ -57,6 +57,10 @@ class Game
     !!away_is_winner
   end
 
+  def self.exists?
+    self.count > 0 ? true : false
+  end
+
   def self.all
     ObjectSpace.each_object(self).to_a
   end

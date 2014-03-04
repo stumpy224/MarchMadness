@@ -1,7 +1,7 @@
 <% provide(:title, 'Results') %>
 <div align='center'>
 <div class='page-header pageHeaderLcl'><h1>Results</h1></div>
-<%= render 'refresh' %>
+<%= render partial: 'refresh', locals: { path: refresh_results_path } %>
 <table>
   <thead class='headerRow'>
     <tr>
