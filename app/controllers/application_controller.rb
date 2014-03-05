@@ -64,7 +64,7 @@ class ApplicationController < ActionController::Base
 
   def create_new_result_if_necessary(game)
     if game.game_over? and game.round != '1'
-      if Result.find_by(round: game.round, year: Time.new.year, game_id: game.game_id).blank?
+      if Result.find_by(round: game.round, year: Time.new.year.to_s, game_id: game.game_id).blank?
         square = get_square_by_game(game)
         create_new_result game, square if square.present?
       end

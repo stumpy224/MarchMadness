@@ -2,7 +2,11 @@ require 'net/http'
 
 class PagesController < ApplicationController
   def bracket
-    get_tourney_games if !Game.exists?
+    if !Game.exists?
+      get_tourney_games
+      update_bracket_refreshed_date
+    end
+    
     @games = Game.all
   end
 
