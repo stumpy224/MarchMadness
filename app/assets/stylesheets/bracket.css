@@ -135,23 +135,13 @@ text-align:right;
 position:relative;
 }
 
-.rBar {
-width:1px;
-height:25px;
-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#cecece',endColorstr='#ffffff',GradientType=0);
-background:linear-gradient(top,#cecece0%,#ffffff100%);
-display:block;
-float:left;
-margin-right:3px;
-}
-
-.rtl .rBar {
+.rtl {
 float:right;
 margin-right:0;
 margin-left:3px;
 }
 
-.column1 .rBar {
+.column1 {
 background:transparent;
 width:0;
 }
@@ -177,7 +167,7 @@ margin-left:0;
 margin-right:8px;
 }
 
-.grid22 #section22 .rBar {
+.grid22 #section22 {
 display:block;
 width:0;
 }
@@ -1151,7 +1141,7 @@ font-size:11px;
 padding:20px 0;
 }
 
-.ui-helper-hidden,.ui-resizable-disabled .ui-resizable-handle,.ui-resizable-autohide .ui-resizable-handle,#nav-favorites-footer .favsie-footer-buttons a.fav-footer-button.button-cancel-signin,div.panel-pane div.panel-hide,#section22 .rBar,.grid34 #section12 .roundTitle,#ncaa-mobile-drop-arrow,div.gig-share-sidebar {
+.ui-helper-hidden,.ui-resizable-disabled .ui-resizable-handle,.ui-resizable-autohide .ui-resizable-handle,#nav-favorites-footer .favsie-footer-buttons a.fav-footer-button.button-cancel-signin,div.panel-pane div.panel-hide,#section22,.grid34 #section12 .roundTitle,#ncaa-mobile-drop-arrow,div.gig-share-sidebar {
 display:none;
 }
 
