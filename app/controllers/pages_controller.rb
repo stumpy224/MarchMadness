@@ -14,11 +14,13 @@ class PagesController < ApplicationController
   def refresh_bracket
     redirect_to action: 'bracket'
     get_tourney_games
+    update_bracket_refreshed_date
   end
 
   def refresh_results
     redirect_to action: 'results'
     get_tourney_games
+    update_results_refreshed_date
   end
 
   def grid

@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   end
 
   def get_tourney_info
-    url = 'http://data.ncaa.com/jsonp/gametool/brackets/championships/basketball-men/d1/2012/data.json'
+    url = Year.find_by(year: '2013').source_url
     response = Net::HTTP.get_response(URI.parse(url))
 
     if response.is_a?(Net::HTTPSuccess)
@@ -67,10 +67,23 @@ class ApplicationController < ActionController::Base
   end
 
   def create_new_result(game, square)
+    update_results_refreshed_date
     Result.create(
       participant_id: square.participant_id,
       round: game.round,
       year: square.year,
       game_id: game.game_id)
+  end
+
+  def update_bracket_refreshed_date
+    year = Year.find_by(year: '2013')
+    year.bracket_last_updated_at = DateTime.now
+    year.save
+  end
+
+  def update_results_refreshed_date
+    year = Year.find_by(year: '2013')
+    year.results_last_updated_at = DateTime.now
+    year.save
   end
 end
