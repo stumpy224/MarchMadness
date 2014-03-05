@@ -4,7 +4,7 @@
   <div class="live-top"></div>
   <% end %>
   <div class="game-cell">
-    <% if (@g.home_is_top and @g.home_is_winner) or (@g.away_is_top and @g.away_is_winner) %>
+    <% if (@g.home_is_top? and @g.home_is_winner?) or (@g.away_is_top? and @g.away_is_winner?) %>
       <div class="teamInfo_top winner">
     <% else %>
       <div class="teamInfo_top">
@@ -14,7 +14,7 @@
         <div class="teamName"><%= @g.home_is_top? ? @g.home_name : @g.away_name %></div>
         <div class="teamScore"><%= @g.home_is_top? ? @g.home_score : @g.away_score %></div>
     </div>
-    <% if (@g.home_is_top and @g.away_is_winner) or (@g.away_is_top and @g.home_is_winner) %>
+    <% if (@g.home_is_top? and @g.away_is_winner?) or (@g.away_is_top? and @g.home_is_winner?) %>
       <div class="teamInfo_bottom winner">
     <% else %>
       <div class="teamInfo_bottom">
