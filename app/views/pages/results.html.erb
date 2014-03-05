@@ -1,58 +1,62 @@
 <% provide(:title, 'Results') %>
 <div align='center'>
 <div class='page-header pageHeaderLcl'><h1>Results</h1></div>
-<%= render partial: 'refresh', locals: { path: refresh_results_path } %>
-<table>
-  <thead class='headerRow'>
-    <tr>
-    <th class='nameColumn'>Name</th>
-    <th class='roundColumn'>Round</th>
-    <th class='dollarColumn'>$ Paid</th>
-    <th class='dollarColumn'>$ Won</th>
-    <th class='dollarColumn'>Profit</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @participants.each do |participant| %>
-    <% @resultCounter = 0 %>
-    <% @totalPaid = 0 %>
-    <% @totalWon = 0 %>
-    <% @totalProfit = 0 %>
-    <tr>
-    <%= content_tag :td, class: 'nameCell', rowspan: participant.results.count + 2 do %>
-      <%= participant.name %>
-    <% end %>
-    <% for result in participant.results %>
-      <% @totalPaid += 5 %>
-      <% @resultCounter += 1 %>
-      <% if @resultCounter == 1 %>
-        <tr class='firstResultRow'>
-      <% else %>
-        <tr class='resultRow'>
+<% if @payouts.exists? %>
+  <%= render partial: 'refresh', locals: { path: refresh_results_path } %>
+  <table>
+    <thead class='headerRow'>
+      <tr>
+      <th class='nameColumn'>Name</th>
+      <th class='roundColumn'>Round</th>
+      <th class='dollarColumn'>$ Paid</th>
+      <th class='dollarColumn'>$ Won</th>
+      <th class='dollarColumn'>Profit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @participants.each do |participant| %>
+      <% @resultCounter = 0 %>
+      <% @totalPaid = 0 %>
+      <% @totalWon = 0 %>
+      <% @totalProfit = 0 %>
+      <tr>
+      <%= content_tag :td, class: 'nameCell', rowspan: participant.results.count + 2 do %>
+        <%= participant.name %>
       <% end %>
-      
-        <td class='roundColumn'><%= result.round %></td>
-        <td>$5</td>
+      <% for result in participant.results %>
+        <% @totalPaid += 5 %>
+        <% @resultCounter += 1 %>
+        <% if @resultCounter == 1 %>
+          <tr class='firstResultRow'>
+        <% else %>
+          <tr class='resultRow'>
+        <% end %>
+        
+          <td class='roundColumn'><%= result.round %></td>
+          <td>$5</td>
 
-        <% @payouts.each do |payout| %>
-          <% if result.round == payout.round %>
-            <% @totalWon += payout.game_payout %>
-            <% @totalProfit += (@totalWon - @totalPaid) %>
-            <td>$<%= payout.game_payout %></td>
-            <td>$<%= (payout.game_payout-5) %></td>
+          <% @payouts.each do |payout| %>
+            <% if result.round == payout.round %>
+              <% @totalWon += payout.game_payout %>
+              <% @totalProfit += (@totalWon - @totalPaid) %>
+              <td>$<%= payout.game_payout %></td>
+              <td>$<%= (payout.game_payout-5) %></td>
+            <% end %>
           <% end %>
+        </tr>
+        <% end %>
+
+        <tr class='totalResultRow'>
+          <td />
+          <td style='font-weight:bold;'>$<%= @totalPaid %></td>
+          <td style='font-weight:bold;'>$<%= @totalWon %></td>
+          <td style='font-weight:bold;'>$<%= @totalProfit %></td>
+        </tr>
         <% end %>
       </tr>
-      <% end %>
-
-      <tr class='totalResultRow'>
-        <td />
-        <td style='font-weight:bold;'>$<%= @totalPaid %></td>
-        <td style='font-weight:bold;'>$<%= @totalWon %></td>
-        <td style='font-weight:bold;'>$<%= @totalProfit %></td>
-      </tr>
-      <% end %>
-    </tr>
-  </tbody>
-</table>
-</div>
+    </tbody>
+  </table>
+  </div>
+<% else %>
+  <div>Please enter payouts for the year.</div>
+<% end %>

@@ -1,17 +1,17 @@
 <% @last_updated_format = 'Last updated: %m/%d/%Y at %I:%M %p' %>
-<% if Result.where(year: '2013').count < 67 %>
-<div align='center' class='page-header' style='padding-top:5px;padding-bottom:15px;'>
-  <% if path == refresh_results_path %>
-    <% @last_updated_at = Year.find_by(year: '2013').results_last_updated_at %>
-    <% if !@last_updated_at.blank? %>
-      <%= @last_updated_at.strftime(@last_updated_format) %>
+<% Result.where(year: '2013').count < 67 %>
+  <div align='center' class='page-header' style='padding-top:5px;padding-bottom:15px;'>
+    <% if path == refresh_results_path %>
+      <% @last_updated_at = Year.find_by(year: '2013').results_last_updated_at %>
+      <% if !@last_updated_at.blank? %>
+        <%= @last_updated_at.strftime(@last_updated_format) %>
+      <% end %>
+    <% else %>
+      <% @last_updated_at = Year.find_by(year: '2013').bracket_last_updated_at %>
+      <% if !@last_updated_at.blank? %>
+        <%= @last_updated_at.strftime(@last_updated_format) %>
+      <% end %>
     <% end %>
-  <% else %>
-    <% @last_updated_at = Year.find_by(year: '2013').bracket_last_updated_at %>
-    <% if !@last_updated_at.blank? %>
-      <%= @last_updated_at.strftime(@last_updated_format) %>
-    <% end %>
-  <% end %>
-  <span style='padding-left:20px;'><%= link_to 'Refresh', path, class: 'btn btn-default btn-primary' %></span>
+    <span style='padding-left:20px;'><%= link_to 'Refresh', path, class: 'btn btn-default btn-primary' %></span>
+  </div>
 <% end %>
-</div>
