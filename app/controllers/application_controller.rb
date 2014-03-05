@@ -44,7 +44,7 @@ class ApplicationController < ActionController::Base
       parsed_game['away']['winner'] == 'true' ? game.away_is_winner = true : game.away_is_winner = false
 
       square = get_square_by_game(game)
-      game.square_winner = Participant.find(square.participant_id).name if square.present?
+      game.square_winner = if square.present? ? Participant.find(square.participant_id).name : ''
     end
 
     return game
