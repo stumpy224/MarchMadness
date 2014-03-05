@@ -44,11 +44,11 @@ body #footer {
     -o-border-radius: 4px;
     border-radius: 4px;
     background-color: #0065a9;
-    background-image: -webkit-gradient(linear,0 100%,100% 0,color-stop(0.25,rgba(255,255,255,0.15)),color-stop(0.25,transparent),color-stop(0.5,transparent),color-stop(0.5,rgba(255,255,255,0.15)),color-stop(0.75,rgba(255,255,255,0.15)),color-stop(0.75,transparent),to(transparent));
+    /*background-image: -webkit-gradient(linear,0 100%,100% 0,color-stop(0.25,rgba(255,255,255,0.15)),color-stop(0.25,transparent),color-stop(0.5,transparent),color-stop(0.5,rgba(255,255,255,0.15)),color-stop(0.75,rgba(255,255,255,0.15)),color-stop(0.75,transparent),to(transparent));
     background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
     background-image: -moz-linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
     background-image: -o-linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
-    background-image: linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
+    background-image: linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);*/
     -webkit-background-size: 40px 40px;
     -moz-background-size: 40px 40px;
     -o-background-size: 40px 40px;
@@ -138,8 +138,8 @@ position:relative;
 .rBar {
 width:1px;
 height:25px;
-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#cecece',endColorstr='#ffffff',GradientType=0);
-background:linear-gradient(top,#cecece0%,#ffffff100%);
+/*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#cecece',endColorstr='#ffffff',GradientType=0);
+background:linear-gradient(top,#cecece0%,#ffffff100%);*/
 display:block;
 float:left;
 margin-right:3px;
@@ -318,19 +318,19 @@ padding:1px 3px 0;
 .live-top {
 border-top-left-radius:3px;
 border-top-right-radius:3px;
-background:linear-gradient(top,#bababa0%,#dbdbdb100%);
+/*background:linear-gradient(top,#bababa0%,#dbdbdb100%);*/
 }
 
 .live-bottom {
 border-bottom-left-radius:3px;
 border-bottom-right-radius:3px;
-background:linear-gradient(top,#dbdbdb0%,#dbdbdb100%);
+/*background:linear-gradient(top,#dbdbdb0%,#dbdbdb100%);*/
 font-size: 9px !important;
 width: 180px !important;
 }
 
 .ie8 .live-top,.ie8 .live-bottom {
-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#DBDBDB',endColorstr='#bababa',GradientType=0);
+/*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#DBDBDB',endColorstr='#bababa',GradientType=0);*/
 }
 
 .game-xs {
@@ -609,8 +609,8 @@ padding-right:1px;
 }
 
 .gameSet .game-cell,#grid-wrapper .gameSet {
-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f0f0',endColorstr='#f0f0f0',GradientType=0);
-background:linear-gradient(top,#f0f0f00%,#fdfdfd50%,#f0f0f0100%);
+/*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f0f0',endColorstr='#f0f0f0',GradientType=0);
+background:linear-gradient(top,#f0f0f00%,#fdfdfd50%,#f0f0f0100%);*/
 direction:ltr;
 border:1px solid #B9B9B9;
 position:relative;
@@ -640,18 +640,18 @@ left:-55px;
 }
 
 .state1 .game-cell {
-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8EA2AD',endColorstr='#8EA2AD',GradientType=0);
-background:linear-gradient(top,#8ea2ad0%,#7890a050%,#8ea2ad100%);
+/*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8EA2AD',endColorstr='#8EA2AD',GradientType=0);
+background:linear-gradient(top,#8ea2ad0%,#7890a050%,#8ea2ad100%);*/
 }
 
 .state2 .game-cell {
-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b82c2d',endColorstr='#b82c2d',GradientType=0);
-background:linear-gradient(top,#b82c2d0%,#c7595a50%,#b82c2d100%);
+/*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b82c2d',endColorstr='#b82c2d',GradientType=0);
+background:linear-gradient(top,#b82c2d0%,#c7595a50%,#b82c2d100%);*/
 }
 
 .state3 .game-cell {
-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a8c7db',endColorstr='#a8c7db',GradientType=0);
-background:linear-gradient(top,#a8c7db0%,#d2e4f050%,#a8c7db100%);
+/*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a8c7db',endColorstr='#a8c7db',GradientType=0);
+background:linear-gradient(top,#a8c7db0%,#d2e4f050%,#a8c7db100%);*/
 }
 
 .isChamp .specialText {
