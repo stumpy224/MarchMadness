@@ -1,16 +1,18 @@
 <% provide(:title, 'Results') %>
 <div align='center'>
-<div class='page-header pageHeaderLcl'><h1>Results</h1></div>
+<div class='page-header pageHeaderLcl'><h1><%= $year %> Results</h1></div>
 <% if @payouts.exists? %>
-  <%= render partial: 'refresh', locals: { path: refresh_results_path } %>
+  <% if Result.where(year: $year).count < 67 %>
+    <%= render partial: 'refresh', locals: { path: refresh_results_path } %>
+  <% end %>
   <table>
     <thead class='headerRow'>
       <tr>
-      <th class='nameColumn'>Name</th>
-      <th class='roundColumn'>Round</th>
-      <th class='dollarColumn'>$ Paid</th>
-      <th class='dollarColumn'>$ Won</th>
-      <th class='dollarColumn'>Profit</th>
+        <th class='nameColumn'>Name</th>
+        <th class='roundColumn'>Round</th>
+        <th class='dollarColumn'>$ Paid</th>
+        <th class='dollarColumn'>$ Won</th>
+        <th class='dollarColumn'>Profit</th>
       </tr>
     </thead>
     <tbody>
@@ -56,7 +58,20 @@
       </tr>
     </tbody>
   </table>
+  <% if Year.many? %>
+  <br />
+  <div>Looking for results from a different year?</div>
+  <br />
+  <div>
+    <a data-dropdown='drop' class='button radius btn-default btn-primary tiny dropdown'>Year</a><br>
+    <ul id='drop' data-dropdown-content class='f-dropdown' style='width:100px !important;'>
+      <% Year.order(year: :desc).each do |y| %>
+        <li><%= link_to y.year, controller: 'pages', action: 'results', year: y.year %></li>
+      <% end %>
+    </ul>
   </div>
+  <% end %>
 <% else %>
   <div>Please enter payouts for the year.</div>
 <% end %>
+</div>

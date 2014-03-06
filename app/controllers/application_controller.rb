@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   end
 
   def get_tourney_info
-    url = Year.find_by(year: '2013').source_url
+    url = Year.find_by(year: $year).source_url
     response = Net::HTTP.get_response(URI.parse(url))
 
     if response.is_a?(Net::HTTPSuccess)
@@ -58,13 +58,14 @@ class ApplicationController < ActionController::Base
   def get_square_by_game(game)
     Square.find_by(
       winner_digit: game.home_is_winner? ? game.home_score.to_s.last(1) : game.away_score.to_s.last(1),
-      loser_digit: game.home_is_winner? ? game.away_score.to_s.last(1) : game.home_score.to_s.last(1)
+      loser_digit: game.home_is_winner? ? game.away_score.to_s.last(1) : game.home_score.to_s.last(1),
+      year: $year
     )
   end
 
   def create_new_result_if_necessary(game)
     if game.game_over? and game.round != '1'
-      if Result.find_by(round: game.round, year: Time.new.year.to_s, game_id: game.game_id).blank?
+      if Result.find_by(round: game.round, year: $year, game_id: game.game_id).blank?
         square = get_square_by_game(game)
         create_new_result game, square if square.present?
       end
@@ -81,13 +82,13 @@ class ApplicationController < ActionController::Base
   end
 
   def update_bracket_refreshed_date
-    year = Year.find_by(year: '2013')
+    year = Year.find_by(year: $year)
     year.bracket_last_updated_at = DateTime.now
     year.save
   end
 
   def update_results_refreshed_date
-    year = Year.find_by(year: '2013')
+    year = Year.find_by(year: $year)
     year.results_last_updated_at = DateTime.now
     year.save
   end

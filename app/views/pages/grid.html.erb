@@ -1,6 +1,6 @@
 <% provide(:title, 'Grid') %>
 <div align='center'>
-  <div class='page-header pageHeaderLcl'><h1>Grid</h1></div>
+  <div class='page-header pageHeaderLcl'><h1><%= $year %> Grid</h1></div>
   <table class='gridTable'>
     <thead>
       <tr>
@@ -27,7 +27,7 @@
               <% end %>
             <% else %>
               <%= content_tag :td, class: 'gridSquare', title: @p.name do %>
-                <%= @p.first_name.first %>. <%= @p.last_name %>
+                <%= @p.first_name %><br /><%= @p.last_name %>
               <% end %>
             <% end %>
             </td>
