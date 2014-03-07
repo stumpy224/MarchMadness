@@ -8,7 +8,7 @@ ActiveAdmin.register Year do
   
   index do
     column :year, sortable: :year do |y|
-      div class: "year" do
+      div class: 'year' do
         y.year
       end
     end

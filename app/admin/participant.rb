@@ -6,7 +6,7 @@ ActiveAdmin.register Participant do
       f.input :name
     end
 
-    f.inputs "Squares" do
+    f.inputs 'Squares' do
       f.has_many :squares do |square|
         square.input :winner_digit
         square.input :loser_digit
@@ -15,5 +15,9 @@ ActiveAdmin.register Participant do
     end
 
     f.actions
+  end
+
+  action_item only: :show do
+    link_to 'New Participant', new_admin_participant_path, method: :get
   end
 end

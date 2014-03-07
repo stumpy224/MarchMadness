@@ -19,4 +19,8 @@ ActiveAdmin.register Payout do
     column 'Date Updated', :updated_at
     default_actions
   end
+
+  action_item only: :show do
+    link_to 'New Payout', new_admin_payout_path, method: :get
+  end
 end

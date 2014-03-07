@@ -44,7 +44,13 @@ class PagesController < ApplicationController
 
     def get_tourney_games
       tourney_games = get_tourney_info
-      if tourney_games.include?("Oh, snap! An error occurred...")
+
+'Response does not contain any data.' if response.include?
+
+      return 'Oh, snap! An error occurred... please try clicking Refresh again to get the latest results.'
+
+
+      if tourney_games.include?('Oh, snap! An error occurred...')
         flash.now[:error] = tourney_games
       else
         tourney_games.each do |g|

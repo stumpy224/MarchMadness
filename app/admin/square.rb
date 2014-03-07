@@ -1,8 +1,10 @@
 ActiveAdmin.register Square do
   permit_params :winner_digit, :loser_digit, :year, :participant_id
 
+  config.sort_order = 'year_desc'
+
   index do
-    column "Participant", sortable: :participant_id do |s|
+    column 'Participant', sortable: :participant_id do |s|
       Participant.find(s.participant_id).name
     end
     column :winner_digit, sortable: :winner_digit

@@ -13,7 +13,11 @@ class ApplicationController < ActionController::Base
       Game.clean_up
       return parse_tourney_response(response)
     else
-      return 'Oh, snap! An error occurred... please try clicking Refresh again to get the latest results.'
+      if response.include?('Response does not contain any data.')
+        return 'Response does not contain any data.'
+      else
+        return 'Oh, snap! An error occurred... please try clicking Refresh again.'
+      end
     end
   end
 
