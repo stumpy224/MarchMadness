@@ -1,6 +1,6 @@
 module ApplicationHelper
   def full_title(page_title)
-    base_title = "March Madness"
+    base_title = 'Grid Pool'
 
     page_title.empty? ? base_title : base_title + " | " + page_title
   end

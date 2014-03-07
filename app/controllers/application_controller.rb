@@ -6,15 +6,24 @@ class ApplicationController < ActionController::Base
   end
 
   def get_tourney_info
+    if $year.blank?
+      $year = get_latest_year
+    end
+
     url = Year.find_by(year: $year).source_url
-    response = Net::HTTP.get_response(URI.parse(url))
+
+    if url.empty?
+      return 'Oh, snap! The URL has not been entered for #{$year}.'
+    else
+      response = Net::HTTP.get_response(URI.parse(url))
+    end
 
     if response.is_a?(Net::HTTPSuccess)
       Game.clean_up
       return parse_tourney_response(response)
     else
-      if response.include?('Response does not contain any data.')
-        return 'Response does not contain any data.'
+      if response.message.include?('Not Found')
+        return 'Oh, snap! The bracket has not yet been released... please check back later.'
       else
         return 'Oh, snap! An error occurred... please try clicking Refresh again.'
       end
@@ -95,5 +104,9 @@ class ApplicationController < ActionController::Base
     year = Year.find_by(year: $year)
     year.results_last_updated_at = DateTime.now
     year.save
+  end
+
+  def get_latest_year
+    Year.order(:year).last.year
   end
 end

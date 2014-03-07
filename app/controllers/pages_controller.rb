@@ -14,7 +14,7 @@ class PagesController < ApplicationController
     if params[:year].present?
       $year = params[:year]
     else
-      $year = Year.order(:year).last.year
+      $year = get_latest_year
     end
 
     @participants = Participant.joins('INNER JOIN squares '\
@@ -44,13 +44,8 @@ class PagesController < ApplicationController
 
     def get_tourney_games
       tourney_games = get_tourney_info
-
-'Response does not contain any data.' if response.include?
-
-      return 'Oh, snap! An error occurred... please try clicking Refresh again to get the latest results.'
-
-
-      if tourney_games.include?('Oh, snap! An error occurred...')
+      
+      if tourney_games.include?('Oh, snap!')
         flash.now[:error] = tourney_games
       else
         tourney_games.each do |g|

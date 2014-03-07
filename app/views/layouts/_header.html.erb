@@ -1,15 +1,16 @@
 <nav class='top-bar' data-topbar>
   <ul class='title-area' style='margin-left:8.5em;'>
     <li class='name'>
-      <h1><%= link_to 'March Madness', controller: 'pages', action: 'results', year: $year %></h1>
+      <h1><%= link_to 'Grid Pool', controller: 'pages', action: 'results', year: $year %></h1>
     </li>
   </ul>
   <section class='top-bar-section'>
     <!-- Right Nav Section -->
-    <ul class='right' style='margin-right:9em;'>
+    <ul class='right' style='margin-right:8.5em;'>
       <li><%= link_to 'Results', controller: 'pages', action: 'results', year: $year %></li>
       <li><%= link_to 'Bracket', bracket_path %></li>
       <li><%= link_to 'Grid', grid_path %></li>
+      <li><%= link_to 'How It Works', summary_path %></li>
     </ul>
   </section>
 </nav>
