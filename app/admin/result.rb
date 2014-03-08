@@ -1,5 +1,16 @@
 ActiveAdmin.register Result do
   permit_params :participant_id, :round, :year, :game_id
+
+  form do |f|
+    f.inputs do
+      f.input :participant_id, as: :select, collection: Participant.all.order(:name)
+      f.input :round
+      f.input :year, :value => 'Time.now.year'
+      f.input :game_id
+    end
+
+    f.actions
+  end
   
   index do
     column :year, sortable: :year do |result|

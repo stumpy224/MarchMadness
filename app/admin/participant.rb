@@ -7,10 +7,16 @@ ActiveAdmin.register Participant do
     end
 
     f.inputs 'Squares' do
-      f.has_many :squares do |square|
-        square.input :winner_digit
-        square.input :loser_digit
-        square.input :year, :as => :hidden, :value => Time.now.year
+      f.has_many :squares do |s|
+        if (Time.now.year.to_s == '2014')
+          s.input :winner_digit
+          s.input :loser_digit
+          s.input :year, :value => '2013'#, :as => :hidden
+        else
+          s.input :winner_digit, input_html: { disabled: true }
+          s.input :loser_digit, input_html: { disabled: true }
+          s.input :year, input_html: { disabled: true }
+        end
       end
     end
 

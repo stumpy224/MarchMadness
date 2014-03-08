@@ -1,0 +1,11 @@
+<% if counter == Square.select(:participant_id).distinct.count %>
+  <tr class='firstResultRow borderLeft borderBottom'>
+<% else %>
+  <tr class='firstResultRow borderLeft'>
+<% end %>
+    <td class='nameCell'><%= participant.name %></td>
+    <td />
+    <td>$<%= Square.where(participant_id: participant.id).count * 5 %></td>
+    <td>$0</td>
+    <td>$0</td>
+  </tr>

@@ -17,9 +17,7 @@ class PagesController < ApplicationController
       $year = get_latest_year
     end
 
-    @participants = Participant.joins('INNER JOIN squares '\
-      'ON squares.participant_id = participants.id '\
-      'WHERE squares.year = ' + $year).order(:name)
+    @participants_with_squares = Square.where(year: $year).select(:participant_id).distinct
     @payouts = Payout.all
   end
 

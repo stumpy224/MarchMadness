@@ -5,59 +5,36 @@
   <% if Result.where(year: $year).count < 67 %>
     <%= render partial: 'refresh', locals: { path: refresh_results_path } %>
   <% end %>
-  <table>
-    <thead class='headerRow'>
-      <tr>
-        <th class='nameColumn'>Name</th>
-        <th class='roundColumn'>Round</th>
-        <th class='dollarColumn'>$ Paid</th>
-        <th class='dollarColumn'>$ Won</th>
-        <th class='dollarColumn'>Profit</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @participants.each do |participant| %>
-      <% @resultCounter = 0 %>
-      <% @totalPaid = 0 %>
-      <% @totalWon = 0 %>
-      <% @totalProfit = 0 %>
-      <tr>
-      <%= content_tag :td, class: 'nameCell', rowspan: participant.results.count + 2 do %>
-        <%= participant.name %>
-      <% end %>
-      <% for result in participant.results %>
-        <% @totalPaid += 5 %>
-        <% @resultCounter += 1 %>
-        <% if @resultCounter == 1 %>
-          <tr class='firstResultRow'>
-        <% else %>
-          <tr class='resultRow'>
-        <% end %>
-        
-          <td class='roundColumn'><%= result.round %></td>
-          <td>$5</td>
 
-          <% @payouts.each do |payout| %>
-            <% if result.round == payout.round %>
-              <% @totalWon += payout.game_payout %>
-              <% @totalProfit += (@totalWon - @totalPaid) %>
-              <td>$<%= payout.game_payout %></td>
-              <td>$<%= (payout.game_payout-5) %></td>
-            <% end %>
+  <% if @participants_with_squares.count > 0 %>
+    <table>
+      <thead class='headerRow'>
+        <tr>
+          <th class='nameColumn'>Name</th>
+          <th class='roundColumn'>Round</th>
+          <th class='dollarColumn'>$ Paid</th>
+          <th class='dollarColumn'>$ Won</th>
+          <th class='dollarColumn'>Profit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% pCounter = 0 %>
+        <% @participants_with_squares.each do |p_w_sq| %>
+          <% participant = Participant.find(p_w_sq.participant_id) %>
+          <% pResultCount = Result.where(participant_id: participant.id).count %>
+          <% pCounter += 1 %>
+          <% if pResultCount > 0 %>
+            <%= render partial: 'participantWithResults', locals: { participant: participant } %>
+          <% else %>
+            <%= render partial: 'participantWithNoResults', locals: { counter: pCounter, participant: participant } %>
           <% end %>
-        </tr>
         <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <div style='font-weight:bold;'>Please enter participants for the year.</div>
+  <% end %>
 
-        <tr class='totalResultRow'>
-          <td />
-          <td style='font-weight:bold;'>$<%= @totalPaid %></td>
-          <td style='font-weight:bold;'>$<%= @totalWon %></td>
-          <td style='font-weight:bold;'>$<%= @totalProfit %></td>
-        </tr>
-        <% end %>
-      </tr>
-    </tbody>
-  </table>
   <% if Year.many? %>
   <br />
   <div>Looking for results from a different year?</div>
@@ -72,6 +49,6 @@
   </div>
   <% end %>
 <% else %>
-  <div>Please enter payouts for the year.</div>
+  <div style='font-weight:bold;'>Please enter payouts for the year.</div>
 <% end %>
 </div>

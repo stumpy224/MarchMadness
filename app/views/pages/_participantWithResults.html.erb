@@ -1,0 +1,36 @@
+<% resultCounter = 0 %>
+<% totalPaid = Square.where(participant_id: participant.id).count * 5 %>
+<% totalWon = 0 %>
+<tr>
+  <%= content_tag :td, class: 'nameCell', rowspan: participant.results.count + 2 do %>
+    <%= participant.name %>
+  <% end %>
+
+  <% for result in participant.results %>
+    <% resultCounter += 1 %>
+    <% if resultCounter == 1 %>
+      <tr class='firstResultRow'>
+    <% else %>
+      <tr class='resultRow'>
+    <% end %>
+    
+      <td class='roundColumn'><%= result.round %></td>
+      <td>$5</td>
+
+      <% @payouts.each do |payout| %>
+        <% if result.round == payout.round %>
+          <% totalWon += payout.game_payout %>
+          <td>$<%= payout.game_payout %></td>
+          <td>$<%= (payout.game_payout - 5) %></td>
+        <% end %>
+      <% end %>
+    </tr>
+  <% end %>
+
+  <tr class='totalResultRow'>
+    <td class='roundColumn' style='font-weight:bold;'>Totals</td>
+    <td style='font-weight:bold;'>$<%= totalPaid %></td>
+    <td style='font-weight:bold;'>$<%= totalWon %></td>
+    <td style='font-weight:bold;'>$<%= totalWon - totalPaid %></td>
+  </tr>
+</tr>

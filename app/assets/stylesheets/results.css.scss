@@ -18,36 +18,55 @@
   padding-left: 20px;
 }
 
-/* Index Page */
-.headerRow {
-  border-left: solid 2px;
-  border-top: solid 2px;
-  border-right: solid 2px;
+/* Results Page */
+.borderBottom {
   border-bottom: solid 2px;
+  border-bottom-color: black !important;
+  border-bottom-style: solid !important;
+}
+
+.borderTop {
+  border-top: solid 2px;
+}
+
+.borderLeft {
+  border-left: solid 2px;
+}
+
+.borderRight {
+  border-right: solid 2px;
+}
+
+.borderAll {
+  @extend .borderLeft;
+  @extend .borderTop;
+  @extend .borderRight;
+  @extend .borderBottom;
+}
+
+.headerRow {
+  @extend .borderAll;
   background: silver;
   width: 592px !important;
 }
 
 .nameCell {
-  border-top: solid 2px;
-  border-left: solid 2px;
-  border-bottom: solid 2px;
-  border-right: solid 2px;
+  @extend .borderAll;
 }
 
 .firstResultRow {
-  border-top: solid 2px;
-  border-right: solid 2px;
+  @extend .borderTop;
+  @extend .borderRight;
 }
 
 .resultRow {
-  border-right: solid 2px;
+  @extend .borderRight;
 }
 
 .totalResultRow {
-  border-left: solid 2px;
-  border-bottom: solid 2px;
-  border-right: solid 2px;
+  @extend .borderLeft;
+  @extend .borderRight;
+  @extend .borderBottom;
 }
 
 .nameColumn {
@@ -63,11 +82,6 @@
 .dollarColumn {
   text-align: right;
   width: 100px;
-}
-
-.borderBottom {
-  border-bottom-color: black !important;
-  border-bottom-style: solid !important;
 }
 
 /* Sticky table header */
