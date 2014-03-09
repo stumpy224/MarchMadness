@@ -294,6 +294,7 @@ DEPENDENCIES
   inherited_resources!
   jbuilder (~> 1.2)
   jquery-rails
+  kaminari
   libnotify (= 0.8.0)
   pg (= 0.15.1)
   rails (= 4.0.2)

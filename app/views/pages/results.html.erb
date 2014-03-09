@@ -5,6 +5,8 @@
   <% if Result.where(year: $year).count < 63 %>
     <%= render partial: 'refresh', locals: { path: refresh_results_path } %>
   <% end %>
+  
+  <%= paginate @participants_with_squares %>
 
   <% if @participants_with_squares.any? %>
     <table>
@@ -34,6 +36,8 @@
   <% else %>
     <div style='font-weight:bold;'>Please enter participants for the year.</div>
   <% end %>
+  
+  <%= paginate @participants_with_squares %>
 
   <% if Year.many? %>
   <br />

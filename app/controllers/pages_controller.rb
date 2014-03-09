@@ -15,7 +15,7 @@ class PagesController < ApplicationController
       $year = get_latest_year
     end
 
-    @participants_with_squares = ParticipantSquare.where(year: $year).select(:participant_id).distinct
+    @participants_with_squares = ParticipantSquare.select(:participant_id).distinct.where(year: $year).group(:participant_id).page(params[:page]).per(10)
     @payouts = Payout.all
     @years = Year.all
   end
