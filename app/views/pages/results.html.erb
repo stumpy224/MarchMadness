@@ -2,11 +2,11 @@
 <div align='center'>
 <div class='page-header pageHeaderLcl'><h1><%= $year %> Results</h1></div>
 <% if @payouts.exists? %>
-  <% if Result.where(year: $year).count < 67 %>
+  <% if Result.where(year: $year).count < 63 %>
     <%= render partial: 'refresh', locals: { path: refresh_results_path } %>
   <% end %>
 
-  <% if @participants_with_squares.count > 0 %>
+  <% if @participants_with_squares.any? %>
     <table>
       <thead class='headerRow'>
         <tr>

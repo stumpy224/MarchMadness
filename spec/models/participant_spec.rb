@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Participant do
-  before { @participant = Participant.new(name: "Jeremiah Stump") }
+  before { @participant = Participant.new(name: 'Jeremiah Stump') }
 
   subject { @participant }
 

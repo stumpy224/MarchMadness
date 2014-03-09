@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+(0..9).each do |w|
+  (0..9).each do |l|
+    Square.create( winner_digit: w, loser_digit: l)
+  end
+end

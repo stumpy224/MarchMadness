@@ -3,7 +3,6 @@
 .body {
   background-image:url(image_path('bballCourt.jpg'));
 }
-
 .container {
   width: 1000px !important;
   margin-top: 15px;
@@ -14,7 +13,6 @@
   -webkit-border-radius:5px;
   border-radius:5px;
 }
-
 .pageHeaderLcl {
   background-color: darkgray !important;
   margin-top: -3px !important;
@@ -29,19 +27,16 @@
 .gridTable {
   border: 1px solid #ddd;
 }
-
 .gridHeaderRow {
   font-size: xx-large;
   text-align: center;
 }
-.gridDigitsHeaderRow {
+.gridWinnerDigitsHeaderRow {
   text-align: center;
 }
-
-.gridLoserColumn {
+.gridLoserDigitsColumn {
   font-weight: bold;
 }
-
 .gridSquare {
   border-top: 1px solid black;
   border-left: 1px solid black;

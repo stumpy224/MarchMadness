@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140304234440) do
+ActiveRecord::Schema.define(version: 20140308234459) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -46,6 +46,18 @@ ActiveRecord::Schema.define(version: 20140304234440) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
+  create_table "participant_squares", force: true do |t|
+    t.integer  "participant_id"
+    t.integer  "square_id"
+    t.string   "year"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "participant_squares", ["participant_id"], name: "index_participant_squares_on_participant_id"
+  add_index "participant_squares", ["square_id"], name: "index_participant_squares_on_square_id"
+  add_index "participant_squares", ["year"], name: "index_participant_squares_on_year"
+
   create_table "participants", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -78,18 +90,15 @@ ActiveRecord::Schema.define(version: 20140304234440) do
     t.integer  "game_id"
   end
 
+  add_index "results", ["game_id"], name: "index_results_on_game_id"
   add_index "results", ["participant_id"], name: "index_results_on_participant_id"
 
   create_table "squares", force: true do |t|
     t.integer  "winner_digit"
     t.integer  "loser_digit"
-    t.string   "year"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "participant_id"
   end
-
-  add_index "squares", ["participant_id"], name: "index_squares_on_participant_id"
 
   create_table "years", force: true do |t|
     t.string   "year"

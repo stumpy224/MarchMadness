@@ -1,5 +1,7 @@
 ActiveAdmin.register Participant do
-  permit_params :name, squares_attributes: [:id, :winner_digit, :loser_digit, :year, :_destroy]
+  permit_params :name, participant_squares_attributes: [:id, :square_id, :year, :_destroy]
+
+  config.sort_order = 'name_asc'
 
   form do |f|
     f.inputs do
@@ -7,16 +9,13 @@ ActiveAdmin.register Participant do
     end
 
     f.inputs 'Squares' do
-      f.has_many :squares do |s|
-        if (Time.now.year.to_s == '2014')
-          s.input :winner_digit
-          s.input :loser_digit
-          s.input :year, :value => '2013'#, :as => :hidden
-        else
-          s.input :winner_digit, input_html: { disabled: true }
-          s.input :loser_digit, input_html: { disabled: true }
-          s.input :year, input_html: { disabled: true }
-        end
+      f.has_many :participant_squares do |s|
+        s.input :year, as: :select,
+          collection: Year.all.order(year: :desc).map{ |y| ["#{y.year}", y.year] }
+        s.input :square_id, as: :select,
+          collection: Square.where('id IN (?) OR id NOT IN (?)', 
+            ParticipantSquare.where(participant_id: params[:id], year: $year).select(:square_id), 
+            ParticipantSquare.select(:square_id)).map{ |s| ["W:#{s.winner_digit} L:#{s.loser_digit}", s.id] }
       end
     end
 

@@ -10,24 +10,23 @@
       <tr>
         <th>&nbsp;</th>
         <% (0..9).each do |i| %>
-          <th class='gridDigitsHeaderRow'><%= i %></th>
+          <th class='gridWinnerDigitsHeaderRow'><%= i %></th>
         <% end %>
       </tr>
     </thead>
     <tbody>
       <% (0..9).each do |loser| %>
         <tr>
-          <td class='gridLoserColumn'><%= loser %></td>
+          <td class='gridLoserDigitsColumn'><%= loser %></td>
           <% (0..9).each do |winner| %>
-            <% @s = @squares.find_by(winner_digit: winner, loser_digit: loser) %>
-            <% @p = @participants.find(@s.participant_id) if @s.present? %>
-            <% if @s.blank? or @p.blank? %>
-              <%= content_tag :td, class: 'gridSquare' do %>
-                &nbsp;
-              <% end %>
+            <% square = @squares.find_by(winner_digit: winner, loser_digit: loser) %>
+            <% participant_square = @participant_squares.find_by(square_id: square.id) %>
+            <% participant = @participants.find(participant_square.participant_id) if participant_square.present? %>
+            <% if participant_square.blank? %>
+              <td class='gridSquare'>&nbsp;</td>
             <% else %>
-              <%= content_tag :td, class: 'gridSquare', title: @p.name do %>
-                <%= @p.first_name %><br /><%= @p.last_name %>
+              <%= content_tag :td, class: 'gridSquare', title: participant.name do %>
+                <%= participant.first_name %><br /><%= participant.last_name %>
               <% end %>
             <% end %>
             </td>

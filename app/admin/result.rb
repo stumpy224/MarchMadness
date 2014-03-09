@@ -5,11 +5,15 @@ ActiveAdmin.register Result do
     f.inputs do
       f.input :participant_id, as: :select, collection: Participant.all.order(:name)
       f.input :round
-      f.input :year, :value => 'Time.now.year'
+      f.input :year, as: :select, collection: Year.all.order(year: :desc).map{ |y| ["#{y.year}", y.year] }
       f.input :game_id
     end
 
     f.actions
+  end
+
+  action_item only: :show do
+    link_to 'New Result', new_admin_result_path, method: :get
   end
   
   index do

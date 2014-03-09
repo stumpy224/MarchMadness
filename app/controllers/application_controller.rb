@@ -1,15 +1,33 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
+  @@participants = Participant.all
+  @@squares = Square.all
+  @@participant_squares = ParticipantSquare.all
+  @@results = Result.all
+
+  def self.participants
+    @@participants
+  end
+
+  def self.squares
+    @@squares
+  end
+
+  def self.participant_squares
+    @@participant_squares
+  end
+
+  def self.results
+    @@results
+  end
+
   def access_denied(exception)
     redirect_to admin_organizations_path, :alert => exception.message
   end
 
   def get_tourney_info
-    if $year.blank?
-      $year = get_latest_year
-    end
-
+    $year = get_latest_year if $year.blank?
     url = Year.find_by(year: $year).source_url
 
     if url.empty?
@@ -20,13 +38,11 @@ class ApplicationController < ActionController::Base
 
     if response.is_a?(Net::HTTPSuccess)
       Game.clean_up
+      update_bracket_refreshed_date
+      update_results_refreshed_date
       return parse_tourney_response(response)
     else
-      if response.message.include?('Not Found')
-        return 'Oh, snap! The bracket has not yet been released... please check back later.'
-      else
-        return 'Oh, snap! An error occurred... please try clicking Refresh again.'
-      end
+      handle_failure_response(response)
     end
   end
 
@@ -36,62 +52,57 @@ class ApplicationController < ActionController::Base
     json_response['games']
   end
 
-  def translate_game_info(parsed_game)
-    game = Game.new
-    game.game_id = parsed_game['contestId']
-    game.bracket_position_id = parsed_game['bracketPositionId']
-    game.round = parsed_game['round']
-    parsed_game['gameState'].upcase == 'FINAL' ? game.game_over = true : game.game_over = false
+  def translate_game_info(game)
+    g = Game.new
+    g.game_id = game['contestId']
+    g.bracket_position_id = game['bracketPositionId']
+    g.round = game['round']
+    g.seed_top = game['seedTop']
+    g.seed_bottom = game['seedBottom']
+    g.away_name = game['away']['names']['short']
+    g.home_name = game['home']['names']['short']
 
-    game.seed_top = parsed_game['seedTop']
-    game.seed_bottom = parsed_game['seedBottom']
-    parsed_game['away']['isTop'] == 'T' ? game.away_is_top = true : game.away_is_top = false
-    parsed_game['home']['isTop'] == 'T' ? game.home_is_top = true : game.home_is_top = false
-    game.away_name = parsed_game['away']['names']['short']
-    game.home_name = parsed_game['home']['names']['short']
+    game['gameState'].upcase == 'FINAL' ? g.game_over = true : g.game_over = false
+    game['away']['isTop'] == 'T' ? g.away_is_top = true : g.away_is_top = false
+    game['home']['isTop'] == 'T' ? g.home_is_top = true : g.home_is_top = false
 
-    if game.game_over?
-      game.home_score = parsed_game['home']['score']
-      game.away_score = parsed_game['away']['score']
-      parsed_game['home']['winner'] == 'true' ? game.home_is_winner = true : game.home_is_winner = false
-      parsed_game['away']['winner'] == 'true' ? game.away_is_winner = true : game.away_is_winner = false
+    if g.game_over?
+      g.home_score = game['home']['score']
+      g.away_score = game['away']['score']
+      game['home']['winner'] == 'true' ? g.home_is_winner = true : g.home_is_winner = false
+      game['away']['winner'] == 'true' ? g.away_is_winner = true : g.away_is_winner = false
 
-      square = get_square_by_game(game)
+      winner_digit = g.home_is_winner? ? g.home_score.to_s.last(1) : g.away_score.to_s.last(1)
+      loser_digit = g.home_is_winner? ? g.away_score.to_s.last(1) : g.home_score.to_s.last(1)
+      square_id = (("#{winner_digit}#{loser_digit}").to_f + 1).to_i
+      participant_square = @@participant_squares.find_by(square_id: square_id, year: $year)
 
-      if square.present?
-        game.square_winner = Participant.find(square.participant_id).name
+      if participant_square.present?
+        participant_winner = @@participants.find(participant_square.participant_id)
+        g.square_winner = participant_winner.name
+        g.square_winner_id = participant_winner.id
       else
-        game.square_winner = ''
+        g.square_winner = ''
       end
     end
 
-    return game
-  end
-
-  def get_square_by_game(game)
-    Square.find_by(
-      winner_digit: game.home_is_winner? ? game.home_score.to_s.last(1) : game.away_score.to_s.last(1),
-      loser_digit: game.home_is_winner? ? game.away_score.to_s.last(1) : game.home_score.to_s.last(1),
-      year: $year
-    )
+    return g
   end
 
   def create_new_result_if_necessary(game)
-    if game.game_over? and game.round != '1'
-      if Result.find_by(round: game.round, year: $year, game_id: game.game_id).blank?
-        square = get_square_by_game(game)
-        create_new_result game, square if square.present?
-      end
+    if @@results.find_by(game_id: game.game_id).blank?
+      create_new_result(game)
     end
   end
 
-  def create_new_result(game, square)
-    update_results_refreshed_date
-    Result.create(
-      participant_id: square.participant_id,
-      round: game.round,
-      year: square.year,
-      game_id: game.game_id)
+  def create_new_result(game)
+    if not game.square_winner_id.blank?
+      Result.create!(
+        participant_id: game.square_winner_id,
+        round: game.round,
+        year: $year,
+        game_id: game.game_id)
+    end
   end
 
   def update_bracket_refreshed_date
@@ -108,5 +119,13 @@ class ApplicationController < ActionController::Base
 
   def get_latest_year
     Year.order(:year).last.year
+  end
+
+  def handle_failure_response(response)
+    if response.message.include?('Not Found')
+      return 'Oh, snap! The bracket has not yet been released... please check back later.'
+    else
+      return 'Oh, snap! An error occurred... please try clicking Refresh again.'
+    end
   end
 end

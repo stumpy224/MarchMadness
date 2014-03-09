@@ -1,4 +1,4 @@
-<% @r = Region.find_by(quadrant_id: quadrant_id) %>
+<% @r = @regions.find_by(quadrant_id: quadrant_id) %>
 <% if @r.blank? %>
   <span class='regionHeading'>Enter Region</span>
 <% else %>

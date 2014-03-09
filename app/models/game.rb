@@ -14,15 +14,14 @@ class Game
     :away_is_winner,
     :seed_top,
     :seed_bottom,
-    :square_winner
+    :square_winner,
+    :square_winner_id
   )
 
   def initialize(attributes = {})
     @game_id = attributes[:game_id]
     @bracket_position_id = attributes[:bracket_position_id]
     @game_over = attributes[:game_over]
-    @winner_score = attributes[:winner_score]
-    @loser_score = attributes[:loser_score]
     @round = attributes[:round]
     @home_is_top = attributes[:home_is_top]
     @home_name = attributes[:home_name]
@@ -35,26 +34,27 @@ class Game
     @seed_top = attributes[:seed_top]
     @seed_bottom = attributes[:seed_bottom]
     @square_winner = attributes[:square_winner]
+    @square_winner_id = attributes[:square_winner_id]
   end
 
   def game_over?
-    !!game_over
+    !!@game_over
   end
 
   def home_is_top?
-    !!home_is_top
+    !!@home_is_top
   end
 
   def home_is_winner?
-    !!home_is_winner
+    !!@home_is_winner
   end
 
   def away_is_top?
-    !!away_is_top
+    !!@away_is_top
   end
 
   def away_is_winner?
-    !!away_is_winner
+    !!@away_is_winner
   end
 
   def self.exists?

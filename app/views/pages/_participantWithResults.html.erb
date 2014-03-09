@@ -1,5 +1,5 @@
 <% resultCounter = 0 %>
-<% totalPaid = Square.where(participant_id: participant.id).count * 5 %>
+<% totalPaid = ParticipantSquare.where(participant_id: participant.id).count * 5 %>
 <% totalWon = 0 %>
 <tr>
   <%= content_tag :td, class: 'nameCell', rowspan: participant.results.count + 2 do %>
@@ -15,22 +15,31 @@
     <% end %>
     
       <td class='roundColumn'><%= result.round %></td>
-      <td>$5</td>
+      <td />
 
       <% @payouts.each do |payout| %>
         <% if result.round == payout.round %>
           <% totalWon += payout.game_payout %>
           <td>$<%= payout.game_payout %></td>
-          <td>$<%= (payout.game_payout - 5) %></td>
+          <td />
         <% end %>
       <% end %>
     </tr>
   <% end %>
 
   <tr class='totalResultRow'>
+    <% profit = totalWon - totalPaid %>
     <td class='roundColumn' style='font-weight:bold;'>Totals</td>
     <td style='font-weight:bold;'>$<%= totalPaid %></td>
     <td style='font-weight:bold;'>$<%= totalWon %></td>
-    <td style='font-weight:bold;'>$<%= totalWon - totalPaid %></td>
+    <% if profit < 0 %>
+    <td style='font-weight:bold;color:red;'>
+    <% elsif profit > 0 %>
+    <td style='font-weight:bold;color:green;'>
+    <% else %>
+    <td style='font-weight:bold;'>
+    <% end %>
+      $<%= profit %>
+    </td>
   </tr>
 </tr>

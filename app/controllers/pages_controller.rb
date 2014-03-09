@@ -2,12 +2,10 @@ require 'net/http'
 
 class PagesController < ApplicationController
   def bracket
-    if !Game.exists?
-      get_tourney_games
-      update_bracket_refreshed_date
-    end
-    
+    get_tourney_games if !Game.exists?
     @games = Game.all
+    @regions = Region.all
+    @years = Year.all
   end
 
   def results
@@ -17,24 +15,24 @@ class PagesController < ApplicationController
       $year = get_latest_year
     end
 
-    @participants_with_squares = Square.where(year: $year).select(:participant_id).distinct
+    @participants_with_squares = ParticipantSquare.where(year: $year).select(:participant_id).distinct
     @payouts = Payout.all
+    @years = Year.all
   end
 
   def refresh_bracket
     redirect_to action: 'bracket'
     get_tourney_games
-    update_bracket_refreshed_date
   end
 
   def refresh_results
     redirect_to controller: 'pages', action: 'results', year: $year
     get_tourney_games
-    update_results_refreshed_date
   end
 
   def grid
-    @squares = Square.where(year: $year).order(winner_digit: :asc, loser_digit: :asc)
+    @squares = Square.order(winner_digit: :asc, loser_digit: :asc)
+    @participant_squares = ParticipantSquare.where(year: $year).select(:participant_id)
     @participants = Participant.all
   end
 
@@ -48,7 +46,7 @@ class PagesController < ApplicationController
       else
         tourney_games.each do |g|
           game = translate_game_info(g)
-          create_new_result_if_necessary(game)
+          create_new_result_if_necessary(game) if (game.game_over? and game.round != '1')
         end
       end
     end
