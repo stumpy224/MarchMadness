@@ -20,9 +20,9 @@
           <td class='gridLoserDigitsColumn'><%= loser %></td>
           <% (0..9).each do |winner| %>
             <% square = @squares.find_by(winner_digit: winner, loser_digit: loser) %>
-            <% participant_square = @participant_squares.find_by(square_id: square.id) %>
+            <% participant_square = @participant_squares.find_by(square_id: square.id) if square.present? %>
             <% participant = @participants.find(participant_square.participant_id) if participant_square.present? %>
-            <% if participant_square.blank? %>
+            <% if square.blank? or participant_square.blank? or participant.blank? %>
               <td class='gridSquare'>&nbsp;</td>
             <% else %>
               <%= content_tag :td, class: 'gridSquare', title: participant.name do %>
