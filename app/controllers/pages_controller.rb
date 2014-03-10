@@ -1,11 +1,15 @@
 require 'net/http'
 
 class PagesController < ApplicationController
+  respond_to :html, :xml, :json, :js
+
   def bracket
     get_tourney_games if !Game.exists?
     @games = Game.all
     @regions = Region.all
     @years = Year.all
+
+    respond_with(@games)
   end
 
   def results
@@ -15,9 +19,12 @@ class PagesController < ApplicationController
       $year = get_latest_year
     end
 
-    @participants_with_squares = ParticipantSquare.select(:participant_id).distinct.where(year: $year).group(:participant_id).page(params[:page]).per(10)
+    @participants_with_squares = ParticipantSquare.select(:participant_id).distinct\
+      .where(year: $year).group(:participant_id).page(params[:page]).per(10)
     @payouts = Payout.all
     @years = Year.all
+
+    respond_with(@participants_with_squares)
   end
 
   def refresh_bracket
@@ -26,7 +33,7 @@ class PagesController < ApplicationController
   end
 
   def refresh_results
-    redirect_to controller: 'pages', action: 'results', year: $year
+    redirect_to action: 'results', year: $year
     get_tourney_games
   end
 

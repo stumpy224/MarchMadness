@@ -1,6 +1,8 @@
 <% provide(:title, 'Results') %>
-<div align='center'>
-<div class='page-header pageHeaderLcl'><h1><%= $year %> Results</h1></div>
+<div align='center' id='resultsPage'>
+<div class='page-header pageHeaderLcl'>
+  <h1><%= $year %> Results</h1>
+</div>
 <% if @payouts.exists? %>
   <% if Result.where(year: $year).count < 63 %>
     <%= render partial: 'refresh', locals: { path: refresh_results_path } %>
@@ -56,3 +58,4 @@
   <div style='font-weight:bold;'>Please enter payouts for the year.</div>
 <% end %>
 </div>
+<%= render 'wait' %>

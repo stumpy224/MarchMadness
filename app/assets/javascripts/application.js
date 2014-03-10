@@ -11,18 +11,33 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
 //= require_tree .
 //= require cocoon
 
+$(document).on("click","a[id='refreshResultsLink']", function (e) {
+  e.preventDefault(); // Prevent link from following its href
+  $('#waitModal').foundation('reveal', 'open');
+  $.get( "/refresh_results", function( data ) {
+    $( "#resultsPage" ).load( '/?year=2013 #resultsPage');
+    // $( ".result" ).html( data );
+  });
+});
+
+$(document).ajaxStop(function(){
+  // window.location.reload();
+  $('#waitModal').foundation('reveal', 'close');
+});
+
+/*! Copyright (c) 2011 by Jonas Mosbech - https://github.com/jmosbech/StickyTableHeaders
+    MIT license info: https://github.com/jmosbech/StickyTableHeaders/blob/master/license.txt */
 $(function(){
   $(document).foundation();
     $("table").stickyTableHeaders();
 });
-/*! Copyright (c) 2011 by Jonas Mosbech - https://github.com/jmosbech/StickyTableHeaders
-    MIT license info: https://github.com/jmosbech/StickyTableHeaders/blob/master/license.txt */
 
 ;(function ($, window, undefined) {
   'use strict';
