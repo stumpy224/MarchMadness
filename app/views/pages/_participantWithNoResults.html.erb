@@ -1,12 +1,8 @@
-<% if counter == ParticipantSquare.select(:participant_id).distinct.count %>
-  <tr class='firstResultRow borderLeft borderBottom'>
-<% else %>
-  <tr class='firstResultRow borderLeft'>
-<% end %>
-    <% totalPaid = ParticipantSquare.where(participant_id: participant.id).count * 5 %>
-    <td class='nameCell'><%= participant.name %></td>
-    <td />
-    <td>$<%= totalPaid %></td>
-    <td>$0</td>
-    <td>$-<%= totalPaid %></td>
-  </tr>
+<tr class='emptyResultRow'>
+  <% totalPaid = @participant_squares.where(participant_id: participant.id).count * 5 %>
+  <td class='nameCell'><%= participant.name %></td>
+  <td />
+  <td>$<%= totalPaid %></td>
+  <td>$0</td>
+  <td>$-<%= totalPaid %></td>
+</tr>

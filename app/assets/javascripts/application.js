@@ -18,17 +18,18 @@
 //= require_tree .
 //= require cocoon
 
-$(document).on("click","a[id='refreshResultsLink']", function (e) {
-  e.preventDefault(); // Prevent link from following its href
-  $('#waitModal').foundation('reveal', 'open');
-  $.get( "/refresh_results", function( data ) {
-    $( "#resultsPage" ).load( '/?year=2013 #resultsPage');
-    // $( ".result" ).html( data );
+$(document).ready(function() {
+  $('#refreshResultsLink').click(function(e) { 
+    e.stopPropagation();
+    e.preventDefault();
+    $('#waitModal').foundation('reveal', 'open');
+    $.get( "/refresh_results", function( data ) {
+      $( "#resultsPage" ).load( window.location.href + ' #resultsPage');
+    });
   });
 });
 
-$(document).ajaxStop(function(){
-  // window.location.reload();
+$(document).ajaxStop(function() {
   $('#waitModal').foundation('reveal', 'close');
 });
 

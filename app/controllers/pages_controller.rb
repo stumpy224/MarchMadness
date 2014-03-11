@@ -19,9 +19,11 @@ class PagesController < ApplicationController
       $year = get_latest_year
     end
 
+    @participant_squares = ParticipantSquare.all
     @participants_with_squares = ParticipantSquare.select(:participant_id).distinct\
       .where(year: $year).group(:participant_id).page(params[:page]).per(10)
     @payouts = Payout.all
+    @results = Result.all
     @years = Year.all
 
     respond_with(@participants_with_squares)
@@ -56,5 +58,9 @@ class PagesController < ApplicationController
           create_new_result_if_necessary(game) if (game.game_over? and game.round != '1')
         end
       end
+    end
+
+    def person_params
+      params.permit(:year, :refresh)
     end
 end

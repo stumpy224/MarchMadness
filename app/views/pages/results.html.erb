@@ -4,13 +4,13 @@
   <h1><%= $year %> Results</h1>
 </div>
 <% if @payouts.exists? %>
-  <% if Result.where(year: $year).count < 63 %>
-    <%= render partial: 'refresh', locals: { path: refresh_results_path } %>
-  <% end %>
-  
-  <%= paginate @participants_with_squares %>
-
   <% if @participants_with_squares.any? %>
+    <% if @results.where(year: $year).count < 63 %>
+      <%= render partial: 'refresh', locals: { path: refresh_results_path } %>
+    <% end %>
+  
+    <%= paginate @participants_with_squares %>
+  
     <table>
       <thead class='headerRow'>
         <tr>

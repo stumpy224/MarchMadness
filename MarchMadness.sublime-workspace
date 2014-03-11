@@ -295,7 +295,7 @@
 			"file": "app/assets/javascripts/application.js",
 			"settings":
 			{
-				"buffer_size": 8362,
+				"buffer_size": 7139,
 				"line_ending": "Unix"
 			}
 		},
@@ -303,7 +303,7 @@
 			"file": "app/controllers/pages_controller.rb",
 			"settings":
 			{
-				"buffer_size": 1409,
+				"buffer_size": 1414,
 				"line_ending": "Unix"
 			}
 		},
@@ -311,15 +311,24 @@
 			"file": "app/views/pages/results.html.erb",
 			"settings":
 			{
-				"buffer_size": 2387,
+				"buffer_size": 2102,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/pages/_wait.html.erb",
+			"settings":
+			{
+				"buffer_size": 274,
+				"line_ending": "Unix",
+				"name": "_wait.html.erb"
 			}
 		},
 		{
 			"file": "app/views/pages/_refresh.html.erb",
 			"settings":
 			{
-				"buffer_size": 729,
+				"buffer_size": 995,
 				"line_ending": "Unix"
 			}
 		},
@@ -344,6 +353,14 @@
 			"settings":
 			{
 				"buffer_size": 39359,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/pages/bracket.html.erb",
+			"settings":
+			{
+				"buffer_size": 16478,
 				"line_ending": "Unix"
 			}
 		}
@@ -661,7 +678,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -669,15 +686,15 @@
 					"file": "app/assets/javascripts/application.js",
 					"settings":
 					{
-						"buffer_size": 8362,
+						"buffer_size": 7139,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1743,
-								1743
+								1185,
+								1185
 							]
 						],
 						"settings":
@@ -687,7 +704,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 756.0,
+						"translation.y": 308.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -697,15 +714,15 @@
 					"file": "app/controllers/pages_controller.rb",
 					"settings":
 					{
-						"buffer_size": 1409,
+						"buffer_size": 1414,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								609,
-								609
+								766,
+								766
 							]
 						],
 						"settings":
@@ -725,15 +742,15 @@
 					"file": "app/views/pages/results.html.erb",
 					"settings":
 					{
-						"buffer_size": 2387,
+						"buffer_size": 2102,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								336,
-								336
+								68,
+								68
 							]
 						],
 						"settings":
@@ -750,18 +767,45 @@
 				},
 				{
 					"buffer": 3,
-					"file": "app/views/pages/_refresh.html.erb",
+					"file": "app/views/pages/_wait.html.erb",
 					"settings":
 					{
-						"buffer_size": 729,
+						"buffer_size": 274,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								195,
-								195
+								274,
+								274
+							]
+						],
+						"settings":
+						{
+							"auto_name": "_wait.html.erb",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/pages/_refresh.html.erb",
+					"settings":
+					{
+						"buffer_size": 995,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								222,
+								222
 							]
 						],
 						"settings":
@@ -777,7 +821,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "app/assets/stylesheets/results.css.scss",
 					"settings":
 					{
@@ -805,7 +849,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "app/views/layouts/application.html.erb",
 					"settings":
 					{
@@ -816,8 +860,8 @@
 						"selection":
 						[
 							[
-								645,
-								645
+								395,
+								395
 							]
 						],
 						"settings":
@@ -833,7 +877,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "app/assets/stylesheets/foundation_and_overrides.scss",
 					"settings":
 					{
@@ -854,6 +898,34 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 15388.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/views/pages/bracket.html.erb",
+					"settings":
+					{
+						"buffer_size": 16478,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								83,
+								83
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
