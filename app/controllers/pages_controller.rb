@@ -9,7 +9,7 @@ class PagesController < ApplicationController
     @regions = Region.all
     @years = Year.all
 
-    respond_with(@games)
+    respond_with(@games, @regions, @years)
   end
 
   def results
@@ -30,8 +30,8 @@ class PagesController < ApplicationController
   end
 
   def refresh_bracket
-    redirect_to action: 'bracket'
-    get_tourney_games
+    redirect_to action: 'bracket', year: $year
+    get_tourney_games if !Game.exists?
   end
 
   def refresh_results

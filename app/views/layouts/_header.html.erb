@@ -8,7 +8,7 @@
     <!-- Right Nav Section -->
     <ul class='right' style='margin-right:8.5em;'>
       <li><%= link_to 'Results', controller: 'pages', action: 'results', year: $year %></li>
-      <li><%= link_to 'Bracket', bracket_path %></li>
+      <li><%= link_to 'Bracket', bracket_path, id: 'bracketLink', remote: true %></li>
       <li><%= link_to 'Grid', grid_path %></li>
       <li><%= link_to 'How It Works', summary_path %></li>
     </ul>
