@@ -81,7 +81,7 @@ class ApplicationController < ActionController::Base
 
       if participant_square.present?
         participant_winner = @@participants.find(participant_square.participant_id)
-        g.square_winner = participant_winner.name
+        g.square_winner = participant_winner.preferred_name
         g.square_winner_id = participant_winner.id
       else
         g.square_winner = ''

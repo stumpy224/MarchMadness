@@ -19,14 +19,20 @@ class PagesController < ApplicationController
       $year = get_latest_year
     end
 
+    @participants_with_squares = ParticipantSquare.select(:participant_id, \
+      'CASE WHEN participants.display_name IS NULL '\
+        'THEN participants.name '\
+        'ELSE participants.display_name '\
+      'END AS Name').distinct.joins('INNER JOIN participants '\
+      'ON participants.id = participant_squares.participant_id')\
+      .where(year: $year).group(:participant_id).order('Name').page(params[:page]).per(10)
+      
     @participant_squares = ParticipantSquare.all
-    @participants_with_squares = ParticipantSquare.select(:participant_id).distinct\
-      .where(year: $year).group(:participant_id).page(params[:page]).per(10)
     @payouts = Payout.all
     @results = Result.all
     @years = Year.all
 
-    respond_with(@participants_with_squares)
+    respond_with(@participant_squares, @participants_with_squares, @results)
   end
 
   def refresh_bracket

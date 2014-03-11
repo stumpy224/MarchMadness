@@ -3,7 +3,7 @@
 <% totalWon = 0 %>
 <tr>
   <%= content_tag :td, class: 'nameCell', rowspan: participant.results.count + 2 do %>
-    <%= participant.name %>
+    <%= participant.preferred_name %>
   <% end %>
 
   <% for result in participant.results %>

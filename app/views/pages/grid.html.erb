@@ -25,8 +25,14 @@
             <% if square.blank? or participant_square.blank? or participant.blank? %>
               <td class='gridSquare'>&nbsp;</td>
             <% else %>
-              <%= content_tag :td, class: 'gridSquare', title: participant.name do %>
-                <%= participant.first_name %><br /><%= participant.last_name %>
+              <% if participant.display_name.blank? %>
+                <%= content_tag :td, class: 'gridSquare', title: participant.name do %>
+                  <%= participant.first_name %><br /><%= participant.last_name %>
+                <% end %>
+              <% else %>
+                <%= content_tag :td, class: 'gridSquare', title: participant.display_name do %>
+                  <%= participant.display_name %>
+                <% end %>
               <% end %>
             <% end %>
             </td>

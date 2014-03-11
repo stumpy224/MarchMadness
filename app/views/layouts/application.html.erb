@@ -14,8 +14,8 @@
       <div class='alert alert-<%= key %>'><%= value %></div>
       <% end %>
       <%= yield %>
+      <%= render 'wait' %>
     </div>
     <%= render 'layouts/footer' %>
-    
   </body>
 </html>

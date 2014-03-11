@@ -25,17 +25,6 @@ $(document).ready(function() {
     $('#waitModal').foundation('reveal', 'open');
     $.get( "/refresh_bracket", function( data ) {
       window.location = '/bracket'
-      // if (data.redirect) {
-      //     // data.redirect contains the string URL to redirect to
-      //     window.location.href = data.redirect;
-      // }
-      // else {
-      //     // data.form contains the HTML for the replacement form
-      //     $("#bracketPage").replaceWith(data.form);
-      // }
-
-      // $( ".result" ).html( data );
-      // $( "#bracketPage" ).load( '/bracket?year=2013');
     });
   });
 });

@@ -1,11 +1,12 @@
 ActiveAdmin.register Participant do
-  permit_params :name, participant_squares_attributes: [:id, :square_id, :year, :_destroy]
+  permit_params :name, :display_name, participant_squares_attributes: [:id, :square_id, :year, :_destroy]
 
   config.sort_order = 'name_asc'
 
   form do |f|
     f.inputs do
       f.input :name
+      f.input :display_name
     end
 
     f.inputs 'Squares' do
