@@ -92,7 +92,7 @@ body #footer {
 
 .game-cell {
 font-weight:400;
-background-color: rgb(213, 213, 213);
+background-color: ivory;
 }
 
 .popup_seperator {
@@ -124,6 +124,7 @@ margin:auto;
 .roundTitle {
 font-size:10px;
 line-height:12px;
+padding-top:5px;
 }
 
 .rtl {

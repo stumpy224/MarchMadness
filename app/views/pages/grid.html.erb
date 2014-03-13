@@ -26,11 +26,11 @@
               <td class='gridSquare'>&nbsp;</td>
             <% else %>
               <% if participant.display_name.blank? %>
-                <%= content_tag :td, class: 'gridSquare', title: participant.name do %>
+                <%= content_tag :td, class: 'gridSquare' do %>
                   <%= participant.first_name %><br /><%= participant.last_name %>
                 <% end %>
               <% else %>
-                <%= content_tag :td, class: 'gridSquare', title: participant.display_name do %>
+                <%= content_tag :td, class: 'gridSquare' do %>
                   <%= participant.display_name %>
                 <% end %>
               <% end %>

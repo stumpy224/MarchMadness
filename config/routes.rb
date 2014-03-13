@@ -7,7 +7,7 @@ MarchMadness::Application.routes.draw do
   root 'pages#results'
   get 'bracket', to: 'pages#bracket'
   get 'grid', to: 'pages#grid'
-  get 'summary', to: 'pages#summary'
+  get 'faq', to: 'pages#faq'
   get 'refresh_bracket', to: 'pages#refresh_bracket'
   get 'refresh_results', to: 'pages#refresh_results'
 
