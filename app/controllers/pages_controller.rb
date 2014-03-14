@@ -20,8 +20,9 @@ class PagesController < ApplicationController
     end
 
     @sql =  "SELECT DISTINCT pa.id, "\
-              "CASE WHEN pa.display_name == '' "\
-                "THEN pa.name "\
+              "CASE "\
+                "WHEN pa.display_name IS NULL OR pa.display_name = '' "\
+                  "THEN pa.name "\
                 "ELSE pa.display_name "\
               "END AS preferred_name "\
             "FROM participants pa "\
