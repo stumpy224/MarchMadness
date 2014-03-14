@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: 746d1d918053b65b2dfa4724eb158acb532fdd3e
+  revision: 9ca081f47ab447793afbd0cb2ba1eded68c26f10
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0)
@@ -44,7 +44,7 @@ GIT
 
 GIT
   remote: git://github.com/plataformatec/devise.git
-  revision: 71eb6176c361bccc7c9c199e9638982daf0422fb
+  revision: a8e1d4209706a4d904b968d0fe122bc25457cee8
   specs:
     devise (3.2.3)
       bcrypt (~> 3.0)
@@ -131,9 +131,10 @@ GEM
       railties (>= 3.0.0)
     ffi (1.9.3)
     formatador (0.2.4)
-    foundation-rails (5.2.0.0)
+    foundation-rails (5.2.1.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
+    foundation-will_paginate (0.0.1)
     guard (2.5.1)
       formatador (>= 0.2.4)
       listen (~> 2.6)
@@ -234,11 +235,11 @@ GEM
       rspec-expectations (~> 2.13.0)
       rspec-mocks (~> 2.13.0)
     rubyzip (0.9.9)
-    sass (3.3.0)
-      rake
-    sass-rails (4.0.1)
+    sass (3.2.15)
+    sass-rails (4.0.2)
       railties (>= 4.0.0, < 5.0)
-      sass (>= 3.1.10)
+      sass (~> 3.2.0)
+      sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0.0)
     sdoc (0.4.0)
       json (~> 1.8)
@@ -248,7 +249,7 @@ GEM
       multi_json (~> 1.0)
       rubyzip (< 1.0.0)
       websocket (~> 1.0.4)
-    slop (3.4.7)
+    slop (3.5.0)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -269,13 +270,14 @@ GEM
       polyglot (>= 0.3.1)
     turbolinks (2.2.1)
       coffee-rails
-    tzinfo (0.3.38)
+    tzinfo (0.3.39)
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
     websocket (1.0.7)
+    will_paginate (3.0.5)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -293,12 +295,12 @@ DEPENDENCIES
   factory_girl_rails (= 4.2.1)
   formtastic!
   foundation-rails
+  foundation-will_paginate
   guard-rspec (= 2.5.0)
   inherited_resources!
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks
-  kaminari
   libnotify (= 0.8.0)
   pg (= 0.15.1)
   rails (= 4.0.2)
@@ -312,3 +314,4 @@ DEPENDENCIES
   sqlite3
   turbolinks
   uglifier (>= 1.3.0)
+  will_paginate (~> 3.0)

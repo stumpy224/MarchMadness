@@ -5,7 +5,8 @@ ActiveAdmin.register ParticipantSquare do
 
   form do |f|
     f.inputs do
-      f.input :participant_id, as: :select, collection: Participant.all.order(:name)
+      f.input :participant_id, as: :select, collection: 
+        Participant.select(:id, :name).order(:name)
       f.input :year, label: 'Year', as: :select,
         collection: Year.all.order(year: :desc).map{|y| ["#{y.year}", y.year]}
       f.input :square_id, label: 'Square', as: :select,
@@ -21,7 +22,7 @@ ActiveAdmin.register ParticipantSquare do
 
   index do
     column :participant_id, sortable: :participant_id do |s|
-      Participant.find(s.participant_id).name
+      Participant.find(s.participant_id).preferred_name
     end
     column :square_id, sortable: :square_id do |s|
       @square = Square.find(s.square_id)

@@ -6,7 +6,8 @@ gem 'rails', '4.0.2'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'foundation-rails'
 gem 'cocoon', '~> 1.2.0'
-gem 'kaminari'
+gem 'will_paginate', '~> 3.0'
+gem 'foundation-will_paginate'
 
 group :development, :test do
   gem 'sqlite3'

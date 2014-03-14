@@ -9,7 +9,7 @@
       <%= render partial: 'refresh', locals: { path: refresh_results_path } %>
     <% end %>
   
-    <%= paginate @participants_with_squares %>
+    <%= render 'pagination' %>
   
     <table>
       <thead class='headerRow'>
@@ -24,7 +24,7 @@
       <tbody>
         <% pCounter = 0 %>
         <% @participants_with_squares.each do |p_w_sq| %>
-          <% participant = Participant.find(p_w_sq.participant_id) %>
+          <% participant = Participant.find(p_w_sq.id) %>
           <% pResultCount = Result.where(participant_id: participant.id).count %>
           <% pCounter += 1 %>
           <% if pResultCount > 0 %>
@@ -38,8 +38,8 @@
   <% else %>
     <div style='font-weight:bold;'>Please enter participants for the year.</div>
   <% end %>
-  
-  <%= paginate @participants_with_squares %>
+
+  <%= render 'pagination' %>
 
   <% if Year.many? %>
   <br />

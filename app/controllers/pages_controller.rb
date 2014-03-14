@@ -19,20 +19,25 @@ class PagesController < ApplicationController
       $year = get_latest_year
     end
 
-    @participants_with_squares = ParticipantSquare.select(:participant_id, \
-      'CASE WHEN participants.display_name IS NULL '\
-        'THEN participants.name '\
-        'ELSE participants.display_name '\
-      'END AS Name').distinct.joins('INNER JOIN participants '\
-      'ON participants.id = participant_squares.participant_id')\
-      .where(year: $year).group(:participant_id).order('Name').page(params[:page]).per(10)
-      
+    @sql =  "SELECT DISTINCT pa.id, "\
+              "CASE WHEN pa.display_name == '' "\
+                "THEN pa.name "\
+                "ELSE pa.display_name "\
+              "END AS preferred_name "\
+            "FROM participants pa "\
+              "INNER JOIN participant_squares ps "\
+                "ON pa.id = ps.participant_id "\
+                "AND ps.year = '" + $year + "' "\
+            "GROUP BY pa.id "\
+            "ORDER BY preferred_name"
+
+    @participants_with_squares = Participant.paginate_by_sql(@sql, page: params[:page], per_page: 10)
     @participant_squares = ParticipantSquare.all
     @payouts = Payout.all
     @results = Result.all
     @years = Year.all
 
-    respond_with(@participant_squares, @participants_with_squares, @results)
+    respond_with(@participants_with_squares, @participant_squares, @results)
   end
 
   def refresh_bracket
@@ -47,7 +52,7 @@ class PagesController < ApplicationController
 
   def grid
     @squares = Square.order(winner_digit: :asc, loser_digit: :asc)
-    @participant_squares = ParticipantSquare.where(year: $year).select(:participant_id)
+    @participant_squares = ParticipantSquare.select(:participant_id).where(year: $year)
     @participants = Participant.all
   end
 

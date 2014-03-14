@@ -14,9 +14,12 @@ ActiveAdmin.register Participant do
         s.input :year, as: :select,
           collection: Year.all.order(year: :desc).map{ |y| ["#{y.year}", y.year] }
         s.input :square_id, as: :select,
-          collection: Square.where('id IN (?) OR id NOT IN (?)', 
-            ParticipantSquare.where(participant_id: params[:id], year: $year).select(:square_id), 
-            ParticipantSquare.select(:square_id)).map{ |s| ["W:#{s.winner_digit} L:#{s.loser_digit}", s.id] }
+          collection: Square.all.map{ |s| ["W:#{s.winner_digit} L:#{s.loser_digit}", s.id] }
+
+        # s.input :square_id, as: :select,
+        #   collection: Square.where('id IN (?) OR id NOT IN (?)', 
+        #     ParticipantSquare.select(:square_id).where(participant_id: params[:id], year: Time.now.year), 
+        #     ParticipantSquare.select(:square_id)).map{ |s| ["W:#{s.winner_digit} L:#{s.loser_digit}", s.id] }
       end
     end
 
