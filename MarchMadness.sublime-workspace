@@ -348,6 +348,7 @@
 	},
 	"file_history":
 	[
+		"/home/jstump/Development/projects/MarchMadness/app/controllers/pages_controller.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/pages/faq.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/config/routes.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/bracket.css",
@@ -355,7 +356,6 @@
 		"/home/jstump/Development/projects/MarchMadness/app/views/layouts/application.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/layouts/_wait.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/admin/participant_square.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/controllers/pages_controller.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/pages/_pagination.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/pages/results.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/Gemfile",
