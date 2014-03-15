@@ -7,7 +7,6 @@ gem 'bootstrap-sass', '2.3.2.0'
 gem 'foundation-rails'
 gem 'cocoon', '~> 1.2.0'
 gem 'will_paginate', '~> 3.0'
-gem 'foundation-will_paginate'
 
 group :development, :test do
   gem 'sqlite3'
