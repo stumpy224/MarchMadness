@@ -16,13 +16,11 @@
     
       <td class='roundColumn'><%= result.round %></td>
       <td />
+      <td>$<%= @payout = @payouts.find_by(round: result.round).game_payout %></td>
+      <td />
 
-      <% @payouts.each do |payout| %>
-        <% if result.round == payout.round %>
-          <% totalWon += payout.game_payout %>
-          <td>$<%= payout.game_payout %></td>
-          <td />
-        <% end %>
+      <% if !@payout.blank? %>
+        <% totalWon += @payout %>
       <% end %>
     </tr>
   <% end %>
