@@ -3,6 +3,17 @@ ActiveAdmin.register Payout do
 
   config.sort_order = 'year_asc, game_payout_asc'
 
+  form do |f|
+    f.inputs do
+      f.input :game_payout
+      f.input :round
+      f.input :year, as: :select,
+        collection: Year.all.order(year: :desc).map{ |y| ["#{y.year}", y.year] }
+    end
+
+    f.actions
+  end
+
   index do
     column :year
     column :round, sortable: :round do |payout|

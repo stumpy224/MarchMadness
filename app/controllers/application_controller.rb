@@ -57,8 +57,6 @@ class ApplicationController < ActionController::Base
     g.game_id = game['contestId']
     g.bracket_position_id = game['bracketPositionId']
     g.round = game['round']
-    # g.seed_top = game['seedTop']
-    # g.seed_bottom = game['seedBottom']
     g.away_name = game['away']['names']['short']
     g.home_name = game['home']['names']['short']
 
