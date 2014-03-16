@@ -82,6 +82,7 @@
 }
 
 .nameColumn {
+  @extend .borderRight;
   padding-left: 10px;
   width: 200px;
 }
