@@ -33,9 +33,10 @@ class PagesController < ApplicationController
             "ORDER BY preferred_name"
 
     @participants_with_squares = Participant.paginate_by_sql(@sql, page: params[:page], per_page: 10)
-    @participant_squares = ParticipantSquare.all
-    @payouts = Payout.all
-    @results = Result.all
+    @participant_squares = ParticipantSquare.where(year: $year)
+    @participants = Participant.all
+    @payouts = Payout.where(year: $year)
+    @results = Result.where(year: $year)
     @years = Year.all
 
     respond_with(@participants_with_squares, @participant_squares, @results)

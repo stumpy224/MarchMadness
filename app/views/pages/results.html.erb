@@ -5,7 +5,7 @@
 </div>
 <% if @payouts.exists? %>
   <% if @participants_with_squares.any? %>
-    <% if @results.where(year: $year).count < 63 %>
+    <% if @results.count < 63 %>
       <%= render partial: 'refresh', locals: { path: refresh_results_path } %>
     <% end %>
   
@@ -24,8 +24,8 @@
       <tbody>
         <% pCounter = 0 %>
         <% @participants_with_squares.each do |p_w_sq| %>
-          <% participant = Participant.find(p_w_sq.id) %>
-          <% pResultCount = Result.where(participant_id: participant.id).count %>
+          <% participant = @participants.find(p_w_sq.id) %>
+          <% pResultCount = @results.where(participant_id: participant.id).count %>
           <% pCounter += 1 %>
           <% if pResultCount > 0 %>
             <%= render partial: 'participantWithResults', locals: { participant: participant } %>

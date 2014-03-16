@@ -1,5 +1,5 @@
 <% resultCounter = 0 %>
-<% totalPaid = ParticipantSquare.where(participant_id: participant.id).count * 5 %>
+<% totalPaid = @participant_squares.where(participant_id: participant.id).count * 5 %>
 <% totalWon = 0 %>
 <tr>
   <%= content_tag :td, class: 'nameCell', rowspan: participant.results.count + 2 do %>
