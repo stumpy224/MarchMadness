@@ -1,8 +1,8 @@
 ActiveAdmin.register Year do
-  permit_params :year, :source_url
+  permit_params :year, :source_url, :winner_digits, :loser_digits
 
   form do |f|
-    f.inputs :year, :source_url
+    f.inputs :year, :source_url, :winner_digits, :loser_digits
     f.actions
   end
   
@@ -13,8 +13,8 @@ ActiveAdmin.register Year do
       end
     end
     column :source_url
-    column :results_last_updated_at, sortable: :results_last_updated_at
-    column :bracket_last_updated_at, sortable: :bracket_last_updated_at
+    column :winner_digits
+    column :loser_digits
     default_actions
   end
 end

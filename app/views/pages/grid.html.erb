@@ -1,44 +1,50 @@
 <% provide(:title, 'Grid') %>
 <div align='center'>
   <div class='page-header pageHeaderLcl'><h1><%= $year %> Grid</h1></div>
-  <table class='gridTable'>
-    <thead>
-      <tr>
-        <th>&nbsp;</th>
-        <th colspan='10' class='gridHeaderRow'>Last Digit of the Winning Score</th>
-      </tr>
-      <tr>
-        <th>&nbsp;</th>
-        <% (0..9).each do |i| %>
-          <th class='gridWinnerDigitsHeaderRow'><%= i %></th>
-        <% end %>
-      </tr>
-    </thead>
-    <tbody>
-      <% (0..9).each do |loser| %>
+  <% if @winner_digits.blank? or @loser_digits.blank? %>
+  <div>Winner/Loser digits have not been added for <%= $year %>.</div>
+  <% else %>
+    <% winner_digits = @winner_digits.split(',') %>
+    <% loser_digits = @loser_digits.split(',') %>
+    <table class='gridTable'>
+      <thead>
         <tr>
-          <td class='gridLoserDigitsColumn'><%= loser %></td>
-          <% (0..9).each do |winner| %>
-            <% square = @squares.find_by(winner_digit: winner, loser_digit: loser) %>
-            <% participant_square = @participant_squares.find_by(square_id: square.id) if square.present? %>
-            <% participant = @participants.find(participant_square.participant_id) if participant_square.present? %>
-            <% if square.blank? or participant_square.blank? or participant.blank? %>
-              <td class='gridSquare'>&nbsp;</td>
-            <% else %>
-              <% if participant.display_name.blank? %>
-                <%= content_tag :td, class: 'gridSquare' do %>
-                  <%= participant.first_name %><br /><%= participant.last_name %>
-                <% end %>
-              <% else %>
-                <%= content_tag :td, class: 'gridSquare' do %>
-                  <%= participant.display_name %>
-                <% end %>
-              <% end %>
-            <% end %>
-            </td>
+          <th>&nbsp;</th>
+          <th colspan='10' class='gridHeaderRow'>Last Digit of the Winning Score</th>
+        </tr>
+        <tr>
+          <th>&nbsp;</th>
+          <% winner_digits.each do |i| %>
+            <th class='gridWinnerDigitsHeaderRow'><%= i %></th>
           <% end %>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <% loser_digits.each do |loser| %>
+          <tr>
+            <td class='gridLoserDigitsColumn'><%= loser %></td>
+            <% winner_digits.each do |winner| %>
+              <% square = @squares.find_by(winner_digit: winner, loser_digit: loser) %>
+              <% participant_square = @participant_squares.find_by(square_id: square.id) if square.present? %>
+              <% participant = @participants.find(participant_square.participant_id) if participant_square.present? %>
+              <% if square.blank? or participant_square.blank? or participant.blank? %>
+                <td class='gridSquare'>&nbsp;</td>
+              <% else %>
+                <% if participant.display_name.blank? %>
+                  <%= content_tag :td, class: 'gridSquare' do %>
+                    <%= participant.first_name %><br /><%= participant.last_name %>
+                  <% end %>
+                <% else %>
+                  <%= content_tag :td, class: 'gridSquare' do %>
+                    <%= participant.display_name %>
+                  <% end %>
+                <% end %>
+              <% end %>
+              </td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
 </div>

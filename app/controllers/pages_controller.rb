@@ -56,6 +56,9 @@ class PagesController < ApplicationController
     @squares = Square.order(winner_digit: :asc, loser_digit: :asc)
     @participant_squares = ParticipantSquare.select(:participant_id).where(year: $year)
     @participants = Participant.all
+    @years = Year.all
+    @winner_digits = @years.where(year: $year).first.winner_digits
+    @loser_digits = @years.where(year: $year).first.loser_digits
   end
 
   private
