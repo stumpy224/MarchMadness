@@ -73,7 +73,6 @@ table tr:nth-of-type(even) {
 tbody td {
   border-top: 0px !important;
 }
-
 .gridTable {
   border: 0px;
   background-color: whitesmoke;
@@ -100,11 +99,25 @@ tbody td {
   width: 95px;
 }
 
-/* SUMMARY */
+/* FAQ */
 .summaryQuestion {
   font-weight: bold;
 }
 .summaryContent {
   padding-left: 1em;
   padding-right: 1em;
+}
+.payoutTable {
+  border: 0px;
+  background-color: whitesmoke;
+}
+.payoutHeader {
+  text-align: center !important;
+  vertical-align: bottom;
+}
+.roundColumn {
+  text-align:center;
+}
+.winnersColumn {
+  text-align:center;
 }
