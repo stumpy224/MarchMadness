@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include ApplicationHelper
   protect_from_forgery with: :exception
 
   @@participants = Participant.all
@@ -115,10 +116,6 @@ class ApplicationController < ActionController::Base
     year = Year.find_by(year: $year)
     year.results_last_updated_at = DateTime.now
     year.save
-  end
-
-  def get_latest_year
-    Year.order(:year).last.year
   end
 
   def handle_failure_response(response)

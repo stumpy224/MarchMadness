@@ -1,3 +1,8 @@
+.page-header {
+  border-bottom: 1px solid #eeeeee;
+  margin: 0 0 0;
+}
+
 .clearfix{
   *zoom:1;
 }
@@ -92,7 +97,8 @@ body #footer {
 
 .game-cell {
 font-weight:400;
-background-color: burlywood;
+background-color:beige;
+/* burlywood */
 /* ivory */
 }
 

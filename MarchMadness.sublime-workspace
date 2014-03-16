@@ -348,19 +348,21 @@
 	},
 	"file_history":
 	[
+		"/home/jstump/Development/projects/MarchMadness/db/schema.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/pages/results.html.erb",
-		"/home/jstump/Development/projects/MarchMadness/app/views/pages/_pagination.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/controllers/pages_controller.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/pages.css.scss",
+		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/results.css.scss",
+		"/home/jstump/Development/projects/MarchMadness/app/views/pages/_participantWithNoResults.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/pages/_participantWithResults.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/pages/_pagination.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/admin/payout.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/admin/participant.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/foundation_and_overrides.scss",
 		"/home/jstump/Development/projects/MarchMadness/config/environments/production.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/views/pages/_participantWithNoResults.html.erb",
-		"/home/jstump/Development/projects/MarchMadness/app/views/pages/_participantWithResults.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/controllers/application_controller.rb",
 		"/home/jstump/Development/projects/MarchMadness/Gemfile",
 		"/home/jstump/Development/projects/MarchMadness/config/initializers/kaminari_config.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/controllers/pages_controller.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/pages/faq.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/config/routes.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/bracket.css",
@@ -375,13 +377,11 @@
 		"/home/jstump/Development/projects/MarchMadness/app/helpers/application_helper.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/javascripts/application.js",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/javascripts/pages.js.coffee",
-		"/home/jstump/Development/projects/MarchMadness/db/schema.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/models/participant.rb",
 		"/home/jstump/Development/projects/MarchMadness/log/development.log",
 		"/home/jstump/Development/projects/MarchMadness/app/views/pages/_refresh.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/pages/bracket.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140311020443_add_display_name_to_participants.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/results.css.scss",
 		"/home/jstump/Development/projects/MarchMadness/config/environments/development.rb",
 		"/home/jstump/Development/projects/MarchMadness/config/application.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/application.css.scss",
@@ -483,7 +483,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			""

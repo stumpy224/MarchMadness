@@ -6,7 +6,8 @@ ActiveAdmin.register Region do
   form do |f|
     f.inputs do
       f.input :name
-      f.input :year, :value => 'Time.now.year'
+      f.input :year, as: :select,
+          collection: Year.all.order(year: :desc).map{ |y| ["#{y.year}", y.year] }
       f.input :style
       f.input :quadrant_id
     end
