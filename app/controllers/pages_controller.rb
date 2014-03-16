@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   def bracket
     get_tourney_games if !Game.exists?
     @games = Game.all
-    @regions = Region.all
+    @regions = Region.where(year: $year)
     @years = Year.all
 
     respond_with(@games, @regions, @years)
