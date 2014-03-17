@@ -6,10 +6,12 @@ class Game
     :round,
     :home_is_top,
     :home_name,
+    :home_name_full,
     :home_score,
     :home_is_winner,
     :away_is_top,
     :away_name,
+    :away_name_full,
     :away_score,
     :away_is_winner,
     :seed_top,
@@ -25,10 +27,12 @@ class Game
     @round = attributes[:round]
     @home_is_top = attributes[:home_is_top]
     @home_name = attributes[:home_name]
+    @home_name_full = attributes[:home_name_full]
     @home_score = attributes[:home_score]
     @home_is_winner = attributes[:home_is_winner]
     @away_is_top = attributes[:away_is_top]
     @away_name = attributes[:away_name]
+    @away_name_full = attributes[:away_name_full]
     @away_score = attributes[:away_score]
     @away_is_winner = attributes[:away_is_winner]
     @seed_top = attributes[:seed_top]

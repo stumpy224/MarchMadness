@@ -13,7 +13,9 @@
     <% end %>
         <div class='teamLogo'></div>
         <div class='teamSeed'><%= g.seed_top %></div>
-        <div class='teamName'><%= g.home_is_top? ? g.home_name : g.away_name %></div>
+        <%= content_tag :div, class: 'teamName', title: g.home_is_top? ? g.home_name_full : g.away_name_full do %>
+          <%= g.home_is_top? ? g.home_name : g.away_name %>
+        <% end %>
         <div class='teamScore'><%= g.home_is_top? ? g.home_score : g.away_score %></div>
     </div>
     <% if (g.home_is_top? and g.away_is_winner?) or (g.away_is_top? and g.home_is_winner?) %>
@@ -23,7 +25,9 @@
     <% end %>
         <div class='teamLogo'></div>
         <div class='teamSeed'><%= g.seed_bottom %></div>
-        <div class='teamName'><%= g.home_is_top? ? g.away_name : g.home_name %></div>
+        <%= content_tag :div, class: 'teamName', title: g.home_is_top? ? g.away_name_full : g.home_name_full do %>
+          <%= g.home_is_top? ? g.away_name : g.home_name %>
+        <% end %>
         <div class='teamScore'><%= g.home_is_top? ? g.away_score : g.home_score %></div>
     </div>
   </div>

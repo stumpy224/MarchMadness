@@ -59,10 +59,12 @@ class ApplicationController < ActionController::Base
     g.bracket_position_id = game['bracketPositionId']
     g.round = game['round']
     g.away_name = game['away']['names']['short']
+    g.away_name_full = game['away']['names']['full']
     g.home_name = game['home']['names']['short']
+    g.home_name_full = game['home']['names']['full']
 
-    game['seedTop'] == '' ? g.seed_top = '' : g.seed_top = '(' + game['seedTop'] + ')'
-    game['seedBottom'] == '' ? g.seed_bottom = '' : g.seed_bottom = '(' + game['seedBottom'] + ')'
+    game['seedTop'] == '' ? g.seed_top = '' : g.seed_top = game['seedTop']
+    game['seedBottom'] == '' ? g.seed_bottom = '' : g.seed_bottom = game['seedBottom']
     game['gameState'].upcase == 'FINAL' ? g.game_over = true : g.game_over = false
     game['away']['isTop'] == 'T' ? g.away_is_top = true : g.away_is_top = false
     game['home']['isTop'] == 'T' ? g.home_is_top = true : g.home_is_top = false
