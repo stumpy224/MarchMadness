@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   respond_to :html, :xml, :json, :js
 
   def bracket
-    get_tourney_games if !Game.exists?
+    get_tourney_games
     @games = Game.all
     @regions = Region.where(year: $year)
     @years = Year.all
