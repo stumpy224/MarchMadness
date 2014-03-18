@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"aw",
+				"away_full_name"
+			],
+			[
+				"home",
+				"home_full_name"
+			],
+			[
+				"winner",
+				"winner_digits"
+			],
+			[
 				"parti",
 				"participant_squares"
 			],
@@ -42,10 +54,6 @@
 			[
 				"squ",
 				"square_id"
-			],
-			[
-				"winner",
-				"winner_digit"
 			],
 			[
 				"Par",
@@ -144,16 +152,8 @@
 				"seed_bottom"
 			],
 			[
-				"aw",
-				"away_score"
-			],
-			[
 				"awa",
 				"away_score"
-			],
-			[
-				"home",
-				"home_score"
 			],
 			[
 				"hom",
@@ -348,22 +348,27 @@
 	},
 	"file_history":
 	[
-		"/home/jstump/Development/projects/MarchMadness/app/views/pages/faq.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/pages/grid.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/pages/faq.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/views/pages/_game.html.erb",
+		"/home/jstump/Development/projects/MarchMadness/app/controllers/application_controller.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/models/game.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/admin/year.rb",
+		"/home/jstump/Development/projects/MarchMadness/app/controllers/pages_controller.rb",
+		"/home/jstump/Development/projects/MarchMadness/db/schema.rb",
+		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140316221802_add_loser_digits_to_years.rb",
+		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140316221708_add_winner_digits_to_years.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/pages.css.scss",
 		"/home/jstump/Development/projects/MarchMadness/app/views/pages/results.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/results.css.scss",
 		"/home/jstump/Development/projects/MarchMadness/app/views/pages/bracket.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/pages/_region.html.erb",
-		"/home/jstump/Development/projects/MarchMadness/app/controllers/pages_controller.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/layouts/_header.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/config/initializers/active_admin.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/admin/admin_user.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/controllers/application_controller.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/helpers/application_helper.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/bracket.css",
 		"/home/jstump/Development/projects/MarchMadness/app/admin/region.rb",
-		"/home/jstump/Development/projects/MarchMadness/db/schema.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/pages/_participantWithNoResults.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/pages/_participantWithResults.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/pages/_pagination.html.erb",
@@ -377,7 +382,6 @@
 		"/home/jstump/Development/projects/MarchMadness/app/views/layouts/application.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/layouts/_wait.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/admin/participant_square.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/views/pages/_game.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/pages/_wait.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/views/pages/summary.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/javascripts/application.js",
@@ -397,7 +401,6 @@
 		"/home/jstump/Development/projects/MarchMadness/spec/models/participant_spec.rb",
 		"/home/jstump/Development/projects/MarchMadness/spec/models/participant_squares_spec.rb",
 		"/home/jstump/Development/projects/MarchMadness/spec/models/square_spec.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/models/game.rb",
 		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140308234459_remove_index_from_squares_loser_digit.rb",
 		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140308234448_remove_index_from_squares_winner_digit.rb",
 		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140222023610_add_index_to_squares_participant_id.rb",
@@ -421,7 +424,6 @@
 		"/home/jstump/Development/projects/MarchMadness/db/migrate/20140308140300_participant_squares.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/javascripts/results.js.coffee",
 		"/home/jstump/Development/projects/MarchMadness/app/models/admin_user.rb",
-		"/home/jstump/Development/projects/MarchMadness/app/admin/year.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/active_admin.css.scss",
 		"/home/jstump/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 		"/home/jstump/Development/projects/MarchMadness/app/assets/stylesheets/custom.css.scss",
@@ -473,9 +475,7 @@
 		"/home/jstump/Development/projects/MarchMadness/app/views/sessions_old/new.html.erb",
 		"/home/jstump/Development/projects/MarchMadness/app/controllers/sessions_controller_old.rb",
 		"/home/jstump/Development/projects/MarchMadness/app/helpers/sessions_helper.rb",
-		"/home/jstump/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
-		"/home/jstump/Development/projects/MarchMadness/app/views/results/index.json.jbuilder",
-		"/home/jstump/Development/projects/MarchMadness/json"
+		"/home/jstump/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap"
 	],
 	"find":
 	{
@@ -483,7 +483,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			""

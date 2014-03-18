@@ -1,107 +1,139 @@
 <% provide(:title, 'FAQ') %>
 <div class='page-header pageHeaderLcl'><h1>FAQ</h1></div>
 <div class='summaryContent'>
-  <p class='summaryQuestion'>What is a 100 square grid pool?</p>
-  <p>A 10x10 grid comprised of 10 rows and 10 columns.  Once each square is filled, the numbers 0 thru 9 will be randomly drawn across the top of each column (the x-axis), which represent the Winner's digits.  Then, the numbers 0 thru 9 will be randomly drawn down the side of each row (the y-axis), which represent the Loser's digits.</p>
-  <p class='summaryQuestion'>Do I need to know anything about basketball?</p>
-  <p>No, you do not need any knowledge of the game of basketball.  Many people believe there is strategy behind picking their squares, but even that is chance.</p>
-  <p class='summaryQuestion'>How do I know if I've won?</p>
-  <p>After a game is over, the winner of the game is determined by finding the column with the LAST digit of the winner's score, and the row with the LAST digit of the loser's score.  The name found in the square is the winner.  For example, let's say I have the square for winner=7 and loser=5, and Purdue beats Indiana 8<b><u>7</u></b> to 7<b><u>5</u></b>.  I would be considered the winner for that game.</p>
-  <div align='center'>
-    <table class='gridTable'>
-      <thead>
-        <tr>
-          <th>&nbsp;</th>
-          <th class='gridWinnerDigitsHeaderRow'>0</th>
-          <th class='gridWinnerDigitsHeaderRow'>7</th>
-          <th class='gridWinnerDigitsHeaderRow'>8</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class='gridLoserDigitsColumn'>2</td>
-          <td class='gridSquare'>&nbsp;</td>
-          <td class='gridSquare'>&nbsp;</td>
-          <td class='gridSquare'>&nbsp;</td>
-        </tr>
-        <tr>
-          <td class='gridLoserDigitsColumn'>5</td>
-          <td class='gridSquare'>&nbsp;</td>
-          <td class='gridSquare' style='background-color:yellow;'>Winner</td>
-          <td class='gridSquare'>&nbsp;</td>
-        </tr>
-        <tr>
-          <td class='gridLoserDigitsColumn'>9</td>
-          <td class='gridSquare'>&nbsp;</td>
-          <td class='gridSquare'>&nbsp;</td>
-          <td class='gridSquare'>&nbsp;</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <p class='summaryQuestion'>If I have a winning square, will I be notified?</p>
-  <p>No, not at this time.  This feature will be available for the 2015 tournament.</p>
-  <p class='summaryQuestion'>I have a winning square, but how much did I win?</p>
-  <div align='center'>
-    <table class='payoutTable'>
-      <thead>
-        <tr class='borderBottom'>
-          <td class='payoutHeader'>Round</td>
-          <td class='payoutHeader'># of<br />Winners</td>
-          <td class='payoutHeader'>Payout<br />Per Game</td>
-          <td class='payoutHeader'>Total<br />Payout</td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class='roundColumn'>2</td>
-          <td class='winnersColumn'>32</td>
-          <td>$5</td>
-          <td>$160</td>
-        </tr>
-        <tr>
-          <td class='roundColumn'>3</td>
-          <td class='winnersColumn'>16</td>
-          <td>$8</td>
-          <td>$128</td>
-        </tr>
-        <tr>
-          <td class='roundColumn'>4</td>
-          <td class='winnersColumn'>8</td>
-          <td>$10</td>
-          <td>$80</td>
-        </tr>
-        <tr>
-          <td class='roundColumn'>5</td>
-          <td class='winnersColumn'>4</td>
-          <td>$15</td>
-          <td>$60</td>
-        </tr>
-        <tr>
-          <td class='roundColumn'>6</td>
-          <td class='winnersColumn'>2</td>
-          <td>$20</td>
-          <td>$40</td>
-        </tr>
-        <tr>
-          <td class='roundColumn'>7</td>
-          <td class='winnersColumn'>1</td>
-          <td>$32</td>
-          <td>$32</td>
-        </tr>
-        <tr class='borderTop' style='font-weight:bold;'>
-          <td class='roundColumn'>Total</td>
-          <td class='winnersColumn'>63</td>
-          <td>&nbsp;</td>
-          <td>$500</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <p class='summaryQuestion'>Can I win more than once?</p>
-  <p>Yes, you can win multiple times; up to 63 different games.</p>
-  <p class='summaryQuestion'>Are the first four games from Round 1 included?</p>
-  <p>No, these games will not be included.</p>
-  <p class='summaryQuestion'>Can I register with thegridpool.com and manage my own grid(s)?</p>
-  <p>No, not at this time.  This feature will hopefully be available for the 2015 tournament.</p>
+  <dl class='accordion' data-accordion>
+    <dd>
+      <a href='#question1' class='summaryQuestion'>What is a 100 square grid pool?</a>
+      <div id='question1' class='content'>
+        A 10x10 grid comprised of 10 rows and 10 columns.  Once each square is filled, the numbers 0 thru 9 will be randomly drawn across the top of each column (the x-axis), which represent the Winner's digits.  Then, the numbers 0 thru 9 will be randomly drawn down the side of each row (the y-axis), which represent the Loser's digits.
+      </div>
+    </dd>
+    <dd>
+      <a href='#question2' class='summaryQuestion'>Do I need to know anything about basketball?</a>
+      <div id='question2' class='content'>
+        No, you do not need any knowledge of the game of basketball.  Many people believe there is strategy behind picking their squares, but even that is chance.
+      </div>
+    </dd>
+    <dd>
+      <a href='#question3' class='summaryQuestion'>How do I know if I've won?</a>
+      <div id='question3' class='content'>
+        After a game is over, the winner of the game is determined by finding the column with the LAST digit of the winner's score, and the row with the LAST digit of the loser's score.  The name found in the square is the winner.  For example, let's say I have the square for winner=7 and loser=5, and Purdue beats Indiana 8<b><u>7</u></b> to 7<b><u>5</u></b>.  I would be considered the winner for that game.
+        <div align='center'>
+          <table class='exampleGridTable'>
+            <thead style='background:none;'>
+              <tr>
+                <th>&nbsp;</th>
+                <th class='gridWinnerDigitsHeaderRow'>0</th>
+                <th class='gridWinnerDigitsHeaderRow'>7</th>
+                <th class='gridWinnerDigitsHeaderRow'>8</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class='gridLoserDigitsColumn'>2</td>
+                <td class='gridSquare'>&nbsp;</td>
+                <td class='gridSquare'>&nbsp;</td>
+                <td class='gridSquare'>&nbsp;</td>
+              </tr>
+              <tr>
+                <td class='gridLoserDigitsColumn'>5</td>
+                <td class='gridSquare'>&nbsp;</td>
+                <td class='gridSquare' style='background-color:darkgray;'><b>Winner</b></td>
+                <td class='gridSquare'>&nbsp;</td>
+              </tr>
+              <tr>
+                <td class='gridLoserDigitsColumn'>9</td>
+                <td class='gridSquare'>&nbsp;</td>
+                <td class='gridSquare'>&nbsp;</td>
+                <td class='gridSquare'>&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </dd>
+    <dd>
+      <a href='#question4' class='summaryQuestion'>If I have a winning square, will I be notified?</a>
+      <div id='question4' class='content'>
+        No, not at this time.  This feature will be available for the 2015 tournament.
+      </div>
+    </dd>
+    <dd>
+      <a href='#question5' class='summaryQuestion'>I have a winning square, but how much did I win?</a>
+      <div id='question5' class='content' align='center'>
+        <table class='payoutTable'>
+          <thead style='background:none;'>
+            <tr class='borderBottom'>
+              <td class='payoutHeader'>Round</td>
+              <td class='payoutHeader'># of<br />Winners</td>
+              <td class='payoutHeader'>Payout<br />Per Game</td>
+              <td class='payoutHeader'>Total<br />Payout</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class='roundColumn'>2</td>
+              <td class='winnersColumn'>32</td>
+              <td>$5</td>
+              <td>$160</td>
+            </tr>
+            <tr>
+              <td class='roundColumn'>3</td>
+              <td class='winnersColumn'>16</td>
+              <td>$8</td>
+              <td>$128</td>
+            </tr>
+            <tr>
+              <td class='roundColumn'>4</td>
+              <td class='winnersColumn'>8</td>
+              <td>$10</td>
+              <td>$80</td>
+            </tr>
+            <tr>
+              <td class='roundColumn'>5</td>
+              <td class='winnersColumn'>4</td>
+              <td>$15</td>
+              <td>$60</td>
+            </tr>
+            <tr>
+              <td class='roundColumn'>6</td>
+              <td class='winnersColumn'>2</td>
+              <td>$20</td>
+              <td>$40</td>
+            </tr>
+            <tr>
+              <td class='roundColumn'>7</td>
+              <td class='winnersColumn'>1</td>
+              <td>$32</td>
+              <td>$32</td>
+            </tr>
+            <tr class='borderTop' style='font-weight:bold;'>
+              <td class='roundColumn'>Total</td>
+              <td class='winnersColumn'>63</td>
+              <td>&nbsp;</td>
+              <td>$500</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </dd>
+    <dd>
+      <a href='#question6' class='summaryQuestion'>Can I win more than once?</a>
+      <div id='question6' class='content'>
+        Yes, you can win multiple times; up to 63 different games.
+      </div>
+    </dd>
+    <dd>
+      <a href='#question7' class='summaryQuestion'>Are the first four games from Round 1 included?</a>
+      <div id='question7' class='content'>
+        No, these games will not be included.
+      </div>
+    </dd>
+    <dd>
+      <a href='#question8' class='summaryQuestion'>Can I register with thegridpool.com and manage my own grid(s)?</a>
+      <div id='question8' class='content'>
+        No, not at this time.  This feature will hopefully be available for the 2015 tournament.
+      </div>
+    </dd>
+  </dl>
 </div>
