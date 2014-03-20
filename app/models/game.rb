@@ -2,63 +2,65 @@ class Game
   attr_accessor(
     :game_id,
     :bracket_position_id,
+    :game_state,
+    :game_is_live,
     :game_over,
     :round,
-    :home_is_top,
-    :home_name,
-    :home_name_full,
-    :home_score,
-    :home_is_winner,
-    :away_is_top,
-    :away_name,
-    :away_name_full,
-    :away_score,
-    :away_is_winner,
-    :seed_top,
-    :seed_bottom,
+    :team_on_top_seed,
+    :team_on_top_name_short,
+    :team_on_top_name_full,
+    :team_on_top_score,
+    :team_on_top_is_winner,
+    :team_on_bottom_seed,
+    :team_on_bottom_name_short,
+    :team_on_bottom_name_full,
+    :team_on_bottom_score,
+    :team_on_bottom_is_winner,
     :square_winner,
-    :square_winner_id
+    :square_winner_id,
+    :current_period,
+    :time_clock,
+    :game_time
   )
 
   def initialize(attributes = {})
     @game_id = attributes[:game_id]
     @bracket_position_id = attributes[:bracket_position_id]
+    @game_state = attributes[:game_state]
+    @game_is_live = attributes[:game_is_live]
     @game_over = attributes[:game_over]
     @round = attributes[:round]
-    @home_is_top = attributes[:home_is_top]
-    @home_name = attributes[:home_name]
-    @home_name_full = attributes[:home_name_full]
-    @home_score = attributes[:home_score]
-    @home_is_winner = attributes[:home_is_winner]
-    @away_is_top = attributes[:away_is_top]
-    @away_name = attributes[:away_name]
-    @away_name_full = attributes[:away_name_full]
-    @away_score = attributes[:away_score]
-    @away_is_winner = attributes[:away_is_winner]
-    @seed_top = attributes[:seed_top]
-    @seed_bottom = attributes[:seed_bottom]
+    @team_on_top_seed = attributes[:team_on_top_seed]
+    @team_on_top_name_short = attributes[:team_on_top_name_short]
+    @team_on_top_name_full = attributes[:team_on_top_name_full]
+    @team_on_top_score = attributes[:team_on_top_score]
+    @team_on_top_is_winner = attributes[:team_on_top_is_winner]
+    @team_on_bottom_seed = attributes[:team_on_bottom_seed]
+    @team_on_bottom_name_short = attributes[:team_on_bottom_name_short]
+    @team_on_bottom_name_full = attributes[:team_on_bottom_name_full]
+    @team_on_bottom_score = attributes[:team_on_bottom_score]
+    @team_on_bottom_is_winner = attributes[:team_on_bottom_is_winner]
     @square_winner = attributes[:square_winner]
     @square_winner_id = attributes[:square_winner_id]
+    @current_period = attributes[:current_period]
+    @time_clock = attributes[:time_clock]
+    @game_time = attributes[:game_time]
+  end
+
+  def game_is_live?
+    !!@game_is_live
   end
 
   def game_over?
     !!@game_over
   end
 
-  def home_is_top?
-    !!@home_is_top
+  def team_on_bottom_is_winner?
+    !!@team_on_bottom_is_winner
   end
 
-  def home_is_winner?
-    !!@home_is_winner
-  end
-
-  def away_is_top?
-    !!@away_is_top
-  end
-
-  def away_is_winner?
-    !!@away_is_winner
+  def team_on_top_is_winner?
+    !!@team_on_top_is_winner
   end
 
   def self.exists?

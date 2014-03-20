@@ -48,6 +48,10 @@ class ApplicationController < ActionController::Base
   end
 
   def parse_tourney_response(response)
+    # file = File.open('fakeResponse.txt', 'rb')
+    # formatted_response = (file.read.sub! 'callbackWrapper(', '').sub! '});', '}'
+    # file.close
+
     formatted_response = (response.body.sub! 'callbackWrapper(', '').sub! '});', '}'
     json_response = JSON.parse(formatted_response)
     json_response['games']
@@ -58,25 +62,50 @@ class ApplicationController < ActionController::Base
     g.game_id = game['contestId']
     g.bracket_position_id = game['bracketPositionId']
     g.round = game['round']
-    g.away_name = game['away']['names']['short']
-    g.away_name_full = game['away']['names']['full']
-    g.home_name = game['home']['names']['short']
-    g.home_name_full = game['home']['names']['full']
+    g.game_state = game['gameState'].upcase
+    
+    game['seedTop'] == '' ? g.team_on_top_seed = '' : g.team_on_top_seed = game['seedTop']
+    game['seedBottom'] == '' ? g.team_on_bottom_seed = '' : g.team_on_bottom_seed = game['seedBottom']
 
-    game['seedTop'] == '' ? g.seed_top = '' : g.seed_top = game['seedTop']
-    game['seedBottom'] == '' ? g.seed_bottom = '' : g.seed_bottom = game['seedBottom']
-    game['gameState'].upcase == 'FINAL' ? g.game_over = true : g.game_over = false
-    game['away']['isTop'] == 'T' ? g.away_is_top = true : g.away_is_top = false
-    game['home']['isTop'] == 'T' ? g.home_is_top = true : g.home_is_top = false
+    if game['away']['isTop'].upcase == 'F' or game['home']['isTop'].upcase == 'T'
+      g.team_on_bottom_name_short = game['away']['names']['short']
+      g.team_on_bottom_name_full = game['away']['names']['full']
+      g.team_on_bottom_score = game['away']['score']
+      game['away']['winner'] == 'true' ? g.team_on_bottom_is_winner = true : g.team_on_bottom_is_winner = false
+
+      g.team_on_top_name_short = game['home']['names']['short']
+      g.team_on_top_name_full = game['home']['names']['full']
+      g.team_on_top_score = game['home']['score']
+      game['home']['winner'] == 'true' ? g.team_on_top_is_winner = true : g.team_on_top_is_winner = false
+    else
+      g.team_on_bottom_name_short = game['home']['names']['short']
+      g.team_on_bottom_name_full = game['home']['names']['full']
+      g.team_on_bottom_score = game['home']['score']
+      game['home']['winner'] == 'true' ? g.team_on_bottom_is_winner = true : g.team_on_bottom_is_winner = false
+
+      g.team_on_top_name_short = game['away']['names']['short']
+      g.team_on_top_name_full = game['away']['names']['full']
+      g.team_on_top_score = game['away']['score']
+      game['away']['winner'] == 'true' ? g.team_on_top_is_winner = true : g.team_on_top_is_winner = false
+    end
+
+    g.game_state == 'LIVE' ? g.game_is_live = true : g.game_is_live = false
+    g.game_state == 'FINAL' ? g.game_over = true : g.game_over = false
+    
+    if g.game_is_live?
+      g.current_period = game['currentPeriod']
+      g.time_clock = game['timeclock']
+
+      if g.current_period == '1st' and g.time_clock == '0:00'
+        g.game_time = 'Halftime'
+      else
+        g.game_time = g.current_period + ' ' + g.time_clock
+      end
+    end
 
     if g.game_over?
-      g.home_score = game['home']['score']
-      g.away_score = game['away']['score']
-      game['home']['winner'] == 'true' ? g.home_is_winner = true : g.home_is_winner = false
-      game['away']['winner'] == 'true' ? g.away_is_winner = true : g.away_is_winner = false
-
-      winner_digit = g.home_is_winner? ? g.home_score.to_s.last(1) : g.away_score.to_s.last(1)
-      loser_digit = g.home_is_winner? ? g.away_score.to_s.last(1) : g.home_score.to_s.last(1)
+      winner_digit = g.team_on_top_is_winner? ? g.team_on_top_score.to_s.last(1) : g.team_on_bottom_score.to_s.last(1)
+      loser_digit = g.team_on_top_is_winner? ? g.team_on_bottom_score.to_s.last(1) : g.team_on_top_score.to_s.last(1)
       square_id = (("#{winner_digit}#{loser_digit}").to_f + 1).to_i
       participant_square = @@participant_squares.find_by(square_id: square_id, year: $year)
 

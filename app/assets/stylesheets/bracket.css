@@ -321,6 +321,7 @@ display:block;
 width:75px;
 line-height:16px;
 padding:1px 3px 0;
+font-size: 9px !important;
 }
 
 .live-top {
@@ -333,7 +334,6 @@ border-top-right-radius:3px;
 border-bottom-left-radius:3px;
 border-bottom-right-radius:3px;
 /*background:linear-gradient(top,#dbdbdb0%,#dbdbdb100%);*/
-font-size: 9px !important;
 width: 180px !important;
 }
 
@@ -1228,4 +1228,10 @@ left:0;
 
 .grid34 #section12 .column3 .specialText,.grid34 #section12 .column4 .specialText {
 left:159px;
+}
+
+.gameIsLive {
+  -webkit-box-shadow: 0 0 5px 2px darkgray;
+  -moz-box-shadow: 0 0 5px 2px darkgray;
+  box-shadow: 0 0 5px 2px darkgray;
 }

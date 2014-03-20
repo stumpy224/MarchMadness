@@ -141,15 +141,15 @@
 			],
 			[
 				"se",
-				"seed_top"
+				"team_on_top_seed"
 			],
 			[
 				"see",
-				"seed_bottom"
+				"team_on_bottom_seed"
 			],
 			[
 				"seed",
-				"seed_bottom"
+				"team_on_bottom_seed"
 			],
 			[
 				"awa",
@@ -307,6 +307,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/views/pages/faq.html.erb",
+			"settings":
+			{
+				"buffer_size": 5799,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/pages.css.scss",
+			"settings":
+			{
+				"buffer_size": 2282,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/foundation_and_overrides.scss",
+			"settings":
+			{
+				"buffer_size": 39351,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -494,6 +518,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\"",
 			"page-header",
 			"get_latest_year",
 			"panoram",
@@ -603,6 +628,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"'",
 			"",
 			"'",
 			"last_updated_at",
@@ -634,8 +660,91 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/views/pages/faq.html.erb",
+					"settings":
+					{
+						"buffer_size": 5799,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								39,
+								39
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/assets/stylesheets/pages.css.scss",
+					"settings":
+					{
+						"buffer_size": 2282,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2092,
+								2092
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1674.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/assets/stylesheets/foundation_and_overrides.scss",
+					"settings":
+					{
+						"buffer_size": 39351,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7619,
+								7619
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3780.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
