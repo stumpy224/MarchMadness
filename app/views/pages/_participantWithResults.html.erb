@@ -2,11 +2,12 @@
 <% totalPaid = @participant_squares.where(participant_id: participant.id).count * 5 %>
 <% totalWon = 0 %>
 <tr>
-  <%= content_tag :td, class: 'nameCell', rowspan: participant.results.count + 2 do %>
+  <% participant_results = @results.where(participant_id: participant.id) %>  
+  <%= content_tag :td, class: 'nameCell', rowspan: participant_results.count + 2 do %>
     <%= participant.preferred_name %>
   <% end %>
 
-  <% for result in participant.results %>
+  <% participant_results.each do |result| %>
     <% resultCounter += 1 %>
     <% if resultCounter == 1 %>
       <tr class='firstResultRow'>
