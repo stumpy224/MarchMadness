@@ -4,7 +4,9 @@
 <% else %>
   <% if bracket_position_id != '701' %>
     <% if g.game_is_live? %>
-      <div class='live-top' style='margin-bottom:1px;'><%= g.game_time %></div>
+    <%= content_tag :div, class: 'live-top', title: g.game_status do %>
+        <%= g.game_status %>
+      <% end %>
     <% else %>
       <div class='live-top'></div>
     <% end %>

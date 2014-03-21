@@ -526,19 +526,19 @@ callbackWrapper({
                "short": "Western Mich."
             },
             "radioUrl": "",
-            "score": "45",
+            "score": "53",
             "winner": "false"
          },
          "boxScoreUrl": "",
          "bracketPositionId": "206",
          "contestId": "446118",
-         "currentPeriod": "2nd",
+         "currentPeriod": "Final",
          "externalStatsUrl": "",
-         "finalMessage": "",
+         "finalMessage": "Final",
          "gameCenterUrl": "",
          "gameDate": "THURSDAY , MARCH    20",
          "gameDateShort": "MAR. 20",
-         "gameState": "live",
+         "gameState": "final",
          "highlightUrl": "http:\/\/www.ncaa.com\/march-madness\/real-time-highlights\/game\/206",
          "home": {
             "description": "(27-5)",
@@ -553,8 +553,8 @@ callbackWrapper({
                "short": "Syracuse"
             },
             "radioUrl": "",
-            "score": "71",
-            "winner": "false"
+            "score": "77",
+            "winner": "true"
          },
          "liveStatsEnabled": "0",
          "liveVideoExternalUrl": "",
@@ -562,7 +562,7 @@ callbackWrapper({
          "nationalRadioUrl": "",
          "network": "CBS",
          "previewUrl": "",
-         "recapUrl": "",
+         "recapUrl": "http:\/\/www.ncaa.com\/game\/basketball-men\/d1\/2014\/03\/20\/western-mich-syracuse\/recap",
          "round": "2",
          "seedBottom": "14",
          "seedTop": "3",
@@ -572,7 +572,7 @@ callbackWrapper({
          "textOverrideBottom": null,
          "textOverrideTop": null,
          "ticketsUrl": "",
-         "timeclock": "3:41",
+         "timeclock": "0:00",
          "url": "\/game\/basketball-men\/d1\/2014\/03\/20\/western-mich-syracuse",
          "watchLiveUrl": "http:\/\/www.ncaa.com\/march-madness-live\/game\/206"
       },
@@ -590,19 +590,19 @@ callbackWrapper({
                "short": "BYU"
             },
             "radioUrl": "",
-            "score": "38",
+            "score": "68",
             "winner": "false"
          },
          "boxScoreUrl": "",
          "bracketPositionId": "223",
          "contestId": "446135",
-         "currentPeriod": "2nd",
+         "currentPeriod": "Final",
          "externalStatsUrl": "",
-         "finalMessage": "",
+         "finalMessage": "Final",
          "gameCenterUrl": "",
          "gameDate": "THURSDAY , MARCH    20",
          "gameDateShort": "MAR. 20",
-         "gameState": "live",
+         "gameState": "final",
          "highlightUrl": "http:\/\/www.ncaa.com\/march-madness\/real-time-highlights\/game\/223",
          "home": {
             "description": "(23-9)",
@@ -617,8 +617,8 @@ callbackWrapper({
                "short": "Oregon"
             },
             "radioUrl": "",
-            "score": "49",
-            "winner": "false"
+            "score": "87",
+            "winner": "true"
          },
          "liveStatsEnabled": "0",
          "liveVideoExternalUrl": "",
@@ -626,7 +626,7 @@ callbackWrapper({
          "nationalRadioUrl": "",
          "network": "truTV",
          "previewUrl": "",
-         "recapUrl": "",
+         "recapUrl": "http:\/\/www.ncaa.com\/game\/basketball-men\/d1\/2014\/03\/20\/byu-oregon\/recap",
          "round": "2",
          "seedBottom": "10",
          "seedTop": "7",
@@ -636,7 +636,7 @@ callbackWrapper({
          "textOverrideBottom": null,
          "textOverrideTop": null,
          "ticketsUrl": "",
-         "timeclock": "15:24",
+         "timeclock": "0:00",
          "url": "\/game\/basketball-men\/d1\/2014\/03\/20\/byu-oregon",
          "watchLiveUrl": "http:\/\/www.ncaa.com\/march-madness-live\/game\/223"
       },
@@ -654,19 +654,19 @@ callbackWrapper({
                "short": "Albany"
             },
             "radioUrl": "",
-            "score": "28",
+            "score": "55",
             "winner": "false"
          },
          "boxScoreUrl": "",
          "bracketPositionId": "201",
          "contestId": "446113",
-         "currentPeriod": "1st",
+         "currentPeriod": "Final",
          "externalStatsUrl": "",
-         "finalMessage": "",
+         "finalMessage": "Final",
          "gameCenterUrl": "",
          "gameDate": "THURSDAY , MARCH    20",
          "gameDateShort": "MAR. 20",
-         "gameState": "live",
+         "gameState": "final",
          "highlightUrl": "http:\/\/www.ncaa.com\/march-madness\/real-time-highlights\/game\/201",
          "home": {
             "description": "(32-2)",
@@ -681,8 +681,8 @@ callbackWrapper({
                "short": "Florida"
             },
             "radioUrl": "",
-            "score": "32",
-            "winner": "false"
+            "score": "67",
+            "winner": "true"
          },
          "liveStatsEnabled": "0",
          "liveVideoExternalUrl": "",
@@ -690,7 +690,7 @@ callbackWrapper({
          "nationalRadioUrl": "",
          "network": "TBS",
          "previewUrl": "",
-         "recapUrl": "",
+         "recapUrl": "http:\/\/www.ncaa.com\/game\/basketball-men\/d1\/2014\/03\/20\/albany-ny-florida\/recap",
          "round": "2",
          "seedBottom": "16",
          "seedTop": "1",
@@ -700,7 +700,7 @@ callbackWrapper({
          "textOverrideBottom": null,
          "textOverrideTop": null,
          "ticketsUrl": "",
-         "timeclock": "3:26",
+         "timeclock": "0:00",
          "url": "\/game\/basketball-men\/d1\/2014\/03\/20\/albany-ny-florida",
          "watchLiveUrl": "http:\/\/www.ncaa.com\/march-madness-live\/game\/201"
       },
@@ -718,19 +718,19 @@ callbackWrapper({
                "short": "Delaware"
             },
             "radioUrl": "",
-            "score": "",
+            "score": "78",
             "winner": "false"
          },
          "boxScoreUrl": "",
          "bracketPositionId": "212",
          "contestId": "446124",
-         "currentPeriod": "",
+         "currentPeriod": "Final",
          "externalStatsUrl": "",
-         "finalMessage": "",
+         "finalMessage": "Final",
          "gameCenterUrl": "",
          "gameDate": "THURSDAY , MARCH    20",
          "gameDateShort": "MAR. 20",
-         "gameState": "pre",
+         "gameState": "final",
          "highlightUrl": "http:\/\/www.ncaa.com\/march-madness\/real-time-highlights\/game\/212",
          "home": {
             "description": "(26-8)",
@@ -745,8 +745,8 @@ callbackWrapper({
                "short": "Michigan State"
             },
             "radioUrl": "",
-            "score": "",
-            "winner": "false"
+            "score": "93",
+            "winner": "true"
          },
          "liveStatsEnabled": "0",
          "liveVideoExternalUrl": "",
@@ -754,7 +754,7 @@ callbackWrapper({
          "nationalRadioUrl": "",
          "network": "TNT",
          "previewUrl": "",
-         "recapUrl": "",
+         "recapUrl": "http:\/\/www.ncaa.com\/game\/basketball-men\/d1\/2014\/03\/20\/delaware-michigan-st\/recap",
          "round": "2",
          "seedBottom": "13",
          "seedTop": "4",
@@ -764,7 +764,7 @@ callbackWrapper({
          "textOverrideBottom": null,
          "textOverrideTop": null,
          "ticketsUrl": "",
-         "timeclock": "",
+         "timeclock": "0:00",
          "url": "\/game\/basketball-men\/d1\/2014\/03\/20\/delaware-michigan-st",
          "watchLiveUrl": "http:\/\/www.ncaa.com\/march-madness-live\/game\/212"
       },
@@ -782,19 +782,19 @@ callbackWrapper({
                "short": "Saint Joseph's"
             },
             "radioUrl": "",
-            "score": "",
+            "score": "40",
             "winner": "false"
          },
          "boxScoreUrl": "",
          "bracketPositionId": "215",
          "contestId": "446127",
-         "currentPeriod": "",
+         "currentPeriod": "1st",
          "externalStatsUrl": "",
          "finalMessage": "",
          "gameCenterUrl": "",
          "gameDate": "THURSDAY , MARCH    20",
          "gameDateShort": "MAR. 20",
-         "gameState": "pre",
+         "gameState": "live",
          "highlightUrl": "http:\/\/www.ncaa.com\/march-madness\/real-time-highlights\/game\/215",
          "home": {
             "description": "(26-8)",
@@ -809,7 +809,7 @@ callbackWrapper({
                "short": "Connecticut"
             },
             "radioUrl": "",
-            "score": "",
+            "score": "32",
             "winner": "false"
          },
          "liveStatsEnabled": "0",
@@ -828,7 +828,7 @@ callbackWrapper({
          "textOverrideBottom": null,
          "textOverrideTop": null,
          "ticketsUrl": "",
-         "timeclock": "",
+         "timeclock": "0:32.5",
          "url": "\/game\/basketball-men\/d1\/2014\/03\/20\/st-josephs-uconn",
          "watchLiveUrl": "http:\/\/www.ncaa.com\/march-madness-live\/game\/215"
       },
@@ -846,19 +846,19 @@ callbackWrapper({
                "short": "Wofford"
             },
             "radioUrl": "",
-            "score": "",
+            "score": "12",
             "winner": "false"
          },
          "boxScoreUrl": "",
          "bracketPositionId": "232",
          "contestId": "446144",
-         "currentPeriod": "",
+         "currentPeriod": "1st",
          "externalStatsUrl": "",
          "finalMessage": "",
          "gameCenterUrl": "",
          "gameDate": "THURSDAY , MARCH    20",
          "gameDateShort": "MAR. 20",
-         "gameState": "pre",
+         "gameState": "live",
          "highlightUrl": "http:\/\/www.ncaa.com\/march-madness\/real-time-highlights\/game\/232",
          "home": {
             "description": "(25-8)",
@@ -873,7 +873,7 @@ callbackWrapper({
                "short": "Michigan"
             },
             "radioUrl": "",
-            "score": "",
+            "score": "20",
             "winner": "false"
          },
          "liveStatsEnabled": "0",
@@ -892,7 +892,7 @@ callbackWrapper({
          "textOverrideBottom": null,
          "textOverrideTop": null,
          "ticketsUrl": "",
-         "timeclock": "",
+         "timeclock": "6:35",
          "url": "\/game\/basketball-men\/d1\/2014\/03\/20\/wofford-michigan",
          "watchLiveUrl": "http:\/\/www.ncaa.com\/march-madness-live\/game\/232"
       },
@@ -910,19 +910,19 @@ callbackWrapper({
                "short": "NC State"
             },
             "radioUrl": "",
-            "score": "",
+            "score": "19",
             "winner": "false"
          },
          "boxScoreUrl": "",
          "bracketPositionId": "227",
          "contestId": "446139",
-         "currentPeriod": "",
+         "currentPeriod": "1st",
          "externalStatsUrl": "",
          "finalMessage": "",
          "gameCenterUrl": "",
          "gameDate": "THURSDAY , MARCH    20",
          "gameDateShort": "MAR. 20",
-         "gameState": "pre",
+         "gameState": "live",
          "highlightUrl": "http:\/\/www.ncaa.com\/march-madness\/real-time-highlights\/game\/227",
          "home": {
             "description": "(26-6)",
@@ -937,7 +937,7 @@ callbackWrapper({
                "short": "Saint Louis"
             },
             "radioUrl": "",
-            "score": "",
+            "score": "14",
             "winner": "false"
          },
          "liveStatsEnabled": "0",
@@ -956,7 +956,7 @@ callbackWrapper({
          "textOverrideBottom": null,
          "textOverrideTop": null,
          "ticketsUrl": "",
-         "timeclock": "",
+         "timeclock": "10:24",
          "url": "\/game\/basketball-men\/d1\/2014\/03\/20\/north-carolina-st-saint-louis",
          "watchLiveUrl": "http:\/\/www.ncaa.com\/march-madness-live\/game\/227"
       },
@@ -2306,33 +2306,6 @@ callbackWrapper({
       },
       {
          "away": {
-            "description": "",
-            "iconURL": "",
-            "isTop": "",
-            "names": {
-               "char10": "",
-               "char6": "",
-               "char8": "",
-               "full": "",
-               "seo": "",
-               "short": ""
-            },
-            "radioUrl": "",
-            "score": "",
-            "winner": ""
-         },
-         "boxScoreUrl": "",
-         "bracketPositionId": "306",
-         "contestId": "446150",
-         "currentPeriod": "",
-         "externalStatsUrl": "",
-         "finalMessage": "",
-         "gameCenterUrl": "",
-         "gameDate": "SATURDAY , MARCH    22",
-         "gameDateShort": "MAR. 22",
-         "gameState": "pre",
-         "highlightUrl": "",
-         "home": {
             "description": "(27-4)",
             "iconURL": "\/sites\/default\/files\/images\/logos\/schools\/h\/harvard.70.png",
             "isTop": "T",
@@ -2348,6 +2321,33 @@ callbackWrapper({
             "score": "",
             "winner": "false"
          },
+         "boxScoreUrl": "",
+         "bracketPositionId": "306",
+         "contestId": "446150",
+         "currentPeriod": "",
+         "externalStatsUrl": "",
+         "finalMessage": "",
+         "gameCenterUrl": "",
+         "gameDate": "SATURDAY , MARCH    22",
+         "gameDateShort": "MAR. 22",
+         "gameState": "pre",
+         "highlightUrl": "",
+         "home": {
+            "description": "(27-8)",
+            "iconURL": "\/sites\/default\/files\/images\/logos\/schools\/m\/michigan-st.70.png",
+            "isTop": "F",
+            "names": {
+               "char10": "",
+               "char6": "MICHST",
+               "char8": "",
+               "full": "Michigan State University",
+               "seo": "michigan-st",
+               "short": "Michigan State"
+            },
+            "radioUrl": "",
+            "score": "",
+            "winner": "false"
+         },
          "liveStatsEnabled": "0",
          "liveVideoExternalUrl": "",
          "location": "Spokane Veterans Memorial Arena, Spokane, Wash.",
@@ -2356,7 +2356,7 @@ callbackWrapper({
          "previewUrl": "",
          "recapUrl": "",
          "round": "3",
-         "seedBottom": "",
+         "seedBottom": "4",
          "seedTop": "12",
          "startTime": "",
          "startTimeEpoch": "1395446400",
@@ -2365,25 +2365,25 @@ callbackWrapper({
          "textOverrideTop": null,
          "ticketsUrl": "",
          "timeclock": "",
-         "url": "",
+         "url": "\/game\/basketball-men\/d1\/2014\/03\/22\/harvard-michigan-st",
          "watchLiveUrl": "http:\/\/www.ncaa.com\/march-madness-live\/game\/306"
       },
       {
          "away": {
-            "description": "",
-            "iconURL": "",
-            "isTop": "",
+            "description": "(24-9)",
+            "iconURL": "\/sites\/default\/files\/images\/logos\/schools\/o\/oregon.70.png",
+            "isTop": "T",
             "names": {
                "char10": "",
-               "char6": "",
+               "char6": "OREGON",
                "char8": "",
-               "full": "",
-               "seo": "",
-               "short": ""
+               "full": "University of Oregon",
+               "seo": "oregon",
+               "short": "Oregon"
             },
             "radioUrl": "",
             "score": "",
-            "winner": ""
+            "winner": "false"
          },
          "boxScoreUrl": "",
          "bracketPositionId": "312",
@@ -2421,7 +2421,7 @@ callbackWrapper({
          "recapUrl": "",
          "round": "3",
          "seedBottom": "2",
-         "seedTop": "",
+         "seedTop": "7",
          "startTime": "",
          "startTimeEpoch": "1395446400",
          "startTimeShort": "",
@@ -2429,38 +2429,11 @@ callbackWrapper({
          "textOverrideTop": null,
          "ticketsUrl": "",
          "timeclock": "",
-         "url": "",
+         "url": "\/game\/basketball-men\/d1\/2014\/03\/22\/oregon-wisconsin",
          "watchLiveUrl": "http:\/\/www.ncaa.com\/march-madness-live\/game\/312"
       },
       {
          "away": {
-            "description": "",
-            "iconURL": "",
-            "isTop": "",
-            "names": {
-               "char10": "",
-               "char6": "",
-               "char8": "",
-               "full": "",
-               "seo": "",
-               "short": ""
-            },
-            "radioUrl": "",
-            "score": "",
-            "winner": ""
-         },
-         "boxScoreUrl": "",
-         "bracketPositionId": "303",
-         "contestId": "446147",
-         "currentPeriod": "",
-         "externalStatsUrl": "",
-         "finalMessage": "",
-         "gameCenterUrl": "",
-         "gameDate": "SATURDAY , MARCH    22",
-         "gameDateShort": "MAR. 22",
-         "gameState": "pre",
-         "highlightUrl": "",
-         "home": {
             "description": "(24-10)",
             "iconURL": "\/sites\/default\/files\/images\/logos\/schools\/d\/dayton.70.png",
             "isTop": "T",
@@ -2476,6 +2449,33 @@ callbackWrapper({
             "score": "",
             "winner": "false"
          },
+         "boxScoreUrl": "",
+         "bracketPositionId": "303",
+         "contestId": "446147",
+         "currentPeriod": "",
+         "externalStatsUrl": "",
+         "finalMessage": "",
+         "gameCenterUrl": "",
+         "gameDate": "SATURDAY , MARCH    22",
+         "gameDateShort": "MAR. 22",
+         "gameState": "pre",
+         "highlightUrl": "",
+         "home": {
+            "description": "(28-5)",
+            "iconURL": "\/sites\/default\/files\/images\/logos\/schools\/s\/syracuse.70.png",
+            "isTop": "F",
+            "names": {
+               "char10": "",
+               "char6": "SYR",
+               "char8": "",
+               "full": "Syracuse University",
+               "seo": "syracuse",
+               "short": "Syracuse"
+            },
+            "radioUrl": "",
+            "score": "",
+            "winner": "false"
+         },
          "liveStatsEnabled": "0",
          "liveVideoExternalUrl": "",
          "location": "First Niagara Center, Buffalo, N.Y.",
@@ -2484,7 +2484,7 @@ callbackWrapper({
          "previewUrl": "",
          "recapUrl": "",
          "round": "3",
-         "seedBottom": "",
+         "seedBottom": "3",
          "seedTop": "11",
          "startTime": "",
          "startTimeEpoch": "1395446400",
@@ -2493,7 +2493,7 @@ callbackWrapper({
          "textOverrideTop": null,
          "ticketsUrl": "",
          "timeclock": "",
-         "url": "",
+         "url": "\/game\/basketball-men\/d1\/2014\/03\/22\/dayton-syracuse",
          "watchLiveUrl": "http:\/\/www.ncaa.com\/march-madness-live\/game\/303"
       },
       {
@@ -2525,20 +2525,20 @@ callbackWrapper({
          "gameState": "pre",
          "highlightUrl": "",
          "home": {
-            "description": "",
-            "iconURL": "",
-            "isTop": "",
+            "description": "(33-2)",
+            "iconURL": "\/sites\/default\/files\/images\/logos\/schools\/f\/florida.70.png",
+            "isTop": "T",
             "names": {
                "char10": "",
-               "char6": "",
+               "char6": "FLA",
                "char8": "",
-               "full": "",
-               "seo": "",
-               "short": ""
+               "full": "University of Florida",
+               "seo": "florida",
+               "short": "Florida"
             },
             "radioUrl": "",
             "score": "",
-            "winner": ""
+            "winner": "false"
          },
          "liveStatsEnabled": "0",
          "liveVideoExternalUrl": "",
@@ -2549,7 +2549,7 @@ callbackWrapper({
          "recapUrl": "",
          "round": "3",
          "seedBottom": "9",
-         "seedTop": "",
+         "seedTop": "1",
          "startTime": "",
          "startTimeEpoch": "1395446400",
          "startTimeShort": "",
@@ -2557,7 +2557,7 @@ callbackWrapper({
          "textOverrideTop": null,
          "ticketsUrl": "",
          "timeclock": "",
-         "url": "",
+         "url": "\/game\/basketball-men\/d1\/2014\/03\/22\/pittsburgh-florida",
          "watchLiveUrl": "http:\/\/www.ncaa.com\/march-madness-live\/game\/301"
       },
       {

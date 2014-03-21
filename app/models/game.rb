@@ -20,7 +20,8 @@ class Game
     :square_winner_id,
     :current_period,
     :time_clock,
-    :game_time
+    :network,
+    :game_status
   )
 
   def initialize(attributes = {})
@@ -44,7 +45,8 @@ class Game
     @square_winner_id = attributes[:square_winner_id]
     @current_period = attributes[:current_period]
     @time_clock = attributes[:time_clock]
-    @game_time = attributes[:game_time]
+    @network = attributes[:network]
+    @game_status = attributes[:game_status]
   end
 
   def game_is_live?

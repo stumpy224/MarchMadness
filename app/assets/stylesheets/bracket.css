@@ -318,10 +318,10 @@ left:15px;
 .live-top, .live-bottom {
 height:15px;
 display:block;
-width:75px;
-line-height:16px;
+/*line-height:16px;*/
 padding:1px 3px 0;
 font-size: 9px !important;
+width: 150px !important;
 }
 
 .live-top {
@@ -330,11 +330,15 @@ border-top-right-radius:3px;
 /*background:linear-gradient(top,#bababa0%,#dbdbdb100%);*/
 }
 
+#section23 .live-top, #section43 .live-top {
+  direction: ltr;
+  text-align: right;
+}
+
 .live-bottom {
 border-bottom-left-radius:3px;
 border-bottom-right-radius:3px;
 /*background:linear-gradient(top,#dbdbdb0%,#dbdbdb100%);*/
-width: 180px !important;
 }
 
 .ie8 .live-top,.ie8 .live-bottom {

@@ -28,17 +28,17 @@ class ApplicationController < ActionController::Base
   end
 
   def get_tourney_info
+    Game.clean_up
     $year = get_latest_year if $year.blank?
     url = Year.find_by(year: $year).source_url
 
     if url.empty?
-      return 'Oh, snap! The URL has not been entered for #{$year}.'
+      return "Oh, snap! The URL has not been entered for #{$year}."
     else
       response = Net::HTTP.get_response(URI.parse(url))
     end
 
     if response.is_a?(Net::HTTPSuccess)
-      Game.clean_up
       update_bracket_refreshed_date
       update_results_refreshed_date
       return parse_tourney_response(response)
@@ -63,6 +63,7 @@ class ApplicationController < ActionController::Base
     g.bracket_position_id = game['bracketPositionId']
     g.round = game['round']
     g.game_state = game['gameState'].upcase
+    g.network = game['network']
     
     game['seedTop'] == '' ? g.team_on_top_seed = '' : g.team_on_top_seed = game['seedTop']
     game['seedBottom'] == '' ? g.team_on_bottom_seed = '' : g.team_on_bottom_seed = game['seedBottom']
@@ -97,9 +98,9 @@ class ApplicationController < ActionController::Base
       g.time_clock = game['timeclock']
 
       if g.current_period == '1st' and g.time_clock == '0:00'
-        g.game_time = 'Halftime'
+        g.game_status = "Halftime | #{g.network}"
       else
-        g.game_time = g.current_period + ' ' + g.time_clock
+        g.game_status = "#{g.time_clock} #{g.current_period} | #{g.network}"
       end
     end
 
