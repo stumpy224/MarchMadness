@@ -32,7 +32,7 @@ class PagesController < ApplicationController
             "GROUP BY pa.id "\
             "ORDER BY preferred_name"
 
-    @participants_with_squares = Participant.paginate_by_sql(@sql, page: params[:page], per_page: 10)
+    @participants_with_squares = Participant.find_by_sql(@sql)
     @participant_squares = ParticipantSquare.where(year: $year)
     @participants = Participant.all
     @payouts = Payout.where(year: $year)

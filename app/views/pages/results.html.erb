@@ -9,8 +9,6 @@
       <%= render partial: 'refresh', locals: { path: refresh_results_path } %>
     <% end %>
   
-    <%= render 'pagination' %>
-  
     <table>
       <thead class='headerRow'>
         <tr>
@@ -38,8 +36,6 @@
   <% else %>
     <div style='font-weight:bold;'>Please enter participants for the year.</div>
   <% end %>
-
-  <%= render 'pagination' %>
 
   <% if Year.many? %>
   <br />
