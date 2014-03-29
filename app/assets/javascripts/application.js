@@ -19,6 +19,14 @@
 //= require cocoon
 
 $(document).ready(function() {
+  $('.scrollToTop').click(function() {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 'normal');
+  });
+});
+
+$(document).ready(function() {
   $('#bracketLink').click(function(e) { 
     e.stopPropagation();
     e.preventDefault();
