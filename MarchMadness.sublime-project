@@ -2,7 +2,8 @@
 	"folders":
 	[
 		{
-			"path": "/home/jstump/Development/projects/MarchMadness"
+			"follow_symlinks": true,
+			"path": "."
 		}
 	]
 }
