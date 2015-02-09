@@ -11,11 +11,19 @@
   end
 end
 
+Year.create(year: "2015", source_url: "http://data.ncaa.com/jsonp/gametool/brackets/championships/basketball-men/d1/2014/data.json", winner_digits: "8,7,2,0,6,5,4,1,9,3", loser_digits: "8,4,2,7,9,1,0,5,3,6")
 Year.create(year: "2014", source_url: "http://data.ncaa.com/jsonp/gametool/brackets/championships/basketball-men/d1/2013/data.json", winner_digits: "8,7,2,0,6,5,4,1,9,3", loser_digits: "8,4,2,7,9,1,0,5,3,6")
 Year.create(year: "2013", source_url: "http://data.ncaa.com/jsonp/gametool/brackets/championships/basketball-men/d1/2012/data.json", winner_digits: "2,8,4,6,7,0,5,9,3,1", loser_digits: "4,0,2,5,9,8,1,7,3,6")
 
 Participant.create(name: "Jeremiah Stump", display_name: "Stumpy")
 Participant.create(name: "Kayla Stump", display_name: "Mrs. Stumpy")
+
+Payout.create(year: "2015", round: "2", game_payout: "5")
+Payout.create(year: "2015", round: "3", game_payout: "10")
+Payout.create(year: "2015", round: "4", game_payout: "20")
+Payout.create(year: "2015", round: "5", game_payout: "40")
+Payout.create(year: "2015", round: "6", game_payout: "80")
+Payout.create(year: "2015", round: "7", game_payout: "180")
 
 Payout.create(year: "2014", round: "2", game_payout: "5")
 Payout.create(year: "2014", round: "3", game_payout: "8")

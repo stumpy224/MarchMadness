@@ -80,11 +80,11 @@ body #footer {
   background-color:#002647;
 }
 
-#bg-container{
+#bg-main-container{
   z-index:0;
 }
 
-#bg-container{
+#bg-main-container{
   width:100%;
   overflow:hidden;
   position:absolute;

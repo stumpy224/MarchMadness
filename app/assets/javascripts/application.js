@@ -13,10 +13,56 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require foundation
 //= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .
 //= require cocoon
+
+$(document).on("page:change", function() {
+  return init();
+});
+
+$(function() {
+  init();
+});
+
+function init() {
+  if (window.location.pathname == '/')
+    setCurrentLinkToRoot();
+  else if (window.location.pathname == '/bracket')
+    setCurrentLinkToBracket();
+  else if (window.location.pathname == '/grid')
+    setCurrentLinkToGrid();
+  else if (window.location.pathname == '/faq')
+    setCurrentLinkToFaq();
+}
+
+function setCurrentLinkToRoot() {
+  makeAllNavLinksInactive();
+  $('#nav_link_to_results').addClass('active');
+}
+
+function setCurrentLinkToBracket() {
+  makeAllNavLinksInactive();
+  $('#nav_link_to_bracket').addClass('active');
+}
+
+function setCurrentLinkToGrid() {
+  makeAllNavLinksInactive();
+  $('#nav_link_to_grid').addClass('active');
+}
+
+function setCurrentLinkToFaq() {
+  makeAllNavLinksInactive();
+  $('#nav_link_to_faq').addClass('active');
+}
+
+function makeAllNavLinksInactive() {
+  $('#nav_link_to_results').removeClass('active');
+  $('#nav_link_to_bracket').removeClass('active');
+  $('#nav_link_to_grid').removeClass('active');
+  $('#nav_link_to_faq').removeClass('active'); 
+}
 
 $(document).ready(function() {
   $('.scrollToTop').click(function() {

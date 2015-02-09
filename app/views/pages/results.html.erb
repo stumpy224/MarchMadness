@@ -1,56 +1,59 @@
 <% provide(:title, 'Results') %>
 <div align='center' id='resultsPage'>
-<div class='page-header pageHeaderLcl'>
-  <h1><%= $year %> Results</h1>
-</div>
-<% if @payouts.exists? %>
-  <% if @participants_with_squares.any? %>
-    <% if @results.count < 63 %>
-      <%= render partial: 'refresh', locals: { path: refresh_results_path } %>
-    <% end %>
-  
-    <table>
-      <thead class='headerRow'>
-        <tr>
-          <th class='nameColumn'>Name</th>
-          <th class='roundColumn'>Round</th>
-          <th class='dollarColumn'>$ Paid</th>
-          <th class='dollarColumn'>$ Won</th>
-          <th class='dollarColumn'>Profit</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% pCounter = 0 %>
-        <% @participants_with_squares.each do |p_w_sq| %>
-          <% participant = @participants.find(p_w_sq.id) %>
-          <% pResultCount = @results.where(participant_id: participant.id).count %>
-          <% pCounter += 1 %>
-          <% if pResultCount > 0 %>
-            <%= render partial: 'participantWithResults', locals: { participant: participant } %>
-          <% else %>
-            <%= render partial: 'participantWithNoResults', locals: { counter: pCounter, participant: participant } %>
-          <% end %>
-        <% end %>
-      </tbody>
-    </table>
-    <p><a class='scrollToTop' href=''>return to top</a></p>
-  <% else %>
-    <div style='font-weight:bold;'>Please enter participants for the year.</div>
-  <% end %>
-
-  <% if Year.many? %>
-  <div>Looking for results from a different year?</div>
-  <br />
-  <div>
-    <a data-dropdown='drop' class='button radius btn-default btn-primary tiny dropdown'>Year</a><br>
-    <ul id='drop' data-dropdown-content class='f-dropdown' style='width:100px !important;'>
-      <% Year.order(year: :desc).each do |y| %>
-        <li><%= link_to y.year, controller: 'pages', action: 'results', year: y.year %></li>
+  <div class="panel panel-default">
+    <div class="panel-heading" style="font-size:2em;"><%= $year %> Results</div>
+    <div class="panel-body">
+      <% if @payouts.exists? %>
+      <% if @participants_with_squares.any? %>
+      <% if @results.count < 63 %>
+        <%= render partial: 'refresh', locals: { path: refresh_results_path } %>
       <% end %>
-    </ul>
+      
+      <div class="table-responsive">
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Round</th>
+            <th>$ Paid</th>
+            <th>$ Won</th>
+            <th>Profit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% pCounter = 0 %>
+          <% @participants_with_squares.each do |p_w_sq| %>
+            <% participant = @participants.find(p_w_sq.id) %>
+            <% pResultCount = @results.where(participant_id: participant.id).count %>
+            <% pCounter += 1 %>
+            <% if pResultCount > 0 %>
+              <%= render partial: 'participantWithResults', locals: { participant: participant } %>
+            <% else %>
+              <%= render partial: 'participantWithNoResults', locals: { counter: pCounter, participant: participant } %>
+            <% end %>
+          <% end %>
+        </tbody>
+      </table>
+      </div>
+      <p><a class='scrollToTop' href=''>return to top</a></p>
+      <% else %>
+      <div style='font-weight:bold;'>Please enter participants for the year.</div>
+      <% end %>
+      <% if Year.many? %>
+      <div>Looking for results from a different year?</div>
+      <br />
+      <div>
+        <a data-dropdown='drop' class='button radius btn-default btn-primary tiny dropdown'>Year</a><br>
+        <ul id='drop' data-dropdown-content class='f-dropdown' style='width:100px !important;'>
+          <% Year.order(year: :desc).each do |y| %>
+          <li><%= link_to y.year, controller: 'pages', action: 'results', year: y.year %></li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+      <% else %>
+      <div style='font-weight:bold;'>Please enter payouts for the year.</div>
+      <% end %>
+    </div>
   </div>
-  <% end %>
-<% else %>
-  <div style='font-weight:bold;'>Please enter payouts for the year.</div>
-<% end %>
 </div>

@@ -3,19 +3,13 @@
 <% totalWon = 0 %>
 <tr>
   <% participant_results = @results.where(participant_id: participant.id) %>  
-  <%= content_tag :td, class: 'nameCell', rowspan: participant_results.count + 2 do %>
+  <%= content_tag :td, rowspan: participant_results.count + 2 do %>
     <%= participant.preferred_name %>
   <% end %>
 
   <% participant_results.each do |result| %>
     <% resultCounter += 1 %>
-    <% if resultCounter == 1 %>
-      <tr class='firstResultRow'>
-    <% else %>
-      <tr class='resultRow'>
-    <% end %>
-    
-      <td class='roundColumn'><%= result.round %></td>
+      <td><%= result.round %></td>
       <td />
       <td>$<%= @payout = @payouts.find_by(round: result.round).game_payout %></td>
       <td />
@@ -26,9 +20,9 @@
     </tr>
   <% end %>
 
-  <tr class='totalResultRow'>
+  <tr>
     <% profit = totalWon - totalPaid %>
-    <td class='roundColumn' style='font-weight:bold;'>Totals</td>
+    <td style='font-weight:bold;'>Totals</td>
     <td style='font-weight:bold;'>$<%= totalPaid %></td>
     <td style='font-weight:bold;'>$<%= totalWon %></td>
     <% if profit < 0 %>

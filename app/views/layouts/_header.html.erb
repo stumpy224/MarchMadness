@@ -1,16 +1,21 @@
-<nav class='top-bar' data-topbar>
-  <ul class='title-area' style='margin-left:8.5em;'>
-    <li class='name'>
-      <h1><%= link_to image_tag('https://lh6.googleusercontent.com/-9XLrbH9sb1I/UyEbj66ss7I/AAAAAAAAFSI/2iJdr_GZ3r8/w135-h35-p/logo2.png', alt: 'logo', style: 'margin-bottom:4px;'), root_path %></h1>
-    </li>
-  </ul>
-  <section class='top-bar-section'>
-    <!-- Right Nav Section -->
-    <ul class='right' style='margin-right:8.5em;'>
-      <li><%= link_to 'Results', controller: 'pages', action: 'results', year: $year %></li>
-      <li><%= link_to 'Bracket', bracket_path, id: 'bracketLink', remote: true %></li>
-      <li><%= link_to 'Grid', grid_path %></li>
-      <li><%= link_to 'FAQ', faq_path %></li>
-    </ul>
-  </section>
+<nav class="navbar navbar-default" style="margin-top:-40px;">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <%= link_to 'The Grid Pool', root_path, class: 'navbar-brand' %>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li id="nav_link_to_results"><%= link_to 'Results', controller: 'pages', action: 'results', year: $year %></li>
+        <li id="nav_link_to_bracket"><%= link_to 'Bracket', bracket_path, id: 'bracketLink', remote: true %></li>
+        <li id="nav_link_to_grid"><%= link_to 'Grid', grid_path %></li>
+        <li id="nav_link_to_faq"><%= link_to 'FAQ', faq_path %></li>
+      </ul>
+    </div>
+  </div>
 </nav>

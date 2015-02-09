@@ -1,12 +1,16 @@
 <% provide(:title, 'Grid') %>
 <div align='center'>
-  <div class='page-header pageHeaderLcl'><h1><%= $year %> Grid</h1></div>
-  <% if @winner_digits.blank? or @loser_digits.blank? %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h1 class="panel-title"><%= $year %> Grid</h1>
+    </div>
+    <div class="panel-body">
+      <% if @winner_digits.blank? or @loser_digits.blank? %>
   <div>Winner/Loser digits have not been added for <%= $year %>.</div>
   <% else %>
     <% winner_digits = @winner_digits.split(',') %>
     <% loser_digits = @loser_digits.split(',') %>
-    <table class='gridTable'>
+    <table class="table table-condensed table-hover">
       <thead>
         <tr>
           <th>&nbsp;</th>
@@ -47,4 +51,6 @@
       </tbody>
     </table>
   <% end %>
+    </div>
+  </div>
 </div>
